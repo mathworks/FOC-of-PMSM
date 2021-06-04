@@ -19,7 +19,7 @@ Requires MATLAB release R2021a or newer
 - [Embedded Coder] (https://www.mathworks.com/products/embedded-coder.html)
 
 ### 3rd Party Products:
-3p:
+
 - [NXP Model-Based Design Toolbox](https://www.mathworks.com/matlabcentral/fileexchange/64740-nxp-support-package-s32k1xx)
 
 ## Getting Started 
