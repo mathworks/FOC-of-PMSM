@@ -14,9 +14,9 @@ Additional information about set up
 ### MathWorks Products (http://www.mathworks.com)
 
 Requires MATLAB release R2021a or newer
-- [Simulink] (https://www.mathworks.com/products/simulink.html)
-- [Motor Control Blockset] (https://www.mathworks.com/products/motor-control.html)
-- [Embedded Coder] (https://www.mathworks.com/products/embedded-coder.html)
+- [Simulink](https://www.mathworks.com/products/simulink.html)
+- [Motor Control Blockset](https://www.mathworks.com/products/motor-control.html)
+- [Embedded Coder](https://www.mathworks.com/products/embedded-coder.html)
 
 ### 3rd Party Products:
 
