@@ -10,7 +10,7 @@ This example implements a motor control system using the NXP™ MCSPTE1AK144 har
 2. For instructions to use the repository, see the document *mcb_nxp_MCSPTE1AK144_example_doc.pdf*.
 
 
-### MathWorks®  Products(http://www.mathworks.com)
+### [MathWorks®  Products](http://www.mathworks.com)
 
 Requires MATLAB® release R2021a or newer
 - [Simulink®](https://www.mathworks.com/products/simulink.html)
