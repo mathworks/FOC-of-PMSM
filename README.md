@@ -3,6 +3,7 @@ Field-Oriented Control of Permanent Magnet Synchronous Motor Using NXP™ S32K14
 
 This example implements a motor control system using the NXP™ MCSPTE1AK144 hardware. The MCSPTE1AK144 development kit, which uses the NXP™ S32K144 microcontroller, can run motor control applications designed for either a three-phase brushless DC (BLDC) or three-phase permanent magnet synchronous motor (PMSM).
 
+[![View Field-Oriented Control of PMSM Using NXP™ S32K144 Kit on File Exchange](https://www.mathworks.com/matlabcentral/images/matlab-file-exchange.svg)](https://www.mathworks.com/matlabcentral/fileexchange/93535-field-oriented-control-of-pmsm-using-nxp-s32k144-kit)
 
 ## Setup 
 
