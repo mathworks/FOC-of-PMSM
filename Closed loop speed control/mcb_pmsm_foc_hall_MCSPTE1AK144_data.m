@@ -47,7 +47,7 @@ pmsm.N_max  = 4000;             %rpm        // Max speed
 pmsm.QEPIndexOffset = 0.1712;   %0.6879/4;	%PU position// QEP Offset
 pmsm.QEPSlits       = 1000;     %           // QEP Encoder Slits
 pmsm.PositionOffset = 0.3855;
-pmsm.FluxPM     = (pmsm.Ke)/(sqrt(3)*2*pi*1000*4/60);               %PM flux computed from Ke
+pmsm.FluxPM     = (pmsm.Ke)/(sqrt(3)*2*pi*1000*pmsm.p/60);               %PM flux computed from Ke
 pmsm.T_rated    = (3/2)*pmsm.p*pmsm.FluxPM*pmsm.I_rated;   %Get T_rated from I_rated
 
 Target.model                = 'EVB_S32K144';% Manufacturer Model Number
