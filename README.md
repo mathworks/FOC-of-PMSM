@@ -25,6 +25,7 @@ Requires MATLAB® release R2021a or newer
 ## Getting Started 
 For detailed instructions about using the repository, see the document *mcb_nxp_MCSPTE1AK144_example_doc.pdf*.
 
+[![Open in MATLAB Online](https://www.mathworks.com/images/responsive/global/open-in-matlab-online.svg)](<link>)
 
 ## License
 The license is available in the *License.txt* file in this GitHub repository.
