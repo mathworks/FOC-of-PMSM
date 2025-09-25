@@ -8,7 +8,7 @@ This example implements a motor control system using the NXP™ motor control ki
 ## Setup 
 
 1. Download the repository and extract the contents.
-2. For instructions to use the repository, see the document *mcb_nxp_MCSPTE1AK144_example_doc.pdf*.
+2. For instructions to use the repository, see the documents under respective folder.
 
 
 ### [MathWorks®  Products](https://www.mathworks.com)
@@ -23,7 +23,7 @@ Requires MATLAB® release R2021a or newer
 - [NXP™ Model-Based Design Toolbox](https://www.mathworks.com/matlabcentral/fileexchange/64740-nxp-support-package-s32k1xx)
 
 ## Getting Started 
-For detailed instructions about using the repository, see the attached documents under respecive folder.
+For detailed instructions about using the repository, see the documents under respective folder.
 
 [![Open in MATLAB Online](https://www.mathworks.com/images/responsive/global/open-in-matlab-online.svg)](https://matlab.mathworks.com/open/github/v1?repo=mathworks/FOC-of-PMSM)
 
