@@ -21,7 +21,7 @@ Requires MATLAB® release R2021a or newer
 ### 3rd Party Products
 
 - [NXP™ Model-Based Design Toolbox for S32K1](https://www.mathworks.com/matlabcentral/fileexchange/64740-nxp-support-package-s32k1xx)
-- [NXP™ Model-Based Design Toolbox for S32K3](https://www.mathworks.com/matlabcentral/fileexchange/101749-nxp_support_package_s32k3?s_tid=srchtitle)
+- [NXP™ Model-Based Design Toolbox for S32K3 v1.7.0](https://www.mathworks.com/matlabcentral/fileexchange/101749-nxp_support_package_s32k3?s_tid=srchtitle) 
 
 ## Getting Started 
 For detailed instructions about using the repository, see the documents under the respective folder.
