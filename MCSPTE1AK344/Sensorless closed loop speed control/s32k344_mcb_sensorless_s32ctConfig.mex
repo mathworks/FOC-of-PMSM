@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding= "UTF-8" ?>
-<configuration name="S32K344" xsi:schemaLocation="http://mcuxpresso.nxp.com/XSD/mex_configuration_15 http://mcuxpresso.nxp.com/XSD/mex_configuration_15.xsd" uuid="cb0a0571-31b0-4026-b225-2a0da4ce6ac1" version="15" xmlns="http://mcuxpresso.nxp.com/XSD/mex_configuration_15" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<configuration name="S32K344" xsi:schemaLocation="http://mcuxpresso.nxp.com/XSD/mex_configuration_17 http://mcuxpresso.nxp.com/XSD/mex_configuration_17.xsd" uuid="cb0a0571-31b0-4026-b225-2a0da4ce6ac1" version="17" xmlns="http://mcuxpresso.nxp.com/XSD/mex_configuration_17" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <common>
       <processor>S32K344</processor>
       <package>S32K344_172HDQFP</package>
@@ -11,14 +11,13 @@
    </common>
    <preferences>
       <validate_boot_init_only>true</validate_boot_init_only>
-      <generate_extended_information>false</generate_extended_information>
       <generate_code_modified_registers_only>false</generate_code_modified_registers_only>
       <update_include_paths>true</update_include_paths>
       <generate_registers_defines>false</generate_registers_defines>
       <enable_code_preview>true</enable_code_preview>
    </preferences>
    <tools>
-      <pins name="Pins" version="15.0" enabled="true" update_project_code="false">
+      <pins name="Pins" version="17.0" enabled="true" update_project_code="false">
          <generated_project_files>
             <file path="board/Siul2_Port_Ip_Cfg.c" update_enabled="true"/>
             <file path="board/Siul2_Port_Ip_Cfg.h" update_enabled="true"/>
@@ -246,17 +245,6 @@
                         <pin_feature name="InitValue" value="state_0"/>
                      </pin_features>
                   </pin>
-                  <pin peripheral="SIUL2" signal="gpio, 57" pin_num="72" pin_signal="PTB25">
-                     <pin_features>
-                        <pin_feature name="direction" value="OUTPUT"/>
-                        <pin_feature name="safeMode" value="outputOff"/>
-                        <pin_feature name="pullSelect" value="pullDown"/>
-                        <pin_feature name="pullEnable" value="disabled"/>
-                        <pin_feature name="padKeepingEnable" value="disabled"/>
-                        <pin_feature name="outputInversionSelect" value="doNotInvert"/>
-                        <pin_feature name="InitValue" value="state_0"/>
-                     </pin_features>
-                  </pin>
                   <pin peripheral="SIUL2" signal="gpio, 140" pin_num="29" pin_signal="PTE12">
                      <pin_features>
                         <pin_feature name="direction" value="OUTPUT"/>
@@ -267,18 +255,6 @@
                         <pin_feature name="outputInversionSelect" value="doNotInvert"/>
                         <pin_feature name="InitValue" value="state_0"/>
                         <pin_feature name="driverStrengthEnable" value="disabled"/>
-                     </pin_features>
-                  </pin>
-                  <pin peripheral="SIUL2" signal="gpio, 58" pin_num="73" pin_signal="PTB26">
-                     <pin_features>
-                        <pin_feature name="identifier" value=""/>
-                        <pin_feature name="direction" value="INPUT"/>
-                        <pin_feature name="safeMode" value="outputOff"/>
-                        <pin_feature name="pullSelect" value="pullDown"/>
-                        <pin_feature name="pullEnable" value="disabled"/>
-                        <pin_feature name="padKeepingEnable" value="disabled"/>
-                        <pin_feature name="outputInversionSelect" value="doNotInvert"/>
-                        <pin_feature name="InitValue" value="state_0"/>
                      </pin_features>
                   </pin>
                   <pin peripheral="SIUL2" signal="gpio, 51" pin_num="43" pin_signal="PTB19">
@@ -314,17 +290,6 @@
                         <pin_feature name="InitValue" value="state_0"/>
                      </pin_features>
                   </pin>
-                  <pin peripheral="SIUL2" signal="gpio, 49" pin_num="110" pin_signal="PTB17">
-                     <pin_features>
-                        <pin_feature name="direction" value="OUTPUT"/>
-                        <pin_feature name="safeMode" value="outputOff"/>
-                        <pin_feature name="pullSelect" value="pullDown"/>
-                        <pin_feature name="pullEnable" value="disabled"/>
-                        <pin_feature name="padKeepingEnable" value="disabled"/>
-                        <pin_feature name="outputInversionSelect" value="doNotInvert"/>
-                        <pin_feature name="InitValue" value="state_0"/>
-                     </pin_features>
-                  </pin>
                   <pin peripheral="SIUL2" signal="gpio, 53" pin_num="45" pin_signal="PTB21">
                      <pin_features>
                         <pin_feature name="direction" value="INPUT/OUTPUT"/>
@@ -336,155 +301,9 @@
                         <pin_feature name="InitValue" value="state_0"/>
                      </pin_features>
                   </pin>
-               </pins>
-            </function>
-            <function name="Flexio_Pins_MBDT">
-               <description></description>
-               <options>
-                  <callFromInitBoot>false</callFromInitBoot>
-                  <coreID>M7_0</coreID>
-               </options>
-               <dependencies>
-                  <dependency resourceType="SWComponent" resourceId="platform.driver.pins" description="Pins initialization requires the PINS Driver in the project." problem_level="2" source="Pins:Flexio_Pins_MBDT">
-                     <feature name="enabled" evaluation="equal" configuration="M7_0">
-                        <data>true</data>
-                     </feature>
-                  </dependency>
-               </dependencies>
-               <pins>
-                  <pin peripheral="FXIO" signal="fxio_d28" pin_num="130" pin_signal="PTB9">
-                     <pin_features>
-                        <pin_feature name="direction" value="INPUT"/>
-                        <pin_feature name="safeMode" value="outputOff"/>
-                        <pin_feature name="pullSelect" value="pullDown"/>
-                        <pin_feature name="pullEnable" value="disabled"/>
-                        <pin_feature name="padKeepingEnable" value="disabled"/>
-                        <pin_feature name="outputInversionSelect" value="doNotInvert"/>
-                        <pin_feature name="InitValue" value="state_0"/>
-                     </pin_features>
-                  </pin>
-                  <pin peripheral="FXIO" signal="fxio_d27" pin_num="129" pin_signal="PTB10">
+                  <pin peripheral="SIUL2" signal="gpio, 49" pin_num="110" pin_signal="PTB17">
                      <pin_features>
                         <pin_feature name="direction" value="OUTPUT"/>
-                        <pin_feature name="safeMode" value="outputOff"/>
-                        <pin_feature name="pullSelect" value="pullDown"/>
-                        <pin_feature name="pullEnable" value="disabled"/>
-                        <pin_feature name="padKeepingEnable" value="disabled"/>
-                        <pin_feature name="outputInversionSelect" value="doNotInvert"/>
-                        <pin_feature name="InitValue" value="state_0"/>
-                     </pin_features>
-                  </pin>
-                  <pin peripheral="FXIO" signal="fxio_d11" pin_num="141" pin_signal="PTC6">
-                     <pin_features>
-                        <pin_feature name="direction" value="INPUT/OUTPUT"/>
-                        <pin_feature name="safeMode" value="outputOff"/>
-                        <pin_feature name="pullSelect" value="pullDown"/>
-                        <pin_feature name="pullEnable" value="disabled"/>
-                        <pin_feature name="padKeepingEnable" value="disabled"/>
-                        <pin_feature name="outputInversionSelect" value="doNotInvert"/>
-                        <pin_feature name="InitValue" value="state_0"/>
-                        <pin_feature name="driverStrengthEnable" value="disabled"/>
-                     </pin_features>
-                  </pin>
-                  <pin peripheral="FXIO" signal="fxio_d10" pin_num="140" pin_signal="PTC7">
-                     <pin_features>
-                        <pin_feature name="direction" value="INPUT/OUTPUT"/>
-                        <pin_feature name="safeMode" value="outputOff"/>
-                        <pin_feature name="pullSelect" value="pullDown"/>
-                        <pin_feature name="pullEnable" value="disabled"/>
-                        <pin_feature name="padKeepingEnable" value="disabled"/>
-                        <pin_feature name="outputInversionSelect" value="doNotInvert"/>
-                        <pin_feature name="InitValue" value="state_0"/>
-                        <pin_feature name="driverStrengthEnable" value="disabled"/>
-                     </pin_features>
-                  </pin>
-               </pins>
-            </function>
-            <function name="I2c_Pins_MBDT">
-               <description></description>
-               <options>
-                  <callFromInitBoot>false</callFromInitBoot>
-                  <coreID>M7_0</coreID>
-               </options>
-               <dependencies>
-                  <dependency resourceType="SWComponent" resourceId="platform.driver.pins" description="Pins initialization requires the PINS Driver in the project." problem_level="2" source="Pins:I2c_Pins_MBDT">
-                     <feature name="enabled" evaluation="equal" configuration="M7_0">
-                        <data>true</data>
-                     </feature>
-                  </dependency>
-               </dependencies>
-               <pins>
-                  <pin peripheral="LPI2C0" signal="lpi2c0_sda" pin_num="41" pin_signal="PTD13">
-                     <pin_features>
-                        <pin_feature name="direction" value="INPUT/OUTPUT"/>
-                        <pin_feature name="safeMode" value="outputOff"/>
-                        <pin_feature name="pullSelect" value="pullDown"/>
-                        <pin_feature name="pullEnable" value="disabled"/>
-                        <pin_feature name="padKeepingEnable" value="disabled"/>
-                        <pin_feature name="outputInversionSelect" value="doNotInvert"/>
-                        <pin_feature name="InitValue" value="state_0"/>
-                        <pin_feature name="driverStrengthEnable" value="disabled"/>
-                     </pin_features>
-                  </pin>
-                  <pin peripheral="LPI2C0" signal="lpi2c0_scl" pin_num="40" pin_signal="PTD14">
-                     <pin_features>
-                        <pin_feature name="direction" value="INPUT/OUTPUT"/>
-                        <pin_feature name="safeMode" value="outputOff"/>
-                        <pin_feature name="pullSelect" value="pullDown"/>
-                        <pin_feature name="pullEnable" value="disabled"/>
-                        <pin_feature name="padKeepingEnable" value="disabled"/>
-                        <pin_feature name="outputInversionSelect" value="doNotInvert"/>
-                        <pin_feature name="InitValue" value="state_0"/>
-                        <pin_feature name="driverStrengthEnable" value="disabled"/>
-                     </pin_features>
-                  </pin>
-               </pins>
-            </function>
-            <function name="Icu_Pins_MBDT">
-               <description></description>
-               <options>
-                  <callFromInitBoot>false</callFromInitBoot>
-                  <coreID>M7_0</coreID>
-               </options>
-               <dependencies>
-                  <dependency resourceType="SWComponent" resourceId="platform.driver.pins" description="Pins initialization requires the PINS Driver in the project." problem_level="2" source="Pins:Icu_Pins_MBDT">
-                     <feature name="enabled" evaluation="equal" configuration="M7_0">
-                        <data>true</data>
-                     </feature>
-                  </dependency>
-               </dependencies>
-               <pins>
-                  <pin peripheral="eMIOS_2" signal="emios_2_ch_1_h" pin_num="2" pin_signal="PTA19">
-                     <pin_features>
-                        <pin_feature name="direction" value="INPUT/OUTPUT"/>
-                        <pin_feature name="safeMode" value="outputOff"/>
-                        <pin_feature name="pullSelect" value="pullDown"/>
-                        <pin_feature name="pullEnable" value="disabled"/>
-                        <pin_feature name="padKeepingEnable" value="disabled"/>
-                        <pin_feature name="outputInversionSelect" value="doNotInvert"/>
-                        <pin_feature name="InitValue" value="state_0"/>
-                     </pin_features>
-                  </pin>
-                  <pin peripheral="eMIOS_2" signal="emios_2_ch_2_h" pin_num="3" pin_signal="PTA20">
-                     <pin_features>
-                        <pin_feature name="direction" value="INPUT/OUTPUT"/>
-                        <pin_feature name="safeMode" value="outputOff"/>
-                        <pin_feature name="pullSelect" value="pullDown"/>
-                        <pin_feature name="pullEnable" value="disabled"/>
-                        <pin_feature name="padKeepingEnable" value="disabled"/>
-                        <pin_feature name="outputInversionSelect" value="doNotInvert"/>
-                        <pin_feature name="InitValue" value="state_0"/>
-                     </pin_features>
-                  </pin>
-                  <pin peripheral="eMIOS_0" signal="emios_0_ch_3_g" pin_num="7" pin_signal="PTD1">
-                     <pin_features>
-                        <pin_feature name="direction" value="INPUT/OUTPUT"/>
-                        <pin_feature name="safeMode" value="outputOff"/>
-                        <pin_feature name="pullSelect" value="pullDown"/>
-                        <pin_feature name="pullEnable" value="disabled"/>
-                        <pin_feature name="padKeepingEnable" value="disabled"/>
-                        <pin_feature name="outputInversionSelect" value="doNotInvert"/>
-                        <pin_feature name="InitValue" value="state_0"/>
                      </pin_features>
                   </pin>
                </pins>
@@ -503,50 +322,6 @@
                   </dependency>
                </dependencies>
                <pins>
-                  <pin peripheral="eMIOS_0" signal="emios_0_ch_17_y" pin_num="137" pin_signal="PTA0">
-                     <pin_features>
-                        <pin_feature name="direction" value="OUTPUT"/>
-                        <pin_feature name="safeMode" value="outputOff"/>
-                        <pin_feature name="pullSelect" value="pullDown"/>
-                        <pin_feature name="pullEnable" value="disabled"/>
-                        <pin_feature name="padKeepingEnable" value="disabled"/>
-                        <pin_feature name="outputInversionSelect" value="doNotInvert"/>
-                        <pin_feature name="InitValue" value="state_0"/>
-                     </pin_features>
-                  </pin>
-                  <pin peripheral="eMIOS_0" signal="emios_0_ch_9_h" pin_num="135" pin_signal="PTA1">
-                     <pin_features>
-                        <pin_feature name="direction" value="OUTPUT"/>
-                        <pin_feature name="safeMode" value="outputOff"/>
-                        <pin_feature name="pullSelect" value="pullDown"/>
-                        <pin_feature name="pullEnable" value="disabled"/>
-                        <pin_feature name="padKeepingEnable" value="disabled"/>
-                        <pin_feature name="outputInversionSelect" value="doNotInvert"/>
-                        <pin_feature name="InitValue" value="state_0"/>
-                     </pin_features>
-                  </pin>
-                  <pin peripheral="eMIOS_1" signal="emios_1_ch_19_y" pin_num="124" pin_signal="PTA2">
-                     <pin_features>
-                        <pin_feature name="direction" value="OUTPUT"/>
-                        <pin_feature name="safeMode" value="outputOff"/>
-                        <pin_feature name="pullSelect" value="pullDown"/>
-                        <pin_feature name="pullEnable" value="disabled"/>
-                        <pin_feature name="padKeepingEnable" value="disabled"/>
-                        <pin_feature name="outputInversionSelect" value="doNotInvert"/>
-                        <pin_feature name="InitValue" value="state_0"/>
-                     </pin_features>
-                  </pin>
-                  <pin peripheral="eMIOS_1" signal="emios_1_ch_20_y" pin_num="123" pin_signal="PTA3">
-                     <pin_features>
-                        <pin_feature name="direction" value="OUTPUT"/>
-                        <pin_feature name="safeMode" value="outputOff"/>
-                        <pin_feature name="pullSelect" value="pullDown"/>
-                        <pin_feature name="pullEnable" value="disabled"/>
-                        <pin_feature name="padKeepingEnable" value="disabled"/>
-                        <pin_feature name="outputInversionSelect" value="doNotInvert"/>
-                        <pin_feature name="InitValue" value="state_0"/>
-                     </pin_features>
-                  </pin>
                   <pin peripheral="eMIOS_1" signal="emios_1_ch_0_x" pin_num="92" pin_signal="PTC10">
                      <pin_features>
                         <pin_feature name="direction" value="OUTPUT"/>
@@ -560,28 +335,6 @@
                      </pin_features>
                   </pin>
                   <pin peripheral="eMIOS_1" signal="emios_1_ch_1_h" pin_num="90" pin_signal="PTC11">
-                     <pin_features>
-                        <pin_feature name="direction" value="OUTPUT"/>
-                        <pin_feature name="safeMode" value="outputOff"/>
-                        <pin_feature name="pullSelect" value="pullDown"/>
-                        <pin_feature name="pullEnable" value="disabled"/>
-                        <pin_feature name="padKeepingEnable" value="disabled"/>
-                        <pin_feature name="outputInversionSelect" value="doNotInvert"/>
-                        <pin_feature name="InitValue" value="state_0"/>
-                     </pin_features>
-                  </pin>
-                  <pin peripheral="eMIOS_1" signal="emios_1_ch_22_x" pin_num="120" pin_signal="PTD3">
-                     <pin_features>
-                        <pin_feature name="direction" value="OUTPUT"/>
-                        <pin_feature name="safeMode" value="outputOff"/>
-                        <pin_feature name="pullSelect" value="pullDown"/>
-                        <pin_feature name="pullEnable" value="disabled"/>
-                        <pin_feature name="padKeepingEnable" value="disabled"/>
-                        <pin_feature name="outputInversionSelect" value="doNotInvert"/>
-                        <pin_feature name="InitValue" value="state_0"/>
-                     </pin_features>
-                  </pin>
-                  <pin peripheral="eMIOS_1" signal="emios_1_ch_21_y" pin_num="121" pin_signal="PTD2">
                      <pin_features>
                         <pin_feature name="direction" value="OUTPUT"/>
                         <pin_feature name="safeMode" value="outputOff"/>
@@ -619,64 +372,6 @@
                   </dependency>
                </dependencies>
                <pins>
-                  <pin peripheral="LPSPI2" signal="lpspi2_sck" pin_num="80" pin_signal="PTB29">
-                     <pin_features>
-                        <pin_feature name="direction" value="OUTPUT"/>
-                        <pin_feature name="safeMode" value="outputOff"/>
-                        <pin_feature name="pullSelect" value="pullDown"/>
-                        <pin_feature name="pullEnable" value="disabled"/>
-                        <pin_feature name="padKeepingEnable" value="disabled"/>
-                        <pin_feature name="outputInversionSelect" value="doNotInvert"/>
-                        <pin_feature name="InitValue" value="state_0"/>
-                        <pin_feature name="driverStrengthEnable" value="disabled"/>
-                     </pin_features>
-                  </pin>
-                  <pin peripheral="LPSPI2" signal="lpspi2_sin" pin_num="79" pin_signal="PTB2">
-                     <pin_features>
-                        <pin_feature name="direction" value="INPUT"/>
-                        <pin_feature name="safeMode" value="outputOff"/>
-                        <pin_feature name="pullSelect" value="pullDown"/>
-                        <pin_feature name="pullEnable" value="disabled"/>
-                        <pin_feature name="padKeepingEnable" value="disabled"/>
-                        <pin_feature name="outputInversionSelect" value="doNotInvert"/>
-                        <pin_feature name="InitValue" value="state_0"/>
-                        <pin_feature name="driverStrengthEnable" value="disabled"/>
-                     </pin_features>
-                  </pin>
-                  <pin peripheral="LPSPI2" signal="lpspi2_sout" pin_num="74" pin_signal="PTB3">
-                     <pin_features>
-                        <pin_feature name="direction" value="OUTPUT"/>
-                        <pin_feature name="safeMode" value="outputOff"/>
-                        <pin_feature name="pullSelect" value="pullDown"/>
-                        <pin_feature name="pullEnable" value="disabled"/>
-                        <pin_feature name="padKeepingEnable" value="disabled"/>
-                        <pin_feature name="outputInversionSelect" value="doNotInvert"/>
-                        <pin_feature name="InitValue" value="state_0"/>
-                        <pin_feature name="driverStrengthEnable" value="disabled"/>
-                     </pin_features>
-                  </pin>
-                  <pin peripheral="LPSPI2" signal="lpspi2_pcs0" pin_num="72" pin_signal="PTB25">
-                     <pin_features>
-                        <pin_feature name="direction" value="OUTPUT"/>
-                        <pin_feature name="safeMode" value="outputOff"/>
-                        <pin_feature name="pullSelect" value="pullDown"/>
-                        <pin_feature name="pullEnable" value="disabled"/>
-                        <pin_feature name="padKeepingEnable" value="disabled"/>
-                        <pin_feature name="outputInversionSelect" value="doNotInvert"/>
-                        <pin_feature name="InitValue" value="state_0"/>
-                     </pin_features>
-                  </pin>
-                  <pin peripheral="LPSPI1" signal="lpspi1_pcs3" pin_num="110" pin_signal="PTB17">
-                     <pin_features>
-                        <pin_feature name="direction" value="INPUT"/>
-                        <pin_feature name="safeMode" value="outputOff"/>
-                        <pin_feature name="pullSelect" value="pullDown"/>
-                        <pin_feature name="pullEnable" value="disabled"/>
-                        <pin_feature name="padKeepingEnable" value="disabled"/>
-                        <pin_feature name="outputInversionSelect" value="doNotInvert"/>
-                        <pin_feature name="InitValue" value="state_0"/>
-                     </pin_features>
-                  </pin>
                   <pin peripheral="LPSPI1" signal="lpspi1_sck" pin_num="114" pin_signal="PTB14">
                      <pin_features>
                         <pin_feature name="direction" value="OUTPUT"/>
@@ -726,27 +421,6 @@
                   </dependency>
                </dependencies>
                <pins>
-                  <pin peripheral="LPUART5" signal="lpuart5_rx" pin_num="76" pin_signal="PTB28">
-                     <pin_features>
-                        <pin_feature name="safeMode" value="outputOff"/>
-                        <pin_feature name="pullSelect" value="pullDown"/>
-                        <pin_feature name="pullEnable" value="disabled"/>
-                        <pin_feature name="padKeepingEnable" value="disabled"/>
-                        <pin_feature name="outputInversionSelect" value="doNotInvert"/>
-                        <pin_feature name="InitValue" value="state_0"/>
-                     </pin_features>
-                  </pin>
-                  <pin peripheral="LPUART5" signal="lpuart5_tx" pin_num="75" pin_signal="PTB27">
-                     <pin_features>
-                        <pin_feature name="direction" value="OUTPUT"/>
-                        <pin_feature name="safeMode" value="outputOff"/>
-                        <pin_feature name="pullSelect" value="pullDown"/>
-                        <pin_feature name="pullEnable" value="disabled"/>
-                        <pin_feature name="padKeepingEnable" value="disabled"/>
-                        <pin_feature name="outputInversionSelect" value="doNotInvert"/>
-                        <pin_feature name="InitValue" value="state_0"/>
-                     </pin_features>
-                  </pin>
                   <pin peripheral="LPUART6" signal="lpuart6_rx" pin_num="145" pin_signal="PTA15">
                      <pin_features>
                         <pin_feature name="safeMode" value="outputOff"/>
@@ -768,33 +442,12 @@
                         <pin_feature name="InitValue" value="state_0"/>
                      </pin_features>
                   </pin>
-                  <pin peripheral="LPUART13" signal="lpuart13_rx" pin_num="93" pin_signal="PTC27">
-                     <pin_features>
-                        <pin_feature name="safeMode" value="outputOff"/>
-                        <pin_feature name="pullSelect" value="pullDown"/>
-                        <pin_feature name="pullEnable" value="disabled"/>
-                        <pin_feature name="padKeepingEnable" value="disabled"/>
-                        <pin_feature name="outputInversionSelect" value="doNotInvert"/>
-                        <pin_feature name="InitValue" value="state_0"/>
-                        <pin_feature name="driverStrengthEnable" value="disabled"/>
-                     </pin_features>
-                  </pin>
-                  <pin peripheral="LPUART13" signal="lpuart13_tx" pin_num="91" pin_signal="PTC26">
-                     <pin_features>
-                        <pin_feature name="direction" value="OUTPUT"/>
-                        <pin_feature name="safeMode" value="outputOff"/>
-                        <pin_feature name="pullSelect" value="pullDown"/>
-                        <pin_feature name="pullEnable" value="disabled"/>
-                        <pin_feature name="padKeepingEnable" value="disabled"/>
-                        <pin_feature name="outputInversionSelect" value="doNotInvert"/>
-                        <pin_feature name="InitValue" value="state_0"/>
-                     </pin_features>
-                  </pin>
                </pins>
             </function>
             <function name="Lcu_Pins_MBDT">
                <description></description>
                <options>
+                  <callFromInitBoot>false</callFromInitBoot>
                   <coreID>M7_0</coreID>
                </options>
                <dependencies>
@@ -855,25 +508,18 @@
                         <pin_feature name="InitValue" value="state_0"/>
                      </pin_features>
                   </pin>
-                  <pin peripheral="LCU0" signal="lcu0_out5" pin_num="135" pin_signal="PTA1">
-                     <pin_features>
-                        <pin_feature name="safeMode" value="outputOff"/>
-                        <pin_feature name="pullSelect" value="pullDown"/>
-                        <pin_feature name="pullEnable" value="disabled"/>
-                        <pin_feature name="padKeepingEnable" value="disabled"/>
-                        <pin_feature name="outputInversionSelect" value="doNotInvert"/>
-                        <pin_feature name="InitValue" value="state_0"/>
-                     </pin_features>
-                  </pin>
+                  <pin peripheral="LCU0" signal="lcu0_out5" pin_num="135" pin_signal="PTA1"/>
                </pins>
             </function>
          </functions_list>
       </pins>
-      <clocks name="Clocks" version="13.0" enabled="true" update_project_code="false">
+      <clocks name="Clocks" version="15.0" enabled="true" update_project_code="false">
          <generated_project_files>
             <file path="generate/include/Clock_Ip_Cfg.h" update_enabled="true"/>
             <file path="generate/include/Clock_Ip_Cfg_Defines.h" update_enabled="true"/>
+            <file path="generate/include/Clock_Ip_MBDT_PBcfg.h" update_enabled="true"/>
             <file path="generate/src/Clock_Ip_Cfg.c" update_enabled="true"/>
+            <file path="generate/src/Clock_Ip_MBDT_PBcfg.c" update_enabled="true"/>
          </generated_project_files>
          <clocks_profile>
             <processor_version>0.0.0</processor_version>
@@ -891,20 +537,10 @@
                         <data>INPUT</data>
                      </feature>
                   </dependency>
-                  <dependency resourceType="PinSignal" resourceId="FXOSC_CLK.EXTAL" description="&apos;External pin&apos; (Pins tool id: FXOSC_CLK.EXTAL, Clocks tool id: FXOSC_CLK.EXTAL) needs to have &apos;INPUT&apos; direction" problem_level="1" source="Clocks:McuClockSettingConfig_0">
-                     <feature name="direction" evaluation="">
-                        <data>INPUT</data>
-                     </feature>
-                  </dependency>
                   <dependency resourceType="PinSignal" resourceId="FXOSC_CLK.XTAL" description="&apos;External pin&apos; (Pins tool id: FXOSC_CLK.XTAL, Clocks tool id: FXOSC_CLK.XTAL) needs to be routed" problem_level="1" source="Clocks:McuClockSettingConfig_0">
                      <feature name="routed" evaluation="">
                         <data>true</data>
                      </feature>
-                     <feature name="direction" evaluation="">
-                        <data>OUTPUT</data>
-                     </feature>
-                  </dependency>
-                  <dependency resourceType="PinSignal" resourceId="FXOSC_CLK.XTAL" description="&apos;External pin&apos; (Pins tool id: FXOSC_CLK.XTAL, Clocks tool id: FXOSC_CLK.XTAL) needs to have &apos;OUTPUT&apos; direction" problem_level="1" source="Clocks:McuClockSettingConfig_0">
                      <feature name="direction" evaluation="">
                         <data>OUTPUT</data>
                      </feature>
@@ -917,20 +553,10 @@
                         <data>INPUT</data>
                      </feature>
                   </dependency>
-                  <dependency resourceType="PinSignal" resourceId="SXOSC_CLK.EXTAL" description="&apos;External pin&apos; (Pins tool id: SXOSC_CLK.EXTAL, Clocks tool id: SXOSC_CLK.EXTAL) needs to have &apos;INPUT&apos; direction" problem_level="1" source="Clocks:McuClockSettingConfig_0">
-                     <feature name="direction" evaluation="">
-                        <data>INPUT</data>
-                     </feature>
-                  </dependency>
                   <dependency resourceType="PinSignal" resourceId="SXOSC_CLK.XTAL" description="&apos;External pin&apos; (Pins tool id: SXOSC_CLK.XTAL, Clocks tool id: SXOSC_CLK.XTAL) needs to be routed" problem_level="1" source="Clocks:McuClockSettingConfig_0">
                      <feature name="routed" evaluation="">
                         <data>true</data>
                      </feature>
-                     <feature name="direction" evaluation="">
-                        <data>OUTPUT</data>
-                     </feature>
-                  </dependency>
-                  <dependency resourceType="PinSignal" resourceId="SXOSC_CLK.XTAL" description="&apos;External pin&apos; (Pins tool id: SXOSC_CLK.XTAL, Clocks tool id: SXOSC_CLK.XTAL) needs to have &apos;OUTPUT&apos; direction" problem_level="1" source="Clocks:McuClockSettingConfig_0">
                      <feature name="direction" evaluation="">
                         <data>OUTPUT</data>
                      </feature>
@@ -1158,7 +784,12 @@
             <processor_version>N/A</processor_version>
          </gtm_profile>
       </gtm>
-      <periphs name="Peripherals" version="14.0" enabled="true" update_project_code="true">
+      <ice name="ICE" version="1.0" enabled="false" update_project_code="true">
+         <ice_profile>
+            <processor_version>N/A</processor_version>
+         </ice_profile>
+      </ice>
+      <periphs name="Peripherals" version="15.0" enabled="true" update_project_code="true">
          <dependencies>
             <dependency resourceType="SWComponent" resourceId="platform.driver.dio" description="dio is not found in the toolchain/IDE project. The project will not compile!" problem_level="2" source="Peripherals">
                <feature name="enabled" evaluation="equal">
@@ -3268,6 +2899,7 @@
                            <setting name="PwmDutycycleUpdatedEndperiod" value="false"/>
                            <setting name="PwmPeriodUpdatedEndperiod" value="true"/>
                            <setting name="PwmNotificationSupported" value="false"/>
+                           <setting name="PwmFaultNotificationSupported" value="false"/>
                            <setting name="PwmEnableUserModeSupport" value="false"/>
                            <array name="PwmLowPowerStatesSupport"/>
                            <array name="PwmPowerStateAsynchTransitionMode"/>
@@ -3328,7 +2960,7 @@
                                  <setting name="PwmHwChannel" value="/Pwm/Pwm/PwmChannelConfigSet/PwmEmios_0/PwmEmiosChannels_3"/>
                                  <array name="PwmChannelClass"/>
                                  <setting name="PwmPeriodInTicks" value="true"/>
-                                 <setting name="PwmPeriodDefault" value="16000.0"/>
+                                 <setting name="PwmPeriodDefault" value="16000"/>
                                  <setting name="PwmDutycycleDefault" value="5"/>
                                  <setting name="PwmPolarity" value="PWM_HIGH"/>
                                  <setting name="PwmIdleState" value="PWM_LOW"/>
@@ -3347,7 +2979,7 @@
                                        <setting name="EmiosChId" value="CH_1"/>
                                        <setting name="EmiosChMode" value="EMIOS_PWM_IP_MODE_OPWMB"/>
                                        <setting name="EmiosChFlagGeneration" value="Trailing_Edge"/>
-                                       <setting name="EmiosChCounterBus" value="EMIOS_PWM_IP_BUS_BCDE"/>
+                                       <setting name="EmiosChCounterBus" value="EMIOS_PWM_IP_BUS_BCD"/>
                                        <array name="PwmEmiosBusRef">
                                           <setting name="0" value="/Mcl/Mcl/MclConfig/EmiosCommon_0/EmiosMclMasterBus_0"/>
                                        </array>
@@ -3366,7 +2998,7 @@
                                        <setting name="EmiosChId" value="CH_2"/>
                                        <setting name="EmiosChMode" value="EMIOS_PWM_IP_MODE_OPWMB"/>
                                        <setting name="EmiosChFlagGeneration" value="Trailing_Edge"/>
-                                       <setting name="EmiosChCounterBus" value="EMIOS_PWM_IP_BUS_BCDE"/>
+                                       <setting name="EmiosChCounterBus" value="EMIOS_PWM_IP_BUS_BCD"/>
                                        <array name="PwmEmiosBusRef">
                                           <setting name="0" value="/Mcl/Mcl/MclConfig/EmiosCommon_0/EmiosMclMasterBus_0"/>
                                        </array>
@@ -3385,7 +3017,7 @@
                                        <setting name="EmiosChId" value="CH_3"/>
                                        <setting name="EmiosChMode" value="EMIOS_PWM_IP_MODE_OPWMB"/>
                                        <setting name="EmiosChFlagGeneration" value="Trailing_Edge"/>
-                                       <setting name="EmiosChCounterBus" value="EMIOS_PWM_IP_BUS_BCDE"/>
+                                       <setting name="EmiosChCounterBus" value="EMIOS_PWM_IP_BUS_BCD"/>
                                        <array name="PwmEmiosBusRef">
                                           <setting name="0" value="/Mcl/Mcl/MclConfig/EmiosCommon_0/EmiosMclMasterBus_0"/>
                                        </array>
@@ -3435,7 +3067,7 @@
                            <setting name="PwmSetPeriodAndDuty" value="false"/>
                            <setting name="PwmVersionInfoApi" value="false"/>
                            <setting name="PwmGetChannelStateApi" value="false"/>
-                           <setting name="PwmSetDutyCycle_NoUpdate" value="false"/>
+                           <setting name="PwmSetDutyCycle_NoUpdate" value="true"/>
                            <setting name="PwmSetPeriodAndDuty_NoUpdate" value="false"/>
                            <setting name="PwmSetDutyPhaseShift" value="true"/>
                            <setting name="PwmSetChannelDeadTime" value="false"/>
@@ -4191,36 +3823,36 @@
                            <array name="AdcKernelEcucPartitionRef"/>
                            <array name="AdcPowerStateConfig"/>
                         </struct>
-                        <array name="AdcInterrupt">
+                        <array name="AdcHwConfiguration">
                            <struct name="0">
-                              <setting name="Name" value="AdcInterrupt_0"/>
-                              <setting name="AdcInterruptSource" value="ADC0_EOC"/>
-                              <setting name="AdcInterruptEnable" value="false"/>
+                              <setting name="Name" value="AdcHwConfiguration_0"/>
+                              <setting name="AdcHwConfiguredId" value="ADC0"/>
+                              <setting name="AdcNormalInterruptEnable" value="false"/>
+                              <setting name="AdcInjectedInterruptEnable" value="false"/>
+                              <setting name="AdcFifoFullInterruptEnable" value="false"/>
+                              <setting name="CtuFifoOfInterruptEnable" value="false"/>
+                              <setting name="WdgThresholdEnable" value="false"/>
+                              <setting name="DmaTransferEnable" value="false"/>
                            </struct>
                            <struct name="1">
-                              <setting name="Name" value="AdcInterrupt_1"/>
-                              <setting name="AdcInterruptSource" value="ADC0_WD"/>
-                              <setting name="AdcInterruptEnable" value="false"/>
+                              <setting name="Name" value="AdcHwConfiguration_1"/>
+                              <setting name="AdcHwConfiguredId" value="ADC1"/>
+                              <setting name="AdcNormalInterruptEnable" value="false"/>
+                              <setting name="AdcInjectedInterruptEnable" value="false"/>
+                              <setting name="AdcFifoFullInterruptEnable" value="false"/>
+                              <setting name="CtuFifoOfInterruptEnable" value="false"/>
+                              <setting name="WdgThresholdEnable" value="false"/>
+                              <setting name="DmaTransferEnable" value="false"/>
                            </struct>
                            <struct name="2">
-                              <setting name="Name" value="AdcInterrupt_2"/>
-                              <setting name="AdcInterruptSource" value="ADC1_EOC"/>
-                              <setting name="AdcInterruptEnable" value="false"/>
-                           </struct>
-                           <struct name="3">
-                              <setting name="Name" value="AdcInterrupt_3"/>
-                              <setting name="AdcInterruptSource" value="ADC1_WD"/>
-                              <setting name="AdcInterruptEnable" value="false"/>
-                           </struct>
-                           <struct name="4">
-                              <setting name="Name" value="AdcInterrupt_4"/>
-                              <setting name="AdcInterruptSource" value="ADC2_EOC"/>
-                              <setting name="AdcInterruptEnable" value="false"/>
-                           </struct>
-                           <struct name="5">
-                              <setting name="Name" value="AdcInterrupt_5"/>
-                              <setting name="AdcInterruptSource" value="ADC2_WD"/>
-                              <setting name="AdcInterruptEnable" value="false"/>
+                              <setting name="Name" value="AdcHwConfiguration_2"/>
+                              <setting name="AdcHwConfiguredId" value="ADC2"/>
+                              <setting name="AdcNormalInterruptEnable" value="false"/>
+                              <setting name="AdcInjectedInterruptEnable" value="false"/>
+                              <setting name="AdcFifoFullInterruptEnable" value="false"/>
+                              <setting name="CtuFifoOfInterruptEnable" value="false"/>
+                              <setting name="WdgThresholdEnable" value="false"/>
+                              <setting name="DmaTransferEnable" value="false"/>
                            </struct>
                         </array>
                         <struct name="AdcPublishedInformation">
@@ -4245,6 +3877,7 @@
                            <setting name="Name" value="AutosarExt"/>
                            <setting name="AdcTimeoutMethod" value="OSIF_COUNTER_SYSTEM"/>
                            <setting name="AdcTimeoutVal" value="1500000"/>
+                           <setting name="AdcSarEnable" value="true"/>
                            <setting name="AdcSarIpDevErrorDetect" value="false"/>
                            <setting name="SdadcEnable" value="false"/>
                            <setting name="SdadcIpDevErrorDetect" value="false"/>
@@ -4254,6 +3887,7 @@
                            <array name="SdadcDspssInitDmaChannelId"/>
                            <setting name="BctuIpDevErrorDetect" value="false"/>
                            <setting name="AdcMultiPartitionSupport" value="false"/>
+                           <setting name="AdcMaxPartitions" value="1"/>
                            <setting name="AdcEnableGroupDependentChannelNames" value="false"/>
                            <setting name="AdcBypassAbortChainCheck" value="false"/>
                            <setting name="AdcConvTimeOnce" value="true"/>
@@ -4266,6 +3900,7 @@
                            <setting name="AdcUseSoftwareInjectedGroups" value="false"/>
                            <setting name="AdcUseHardwareNormalGroups" value="false"/>
                            <setting name="AdcEnableUserModeSupport" value="false"/>
+                           <setting name="CtuEnableDmaTransferMode" value="false"/>
                            <setting name="AdcSetHwUnitPowerModeApi" value="false"/>
                            <setting name="AdcEnableChDisableChApi" value="false"/>
                            <setting name="AdcGetInjectedConvStatusApi" value="false"/>
@@ -4273,12 +3908,12 @@
                            <setting name="AdcEnableCtuTrigAutosarExtApi" value="false"/>
                            <setting name="AdcCtuHardwareTriggerOptimization" value="false"/>
                            <setting name="AdcEnableCtuControlModeApi" value="true"/>
-                           <setting name="CtuEnableDmaTransferMode" value="false"/>
                            <setting name="AdcEnableWatchdogApi" value="false"/>
                            <setting name="AdcEnableSetChannel" value="false"/>
                            <setting name="AdcEnableDualClockMode" value="false"/>
-                           <setting name="AdcEnableCalibration" value="false"/>
+                           <setting name="AdcEnableCalibration" value="true"/>
                            <setting name="AdcEnableAsyncCalibration" value="false"/>
+                           <setting name="AdcSetUserGainAndOffset" value="false"/>
                            <setting name="AdcEnableApplyCalibration" value="false"/>
                            <setting name="AdcEnableSelfTest" value="false"/>
                            <setting name="AdcEnableReadRawDataApi" value="false"/>
@@ -4347,6 +3982,8 @@
                            <setting name="McuEnterLowPowerMode" value="true"/>
                            <setting name="McuTimeout" value="50000"/>
                            <setting name="McuEnableUserModeSupport" value="false"/>
+                           <setting name="McuMultiPartitionSupport" value="false"/>
+                           <array name="McuInitEcucPartitionRef"/>
                            <setting name="McuPerformResetApi" value="false"/>
                            <setting name="McuCalloutBeforePerformReset" value="false"/>
                            <setting name="McuPerformResetCallout" value="NULL_PTR"/>
@@ -4535,6 +4172,7 @@
                               <struct name="0">
                                  <setting name="Name" value="McuClockSettingConfig_0"/>
                                  <setting name="Configuration" value="McuClockSettingConfig_0"/>
+                                 <array name="McuClockEcucPartitionRef"/>
                                  <struct name="McuFIRC">
                                     <setting name="Name" value="McuFIRC"/>
                                     <setting name="McuFircUnderMcuControl" value="true"/>
@@ -4747,6 +4385,7 @@
                                  <setting name="McuMainCoreSelect" value="CM7_0"/>
                                  <setting name="McuCoreLockStepEnable" value="false"/>
                                  <setting name="McuEnableSleepOnExit" value="false"/>
+                                 <array name="McuPowerEcucPartitionRef"/>
                                  <struct name="McuPartitionConfiguration">
                                     <setting name="Name" value="McuPartitionConfiguration"/>
                                     <struct name="McuPartition0Config">
@@ -5430,696 +5069,6 @@
                                     <setting name="McuGlobalPadkeepingEnable" value="false"/>
                                  </struct>
                               </struct>
-                              <struct name="1">
-                                 <setting name="Name" value="McuModeSettingConf_1"/>
-                                 <setting name="McuMode" value="1"/>
-                                 <setting name="McuPowerMode" value="STANDBY"/>
-                                 <setting name="McuMainCoreSelect" value="CM7_0"/>
-                                 <setting name="McuCoreLockStepEnable" value="false"/>
-                                 <setting name="McuEnableSleepOnExit" value="false"/>
-                                 <struct name="McuPartitionConfiguration">
-                                    <setting name="Name" value="McuPartitionConfiguration"/>
-                                    <struct name="McuPartition0Config">
-                                       <setting name="Name" value="McuPartition0Config"/>
-                                       <setting name="McuPartitionUnderMcuControl" value="true"/>
-                                       <setting name="McuPartitionPowerUnderMcuControl" value="true"/>
-                                       <setting name="McuPrtnCofb1UnderMcuControl" value="true"/>
-                                       <setting name="McuPartitionClockEnable" value="true"/>
-                                       <struct name="McuCore0Configuration">
-                                          <setting name="Name" value="McuCore0Configuration"/>
-                                          <setting name="McuCoreUnderMcuControl" value="true"/>
-                                          <setting name="McuCoreClockEnable" value="false"/>
-                                          <setting name="McuCoreBootAddress" value="0"/>
-                                          <setting name="McuCoreBootAddressLinkerSym" value=""/>
-                                       </struct>
-                                    </struct>
-                                    <struct name="McuPartition1Config">
-                                       <setting name="Name" value="McuPartition1Config"/>
-                                       <setting name="McuPartitionUnderMcuControl" value="true"/>
-                                       <setting name="McuPartitionPowerUnderMcuControl" value="true"/>
-                                       <setting name="McuPrtnCofb0UnderMcuControl" value="true"/>
-                                       <setting name="McuPrtnCofb1UnderMcuControl" value="true"/>
-                                       <setting name="McuPrtnCofb2UnderMcuControl" value="true"/>
-                                       <setting name="McuPrtnCofb3UnderMcuControl" value="true"/>
-                                       <setting name="McuPartitionClockEnable" value="true"/>
-                                    </struct>
-                                    <struct name="McuPartition2Config">
-                                       <setting name="Name" value="McuPartition2Config"/>
-                                       <setting name="McuPartitionUnderMcuControl" value="true"/>
-                                       <setting name="McuPartitionPowerUnderMcuControl" value="true"/>
-                                       <setting name="McuPrtnCofb0UnderMcuControl" value="true"/>
-                                       <setting name="McuPrtnCofb1UnderMcuControl" value="true"/>
-                                       <setting name="McuPartitionClockEnable" value="true"/>
-                                    </struct>
-                                    <array name="McuPeripheral">
-                                       <struct name="0">
-                                          <setting name="Name" value="McuPeripheral_0"/>
-                                          <setting name="McuPeripheralName" value="TRGMUX"/>
-                                          <setting name="McuModeEntrySlot" value="PRTN0_COFB1_REQ32"/>
-                                          <setting name="McuPeripheralClockEnable" value="false"/>
-                                       </struct>
-                                       <struct name="1">
-                                          <setting name="Name" value="McuPeripheral_1"/>
-                                          <setting name="McuPeripheralName" value="BCTU"/>
-                                          <setting name="McuModeEntrySlot" value="PRTN0_COFB1_REQ33"/>
-                                          <setting name="McuPeripheralClockEnable" value="false"/>
-                                       </struct>
-                                       <struct name="2">
-                                          <setting name="Name" value="McuPeripheral_2"/>
-                                          <setting name="McuPeripheralName" value="EMIOS_0"/>
-                                          <setting name="McuModeEntrySlot" value="PRTN0_COFB1_REQ34"/>
-                                          <setting name="McuPeripheralClockEnable" value="false"/>
-                                       </struct>
-                                       <struct name="3">
-                                          <setting name="Name" value="McuPeripheral_3"/>
-                                          <setting name="McuPeripheralName" value="EMIOS_1"/>
-                                          <setting name="McuModeEntrySlot" value="PRTN0_COFB1_REQ35"/>
-                                          <setting name="McuPeripheralClockEnable" value="false"/>
-                                       </struct>
-                                       <struct name="4">
-                                          <setting name="Name" value="McuPeripheral_4"/>
-                                          <setting name="McuPeripheralName" value="EMIOS_2"/>
-                                          <setting name="McuModeEntrySlot" value="PRTN0_COFB1_REQ36"/>
-                                          <setting name="McuPeripheralClockEnable" value="false"/>
-                                       </struct>
-                                       <struct name="5">
-                                          <setting name="Name" value="McuPeripheral_5"/>
-                                          <setting name="McuPeripheralName" value="LCU_0"/>
-                                          <setting name="McuModeEntrySlot" value="PRTN0_COFB1_REQ38"/>
-                                          <setting name="McuPeripheralClockEnable" value="false"/>
-                                       </struct>
-                                       <struct name="6">
-                                          <setting name="Name" value="McuPeripheral_6"/>
-                                          <setting name="McuPeripheralName" value="LCU_1"/>
-                                          <setting name="McuModeEntrySlot" value="PRTN0_COFB1_REQ39"/>
-                                          <setting name="McuPeripheralClockEnable" value="false"/>
-                                       </struct>
-                                       <struct name="7">
-                                          <setting name="Name" value="McuPeripheral_7"/>
-                                          <setting name="McuPeripheralName" value="ADC_0"/>
-                                          <setting name="McuModeEntrySlot" value="PRTN0_COFB1_REQ40"/>
-                                          <setting name="McuPeripheralClockEnable" value="false"/>
-                                       </struct>
-                                       <struct name="8">
-                                          <setting name="Name" value="McuPeripheral_8"/>
-                                          <setting name="McuPeripheralName" value="ADC_1"/>
-                                          <setting name="McuModeEntrySlot" value="PRTN0_COFB1_REQ41"/>
-                                          <setting name="McuPeripheralClockEnable" value="false"/>
-                                       </struct>
-                                       <struct name="9">
-                                          <setting name="Name" value="McuPeripheral_9"/>
-                                          <setting name="McuPeripheralName" value="ADC_2"/>
-                                          <setting name="McuModeEntrySlot" value="PRTN0_COFB1_REQ42"/>
-                                          <setting name="McuPeripheralClockEnable" value="false"/>
-                                       </struct>
-                                       <struct name="10">
-                                          <setting name="Name" value="McuPeripheral_10"/>
-                                          <setting name="McuPeripheralName" value="PIT_0"/>
-                                          <setting name="McuModeEntrySlot" value="PRTN0_COFB1_REQ44"/>
-                                          <setting name="McuPeripheralClockEnable" value="true"/>
-                                       </struct>
-                                       <struct name="11">
-                                          <setting name="Name" value="McuPeripheral_11"/>
-                                          <setting name="McuPeripheralName" value="PIT_1"/>
-                                          <setting name="McuModeEntrySlot" value="PRTN0_COFB1_REQ45"/>
-                                          <setting name="McuPeripheralClockEnable" value="false"/>
-                                       </struct>
-                                       <struct name="12">
-                                          <setting name="Name" value="McuPeripheral_12"/>
-                                          <setting name="McuPeripheralName" value="EDMA"/>
-                                          <setting name="McuModeEntrySlot" value="PRTN1_COFB0_REQ3"/>
-                                          <setting name="McuPeripheralClockEnable" value="false"/>
-                                       </struct>
-                                       <struct name="13">
-                                          <setting name="Name" value="McuPeripheral_13"/>
-                                          <setting name="McuPeripheralName" value="EDMA_TCD_0"/>
-                                          <setting name="McuModeEntrySlot" value="PRTN1_COFB0_REQ4"/>
-                                          <setting name="McuPeripheralClockEnable" value="false"/>
-                                       </struct>
-                                       <struct name="14">
-                                          <setting name="Name" value="McuPeripheral_14"/>
-                                          <setting name="McuPeripheralName" value="EDMA_TCD_1"/>
-                                          <setting name="McuModeEntrySlot" value="PRTN1_COFB0_REQ5"/>
-                                          <setting name="McuPeripheralClockEnable" value="false"/>
-                                       </struct>
-                                       <struct name="15">
-                                          <setting name="Name" value="McuPeripheral_15"/>
-                                          <setting name="McuPeripheralName" value="EDMA_TCD_2"/>
-                                          <setting name="McuModeEntrySlot" value="PRTN1_COFB0_REQ6"/>
-                                          <setting name="McuPeripheralClockEnable" value="false"/>
-                                       </struct>
-                                       <struct name="16">
-                                          <setting name="Name" value="McuPeripheral_16"/>
-                                          <setting name="McuPeripheralName" value="EDMA_TCD_3"/>
-                                          <setting name="McuModeEntrySlot" value="PRTN1_COFB0_REQ7"/>
-                                          <setting name="McuPeripheralClockEnable" value="false"/>
-                                       </struct>
-                                       <struct name="17">
-                                          <setting name="Name" value="McuPeripheral_17"/>
-                                          <setting name="McuPeripheralName" value="EDMA_TCD_4"/>
-                                          <setting name="McuModeEntrySlot" value="PRTN1_COFB0_REQ8"/>
-                                          <setting name="McuPeripheralClockEnable" value="false"/>
-                                       </struct>
-                                       <struct name="18">
-                                          <setting name="Name" value="McuPeripheral_18"/>
-                                          <setting name="McuPeripheralName" value="EDMA_TCD_5"/>
-                                          <setting name="McuModeEntrySlot" value="PRTN1_COFB0_REQ9"/>
-                                          <setting name="McuPeripheralClockEnable" value="false"/>
-                                       </struct>
-                                       <struct name="19">
-                                          <setting name="Name" value="McuPeripheral_19"/>
-                                          <setting name="McuPeripheralName" value="EDMA_TCD_6"/>
-                                          <setting name="McuModeEntrySlot" value="PRTN1_COFB0_REQ10"/>
-                                          <setting name="McuPeripheralClockEnable" value="false"/>
-                                       </struct>
-                                       <struct name="20">
-                                          <setting name="Name" value="McuPeripheral_20"/>
-                                          <setting name="McuPeripheralName" value="EDMA_TCD_7"/>
-                                          <setting name="McuModeEntrySlot" value="PRTN1_COFB0_REQ11"/>
-                                          <setting name="McuPeripheralClockEnable" value="false"/>
-                                       </struct>
-                                       <struct name="21">
-                                          <setting name="Name" value="McuPeripheral_21"/>
-                                          <setting name="McuPeripheralName" value="EDMA_TCD_8"/>
-                                          <setting name="McuModeEntrySlot" value="PRTN1_COFB0_REQ12"/>
-                                          <setting name="McuPeripheralClockEnable" value="false"/>
-                                       </struct>
-                                       <struct name="22">
-                                          <setting name="Name" value="McuPeripheral_22"/>
-                                          <setting name="McuPeripheralName" value="EDMA_TCD_9"/>
-                                          <setting name="McuModeEntrySlot" value="PRTN1_COFB0_REQ13"/>
-                                          <setting name="McuPeripheralClockEnable" value="false"/>
-                                       </struct>
-                                       <struct name="23">
-                                          <setting name="Name" value="McuPeripheral_23"/>
-                                          <setting name="McuPeripheralName" value="EDMA_TCD_10"/>
-                                          <setting name="McuModeEntrySlot" value="PRTN1_COFB0_REQ14"/>
-                                          <setting name="McuPeripheralClockEnable" value="false"/>
-                                       </struct>
-                                       <struct name="24">
-                                          <setting name="Name" value="McuPeripheral_24"/>
-                                          <setting name="McuPeripheralName" value="EDMA_TCD_11"/>
-                                          <setting name="McuModeEntrySlot" value="PRTN1_COFB0_REQ15"/>
-                                          <setting name="McuPeripheralClockEnable" value="false"/>
-                                       </struct>
-                                       <struct name="25">
-                                          <setting name="Name" value="McuPeripheral_25"/>
-                                          <setting name="McuPeripheralName" value="SDA_AP"/>
-                                          <setting name="McuModeEntrySlot" value="PRTN1_COFB0_REQ21"/>
-                                          <setting name="McuPeripheralClockEnable" value="false"/>
-                                       </struct>
-                                       <struct name="26">
-                                          <setting name="Name" value="McuPeripheral_26"/>
-                                          <setting name="McuPeripheralName" value="EIM_0"/>
-                                          <setting name="McuModeEntrySlot" value="PRTN1_COFB0_REQ22"/>
-                                          <setting name="McuPeripheralClockEnable" value="false"/>
-                                       </struct>
-                                       <struct name="27">
-                                          <setting name="Name" value="McuPeripheral_27"/>
-                                          <setting name="McuPeripheralName" value="ERM_0"/>
-                                          <setting name="McuModeEntrySlot" value="PRTN1_COFB0_REQ23"/>
-                                          <setting name="McuPeripheralClockEnable" value="false"/>
-                                       </struct>
-                                       <struct name="28">
-                                          <setting name="Name" value="McuPeripheral_28"/>
-                                          <setting name="McuPeripheralName" value="MSCM"/>
-                                          <setting name="McuModeEntrySlot" value="PRTN1_COFB0_REQ24"/>
-                                          <setting name="McuPeripheralClockEnable" value="true"/>
-                                       </struct>
-                                       <struct name="29">
-                                          <setting name="Name" value="McuPeripheral_29"/>
-                                          <setting name="McuPeripheralName" value="SWT_0"/>
-                                          <setting name="McuModeEntrySlot" value="PRTN1_COFB0_REQ28"/>
-                                          <setting name="McuPeripheralClockEnable" value="false"/>
-                                       </struct>
-                                       <struct name="30">
-                                          <setting name="Name" value="McuPeripheral_30"/>
-                                          <setting name="McuPeripheralName" value="STM_0"/>
-                                          <setting name="McuModeEntrySlot" value="PRTN1_COFB0_REQ29"/>
-                                          <setting name="McuPeripheralClockEnable" value="true"/>
-                                       </struct>
-                                       <struct name="31">
-                                          <setting name="Name" value="McuPeripheral_31"/>
-                                          <setting name="McuPeripheralName" value="INTM"/>
-                                          <setting name="McuModeEntrySlot" value="PRTN1_COFB0_REQ31"/>
-                                          <setting name="McuPeripheralClockEnable" value="false"/>
-                                       </struct>
-                                       <struct name="32">
-                                          <setting name="Name" value="McuPeripheral_32"/>
-                                          <setting name="McuPeripheralName" value="DMAMUX_0"/>
-                                          <setting name="McuModeEntrySlot" value="PRTN1_COFB1_REQ32"/>
-                                          <setting name="McuPeripheralClockEnable" value="true"/>
-                                       </struct>
-                                       <struct name="33">
-                                          <setting name="Name" value="McuPeripheral_33"/>
-                                          <setting name="McuPeripheralName" value="DMAMUX_1"/>
-                                          <setting name="McuModeEntrySlot" value="PRTN1_COFB1_REQ33"/>
-                                          <setting name="McuPeripheralClockEnable" value="false"/>
-                                       </struct>
-                                       <struct name="34">
-                                          <setting name="Name" value="McuPeripheral_34"/>
-                                          <setting name="McuPeripheralName" value="RTC"/>
-                                          <setting name="McuModeEntrySlot" value="PRTN1_COFB1_REQ34"/>
-                                          <setting name="McuPeripheralClockEnable" value="true"/>
-                                       </struct>
-                                       <struct name="35">
-                                          <setting name="Name" value="McuPeripheral_35"/>
-                                          <setting name="McuPeripheralName" value="SIUL2_VIRTWRAPPER_PDAC3"/>
-                                          <setting name="McuModeEntrySlot" value="PRTN1_COFB1_REQ42"/>
-                                          <setting name="McuPeripheralClockEnable" value="false"/>
-                                       </struct>
-                                       <struct name="36">
-                                          <setting name="Name" value="McuPeripheral_36"/>
-                                          <setting name="McuPeripheralName" value="WKPU"/>
-                                          <setting name="McuModeEntrySlot" value="PRTN1_COFB1_REQ45"/>
-                                          <setting name="McuPeripheralClockEnable" value="false"/>
-                                       </struct>
-                                       <struct name="37">
-                                          <setting name="Name" value="McuPeripheral_37"/>
-                                          <setting name="McuPeripheralName" value="CMUs"/>
-                                          <setting name="McuModeEntrySlot" value="PRTN1_COFB1_REQ47"/>
-                                          <setting name="McuPeripheralClockEnable" value="false"/>
-                                       </struct>
-                                       <struct name="38">
-                                          <setting name="Name" value="McuPeripheral_38"/>
-                                          <setting name="McuPeripheralName" value="TSPC"/>
-                                          <setting name="McuModeEntrySlot" value="PRTN1_COFB1_REQ49"/>
-                                          <setting name="McuPeripheralClockEnable" value="false"/>
-                                       </struct>
-                                       <struct name="39">
-                                          <setting name="Name" value="McuPeripheral_39"/>
-                                          <setting name="McuPeripheralName" value="SXOSC"/>
-                                          <setting name="McuModeEntrySlot" value="PRTN1_COFB1_REQ51"/>
-                                          <setting name="McuPeripheralClockEnable" value="true"/>
-                                       </struct>
-                                       <struct name="40">
-                                          <setting name="Name" value="McuPeripheral_40"/>
-                                          <setting name="McuPeripheralName" value="FXOSC"/>
-                                          <setting name="McuModeEntrySlot" value="PRTN1_COFB1_REQ53"/>
-                                          <setting name="McuPeripheralClockEnable" value="true"/>
-                                       </struct>
-                                       <struct name="41">
-                                          <setting name="Name" value="McuPeripheral_41"/>
-                                          <setting name="McuPeripheralName" value="PLL"/>
-                                          <setting name="McuModeEntrySlot" value="PRTN1_COFB1_REQ56"/>
-                                          <setting name="McuPeripheralClockEnable" value="false"/>
-                                       </struct>
-                                       <struct name="42">
-                                          <setting name="Name" value="McuPeripheral_42"/>
-                                          <setting name="McuPeripheralName" value="PIT_2"/>
-                                          <setting name="McuModeEntrySlot" value="PRTN1_COFB1_REQ63"/>
-                                          <setting name="McuPeripheralClockEnable" value="false"/>
-                                       </struct>
-                                       <struct name="43">
-                                          <setting name="Name" value="McuPeripheral_43"/>
-                                          <setting name="McuPeripheralName" value="FlexCAN_0"/>
-                                          <setting name="McuModeEntrySlot" value="PRTN1_COFB2_REQ65"/>
-                                          <setting name="McuPeripheralClockEnable" value="false"/>
-                                       </struct>
-                                       <struct name="44">
-                                          <setting name="Name" value="McuPeripheral_44"/>
-                                          <setting name="McuPeripheralName" value="FlexCAN_1"/>
-                                          <setting name="McuModeEntrySlot" value="PRTN1_COFB2_REQ66"/>
-                                          <setting name="McuPeripheralClockEnable" value="false"/>
-                                       </struct>
-                                       <struct name="45">
-                                          <setting name="Name" value="McuPeripheral_45"/>
-                                          <setting name="McuPeripheralName" value="FlexCAN_2"/>
-                                          <setting name="McuModeEntrySlot" value="PRTN1_COFB2_REQ67"/>
-                                          <setting name="McuPeripheralClockEnable" value="false"/>
-                                       </struct>
-                                       <struct name="46">
-                                          <setting name="Name" value="McuPeripheral_46"/>
-                                          <setting name="McuPeripheralName" value="FlexCAN_3"/>
-                                          <setting name="McuModeEntrySlot" value="PRTN1_COFB2_REQ68"/>
-                                          <setting name="McuPeripheralClockEnable" value="false"/>
-                                       </struct>
-                                       <struct name="47">
-                                          <setting name="Name" value="McuPeripheral_47"/>
-                                          <setting name="McuPeripheralName" value="FlexCAN_4"/>
-                                          <setting name="McuModeEntrySlot" value="PRTN1_COFB2_REQ69"/>
-                                          <setting name="McuPeripheralClockEnable" value="false"/>
-                                       </struct>
-                                       <struct name="48">
-                                          <setting name="Name" value="McuPeripheral_48"/>
-                                          <setting name="McuPeripheralName" value="FlexCAN_5"/>
-                                          <setting name="McuModeEntrySlot" value="PRTN1_COFB2_REQ70"/>
-                                          <setting name="McuPeripheralClockEnable" value="false"/>
-                                       </struct>
-                                       <struct name="49">
-                                          <setting name="Name" value="McuPeripheral_49"/>
-                                          <setting name="McuPeripheralName" value="FlexIO"/>
-                                          <setting name="McuModeEntrySlot" value="PRTN1_COFB2_REQ73"/>
-                                          <setting name="McuPeripheralClockEnable" value="false"/>
-                                       </struct>
-                                       <struct name="50">
-                                          <setting name="Name" value="McuPeripheral_50"/>
-                                          <setting name="McuPeripheralName" value="LPUART_0"/>
-                                          <setting name="McuModeEntrySlot" value="PRTN1_COFB2_REQ74"/>
-                                          <setting name="McuPeripheralClockEnable" value="false"/>
-                                       </struct>
-                                       <struct name="51">
-                                          <setting name="Name" value="McuPeripheral_51"/>
-                                          <setting name="McuPeripheralName" value="LPUART_1"/>
-                                          <setting name="McuModeEntrySlot" value="PRTN1_COFB2_REQ75"/>
-                                          <setting name="McuPeripheralClockEnable" value="false"/>
-                                       </struct>
-                                       <struct name="52">
-                                          <setting name="Name" value="McuPeripheral_52"/>
-                                          <setting name="McuPeripheralName" value="LPUART_2"/>
-                                          <setting name="McuModeEntrySlot" value="PRTN1_COFB2_REQ76"/>
-                                          <setting name="McuPeripheralClockEnable" value="false"/>
-                                       </struct>
-                                       <struct name="53">
-                                          <setting name="Name" value="McuPeripheral_53"/>
-                                          <setting name="McuPeripheralName" value="LPUART_3"/>
-                                          <setting name="McuModeEntrySlot" value="PRTN1_COFB2_REQ77"/>
-                                          <setting name="McuPeripheralClockEnable" value="false"/>
-                                       </struct>
-                                       <struct name="54">
-                                          <setting name="Name" value="McuPeripheral_54"/>
-                                          <setting name="McuPeripheralName" value="LPUART_4"/>
-                                          <setting name="McuModeEntrySlot" value="PRTN1_COFB2_REQ78"/>
-                                          <setting name="McuPeripheralClockEnable" value="false"/>
-                                       </struct>
-                                       <struct name="55">
-                                          <setting name="Name" value="McuPeripheral_55"/>
-                                          <setting name="McuPeripheralName" value="LPUART_5"/>
-                                          <setting name="McuModeEntrySlot" value="PRTN1_COFB2_REQ79"/>
-                                          <setting name="McuPeripheralClockEnable" value="false"/>
-                                       </struct>
-                                       <struct name="56">
-                                          <setting name="Name" value="McuPeripheral_56"/>
-                                          <setting name="McuPeripheralName" value="LPUART_6"/>
-                                          <setting name="McuModeEntrySlot" value="PRTN1_COFB2_REQ80"/>
-                                          <setting name="McuPeripheralClockEnable" value="false"/>
-                                       </struct>
-                                       <struct name="57">
-                                          <setting name="Name" value="McuPeripheral_57"/>
-                                          <setting name="McuPeripheralName" value="LPUART_7"/>
-                                          <setting name="McuModeEntrySlot" value="PRTN1_COFB2_REQ81"/>
-                                          <setting name="McuPeripheralClockEnable" value="false"/>
-                                       </struct>
-                                       <struct name="58">
-                                          <setting name="Name" value="McuPeripheral_58"/>
-                                          <setting name="McuPeripheralName" value="LPI2C_0"/>
-                                          <setting name="McuModeEntrySlot" value="PRTN1_COFB2_REQ84"/>
-                                          <setting name="McuPeripheralClockEnable" value="false"/>
-                                       </struct>
-                                       <struct name="59">
-                                          <setting name="Name" value="McuPeripheral_59"/>
-                                          <setting name="McuPeripheralName" value="LPI2C_1"/>
-                                          <setting name="McuModeEntrySlot" value="PRTN1_COFB2_REQ85"/>
-                                          <setting name="McuPeripheralClockEnable" value="false"/>
-                                       </struct>
-                                       <struct name="60">
-                                          <setting name="Name" value="McuPeripheral_60"/>
-                                          <setting name="McuPeripheralName" value="LPSPI_0"/>
-                                          <setting name="McuModeEntrySlot" value="PRTN1_COFB2_REQ86"/>
-                                          <setting name="McuPeripheralClockEnable" value="false"/>
-                                       </struct>
-                                       <struct name="61">
-                                          <setting name="Name" value="McuPeripheral_61"/>
-                                          <setting name="McuPeripheralName" value="LPSPI_1"/>
-                                          <setting name="McuModeEntrySlot" value="PRTN1_COFB2_REQ87"/>
-                                          <setting name="McuPeripheralClockEnable" value="false"/>
-                                       </struct>
-                                       <struct name="62">
-                                          <setting name="Name" value="McuPeripheral_62"/>
-                                          <setting name="McuPeripheralName" value="LPSPI_2"/>
-                                          <setting name="McuModeEntrySlot" value="PRTN1_COFB2_REQ88"/>
-                                          <setting name="McuPeripheralClockEnable" value="false"/>
-                                       </struct>
-                                       <struct name="63">
-                                          <setting name="Name" value="McuPeripheral_63"/>
-                                          <setting name="McuPeripheralName" value="LPSPI_3"/>
-                                          <setting name="McuModeEntrySlot" value="PRTN1_COFB2_REQ89"/>
-                                          <setting name="McuPeripheralClockEnable" value="false"/>
-                                       </struct>
-                                       <struct name="64">
-                                          <setting name="Name" value="McuPeripheral_64"/>
-                                          <setting name="McuPeripheralName" value="SAI_0"/>
-                                          <setting name="McuModeEntrySlot" value="PRTN1_COFB2_REQ91"/>
-                                          <setting name="McuPeripheralClockEnable" value="false"/>
-                                       </struct>
-                                       <struct name="65">
-                                          <setting name="Name" value="McuPeripheral_65"/>
-                                          <setting name="McuPeripheralName" value="LPCMP_0"/>
-                                          <setting name="McuModeEntrySlot" value="PRTN1_COFB2_REQ92"/>
-                                          <setting name="McuPeripheralClockEnable" value="false"/>
-                                       </struct>
-                                       <struct name="66">
-                                          <setting name="Name" value="McuPeripheral_66"/>
-                                          <setting name="McuPeripheralName" value="LPCMP_1"/>
-                                          <setting name="McuModeEntrySlot" value="PRTN1_COFB2_REQ93"/>
-                                          <setting name="McuPeripheralClockEnable" value="false"/>
-                                       </struct>
-                                       <struct name="67">
-                                          <setting name="Name" value="McuPeripheral_67"/>
-                                          <setting name="McuPeripheralName" value="TEMPSENSE"/>
-                                          <setting name="McuModeEntrySlot" value="PRTN1_COFB2_REQ95"/>
-                                          <setting name="McuPeripheralClockEnable" value="false"/>
-                                       </struct>
-                                       <struct name="68">
-                                          <setting name="Name" value="McuPeripheral_68"/>
-                                          <setting name="McuPeripheralName" value="CRC"/>
-                                          <setting name="McuModeEntrySlot" value="PRTN1_COFB3_REQ96"/>
-                                          <setting name="McuPeripheralClockEnable" value="false"/>
-                                       </struct>
-                                       <struct name="69">
-                                          <setting name="Name" value="McuPeripheral_69"/>
-                                          <setting name="McuPeripheralName" value="STCU_2"/>
-                                          <setting name="McuModeEntrySlot" value="PRTN1_COFB3_REQ104"/>
-                                          <setting name="McuPeripheralClockEnable" value="false"/>
-                                       </struct>
-                                       <struct name="70">
-                                          <setting name="Name" value="McuPeripheral_70"/>
-                                          <setting name="McuPeripheralName" value="EDMA_TCD_12"/>
-                                          <setting name="McuModeEntrySlot" value="PRTN2_COFB0_REQ4"/>
-                                          <setting name="McuPeripheralClockEnable" value="false"/>
-                                       </struct>
-                                       <struct name="71">
-                                          <setting name="Name" value="McuPeripheral_71"/>
-                                          <setting name="McuPeripheralName" value="EDMA_TCD_13"/>
-                                          <setting name="McuModeEntrySlot" value="PRTN2_COFB0_REQ5"/>
-                                          <setting name="McuPeripheralClockEnable" value="false"/>
-                                       </struct>
-                                       <struct name="72">
-                                          <setting name="Name" value="McuPeripheral_72"/>
-                                          <setting name="McuPeripheralName" value="EDMA_TCD_14"/>
-                                          <setting name="McuModeEntrySlot" value="PRTN2_COFB0_REQ6"/>
-                                          <setting name="McuPeripheralClockEnable" value="false"/>
-                                       </struct>
-                                       <struct name="73">
-                                          <setting name="Name" value="McuPeripheral_73"/>
-                                          <setting name="McuPeripheralName" value="EDMA_TCD_15"/>
-                                          <setting name="McuModeEntrySlot" value="PRTN2_COFB0_REQ7"/>
-                                          <setting name="McuPeripheralClockEnable" value="false"/>
-                                       </struct>
-                                       <struct name="74">
-                                          <setting name="Name" value="McuPeripheral_74"/>
-                                          <setting name="McuPeripheralName" value="EDMA_TCD_16"/>
-                                          <setting name="McuModeEntrySlot" value="PRTN2_COFB0_REQ8"/>
-                                          <setting name="McuPeripheralClockEnable" value="false"/>
-                                       </struct>
-                                       <struct name="75">
-                                          <setting name="Name" value="McuPeripheral_75"/>
-                                          <setting name="McuPeripheralName" value="EDMA_TCD_17"/>
-                                          <setting name="McuModeEntrySlot" value="PRTN2_COFB0_REQ9"/>
-                                          <setting name="McuPeripheralClockEnable" value="false"/>
-                                       </struct>
-                                       <struct name="76">
-                                          <setting name="Name" value="McuPeripheral_76"/>
-                                          <setting name="McuPeripheralName" value="EDMA_TCD_18"/>
-                                          <setting name="McuModeEntrySlot" value="PRTN2_COFB0_REQ10"/>
-                                          <setting name="McuPeripheralClockEnable" value="false"/>
-                                       </struct>
-                                       <struct name="77">
-                                          <setting name="Name" value="McuPeripheral_77"/>
-                                          <setting name="McuPeripheralName" value="EDMA_TCD_19"/>
-                                          <setting name="McuModeEntrySlot" value="PRTN2_COFB0_REQ11"/>
-                                          <setting name="McuPeripheralClockEnable" value="false"/>
-                                       </struct>
-                                       <struct name="78">
-                                          <setting name="Name" value="McuPeripheral_78"/>
-                                          <setting name="McuPeripheralName" value="EDMA_TCD_20"/>
-                                          <setting name="McuModeEntrySlot" value="PRTN2_COFB0_REQ12"/>
-                                          <setting name="McuPeripheralClockEnable" value="false"/>
-                                       </struct>
-                                       <struct name="79">
-                                          <setting name="Name" value="McuPeripheral_79"/>
-                                          <setting name="McuPeripheralName" value="EDMA_TCD_21"/>
-                                          <setting name="McuModeEntrySlot" value="PRTN2_COFB0_REQ13"/>
-                                          <setting name="McuPeripheralClockEnable" value="false"/>
-                                       </struct>
-                                       <struct name="80">
-                                          <setting name="Name" value="McuPeripheral_80"/>
-                                          <setting name="McuPeripheralName" value="EDMA_TCD_22"/>
-                                          <setting name="McuModeEntrySlot" value="PRTN2_COFB0_REQ14"/>
-                                          <setting name="McuPeripheralClockEnable" value="false"/>
-                                       </struct>
-                                       <struct name="81">
-                                          <setting name="Name" value="McuPeripheral_81"/>
-                                          <setting name="McuPeripheralName" value="EDMA_TCD_23"/>
-                                          <setting name="McuModeEntrySlot" value="PRTN2_COFB0_REQ15"/>
-                                          <setting name="McuPeripheralClockEnable" value="false"/>
-                                       </struct>
-                                       <struct name="82">
-                                          <setting name="Name" value="McuPeripheral_82"/>
-                                          <setting name="McuPeripheralName" value="EDMA_TCD_24"/>
-                                          <setting name="McuModeEntrySlot" value="PRTN2_COFB0_REQ16"/>
-                                          <setting name="McuPeripheralClockEnable" value="false"/>
-                                       </struct>
-                                       <struct name="83">
-                                          <setting name="Name" value="McuPeripheral_83"/>
-                                          <setting name="McuPeripheralName" value="EDMA_TCD_25"/>
-                                          <setting name="McuModeEntrySlot" value="PRTN2_COFB0_REQ17"/>
-                                          <setting name="McuPeripheralClockEnable" value="false"/>
-                                       </struct>
-                                       <struct name="84">
-                                          <setting name="Name" value="McuPeripheral_84"/>
-                                          <setting name="McuPeripheralName" value="EDMA_TCD_26"/>
-                                          <setting name="McuModeEntrySlot" value="PRTN2_COFB0_REQ18"/>
-                                          <setting name="McuPeripheralClockEnable" value="false"/>
-                                       </struct>
-                                       <struct name="85">
-                                          <setting name="Name" value="McuPeripheral_85"/>
-                                          <setting name="McuPeripheralName" value="EDMA_TCD_27"/>
-                                          <setting name="McuModeEntrySlot" value="PRTN2_COFB0_REQ19"/>
-                                          <setting name="McuPeripheralClockEnable" value="false"/>
-                                       </struct>
-                                       <struct name="86">
-                                          <setting name="Name" value="McuPeripheral_86"/>
-                                          <setting name="McuPeripheralName" value="EDMA_TCD_28"/>
-                                          <setting name="McuModeEntrySlot" value="PRTN2_COFB0_REQ20"/>
-                                          <setting name="McuPeripheralClockEnable" value="false"/>
-                                       </struct>
-                                       <struct name="87">
-                                          <setting name="Name" value="McuPeripheral_87"/>
-                                          <setting name="McuPeripheralName" value="EDMA_TCD_29"/>
-                                          <setting name="McuModeEntrySlot" value="PRTN2_COFB0_REQ21"/>
-                                          <setting name="McuPeripheralClockEnable" value="false"/>
-                                       </struct>
-                                       <struct name="88">
-                                          <setting name="Name" value="McuPeripheral_88"/>
-                                          <setting name="McuPeripheralName" value="EDMA_TCD_30"/>
-                                          <setting name="McuModeEntrySlot" value="PRTN2_COFB0_REQ22"/>
-                                          <setting name="McuPeripheralClockEnable" value="false"/>
-                                       </struct>
-                                       <struct name="89">
-                                          <setting name="Name" value="McuPeripheral_89"/>
-                                          <setting name="McuPeripheralName" value="EDMA_TCD_31"/>
-                                          <setting name="McuModeEntrySlot" value="PRTN2_COFB0_REQ23"/>
-                                          <setting name="McuPeripheralClockEnable" value="false"/>
-                                       </struct>
-                                       <struct name="90">
-                                          <setting name="Name" value="McuPeripheral_90"/>
-                                          <setting name="McuPeripheralName" value="SEMA_42"/>
-                                          <setting name="McuModeEntrySlot" value="PRTN2_COFB0_REQ24"/>
-                                          <setting name="McuPeripheralClockEnable" value="true"/>
-                                       </struct>
-                                       <struct name="91">
-                                          <setting name="Name" value="McuPeripheral_91"/>
-                                          <setting name="McuPeripheralName" value="STM_1"/>
-                                          <setting name="McuModeEntrySlot" value="PRTN2_COFB0_REQ29"/>
-                                          <setting name="McuPeripheralClockEnable" value="true"/>
-                                       </struct>
-                                       <struct name="92">
-                                          <setting name="Name" value="McuPeripheral_92"/>
-                                          <setting name="McuPeripheralName" value="EMAC"/>
-                                          <setting name="McuModeEntrySlot" value="PRTN2_COFB1_REQ32"/>
-                                          <setting name="McuPeripheralClockEnable" value="false"/>
-                                       </struct>
-                                       <struct name="93">
-                                          <setting name="Name" value="McuPeripheral_93"/>
-                                          <setting name="McuPeripheralName" value="LPUART_8"/>
-                                          <setting name="McuModeEntrySlot" value="PRTN2_COFB1_REQ35"/>
-                                          <setting name="McuPeripheralClockEnable" value="false"/>
-                                       </struct>
-                                       <struct name="94">
-                                          <setting name="Name" value="McuPeripheral_94"/>
-                                          <setting name="McuPeripheralName" value="LPUART_9"/>
-                                          <setting name="McuModeEntrySlot" value="PRTN2_COFB1_REQ36"/>
-                                          <setting name="McuPeripheralClockEnable" value="false"/>
-                                       </struct>
-                                       <struct name="95">
-                                          <setting name="Name" value="McuPeripheral_95"/>
-                                          <setting name="McuPeripheralName" value="LPUART_10"/>
-                                          <setting name="McuModeEntrySlot" value="PRTN2_COFB1_REQ37"/>
-                                          <setting name="McuPeripheralClockEnable" value="true"/>
-                                       </struct>
-                                       <struct name="96">
-                                          <setting name="Name" value="McuPeripheral_96"/>
-                                          <setting name="McuPeripheralName" value="LPUART_11"/>
-                                          <setting name="McuModeEntrySlot" value="PRTN2_COFB1_REQ38"/>
-                                          <setting name="McuPeripheralClockEnable" value="false"/>
-                                       </struct>
-                                       <struct name="97">
-                                          <setting name="Name" value="McuPeripheral_97"/>
-                                          <setting name="McuPeripheralName" value="LPUART_12"/>
-                                          <setting name="McuModeEntrySlot" value="PRTN2_COFB1_REQ39"/>
-                                          <setting name="McuPeripheralClockEnable" value="false"/>
-                                       </struct>
-                                       <struct name="98">
-                                          <setting name="Name" value="McuPeripheral_98"/>
-                                          <setting name="McuPeripheralName" value="LPUART_13"/>
-                                          <setting name="McuModeEntrySlot" value="PRTN2_COFB1_REQ40"/>
-                                          <setting name="McuPeripheralClockEnable" value="false"/>
-                                       </struct>
-                                       <struct name="99">
-                                          <setting name="Name" value="McuPeripheral_99"/>
-                                          <setting name="McuPeripheralName" value="LPUART_14"/>
-                                          <setting name="McuModeEntrySlot" value="PRTN2_COFB1_REQ41"/>
-                                          <setting name="McuPeripheralClockEnable" value="false"/>
-                                       </struct>
-                                       <struct name="100">
-                                          <setting name="Name" value="McuPeripheral_100"/>
-                                          <setting name="McuPeripheralName" value="LPUART_15"/>
-                                          <setting name="McuModeEntrySlot" value="PRTN2_COFB1_REQ42"/>
-                                          <setting name="McuPeripheralClockEnable" value="false"/>
-                                       </struct>
-                                       <struct name="101">
-                                          <setting name="Name" value="McuPeripheral_101"/>
-                                          <setting name="McuPeripheralName" value="LPSPI_4"/>
-                                          <setting name="McuModeEntrySlot" value="PRTN2_COFB1_REQ47"/>
-                                          <setting name="McuPeripheralClockEnable" value="false"/>
-                                       </struct>
-                                       <struct name="102">
-                                          <setting name="Name" value="McuPeripheral_102"/>
-                                          <setting name="McuPeripheralName" value="LPSPI_5"/>
-                                          <setting name="McuModeEntrySlot" value="PRTN2_COFB1_REQ48"/>
-                                          <setting name="McuPeripheralClockEnable" value="false"/>
-                                       </struct>
-                                       <struct name="103">
-                                          <setting name="Name" value="McuPeripheral_103"/>
-                                          <setting name="McuPeripheralName" value="QuadSPI"/>
-                                          <setting name="McuModeEntrySlot" value="PRTN2_COFB1_REQ51"/>
-                                          <setting name="McuPeripheralClockEnable" value="false"/>
-                                       </struct>
-                                       <struct name="104">
-                                          <setting name="Name" value="McuPeripheral_104"/>
-                                          <setting name="McuPeripheralName" value="SAI_1"/>
-                                          <setting name="McuModeEntrySlot" value="PRTN2_COFB1_REQ55"/>
-                                          <setting name="McuPeripheralClockEnable" value="false"/>
-                                       </struct>
-                                       <struct name="105">
-                                          <setting name="Name" value="McuPeripheral_105"/>
-                                          <setting name="McuPeripheralName" value="LPCMP_2"/>
-                                          <setting name="McuModeEntrySlot" value="PRTN2_COFB1_REQ58"/>
-                                          <setting name="McuPeripheralClockEnable" value="false"/>
-                                       </struct>
-                                    </array>
-                                 </struct>
-                                 <struct name="McuDcmGprConfiguration">
-                                    <setting name="Name" value="McuDcmGprConfiguration"/>
-                                    <setting name="McuDcmGprUnderMcuControl" value="true"/>
-                                    <setting name="McuBootBaseAddress" value="0"/>
-                                    <setting name="McuPMC_TRIM_RGM_DCF_BYP_STDBY_EXTControl" value="false"/>
-                                    <setting name="McuFIRC_TRIM_BYP_STDBY_EXTControl" value="false"/>
-                                    <setting name="McuDCM_SCAN_BYP_STDBY_EXTControl" value="false"/>
-                                    <setting name="McuGlobalPadkeepingEnable" value="false"/>
-                                 </struct>
-                              </struct>
                            </array>
                            <array name="McuRamSectorSettingConf">
                               <struct name="0">
@@ -6131,6 +5080,7 @@
                                  <setting name="McuRamSectionWriteSize" value="8"/>
                                  <setting name="McuRamSectionBaseAddrLinkerSym" value=""/>
                                  <setting name="McuRamSectionSizeLinkerSym" value=""/>
+                                 <array name="McuRamEcucPartitionRef"/>
                               </struct>
                            </array>
                            <struct name="McuResetConfig">
@@ -6192,6 +5142,7 @@
                            <setting name="OsIfUseGetUserId" value="GET_CORE_ID"/>
                            <setting name="OsIfInstanceId" value="0"/>
                            <setting name="OsIfGetPhysicalCoreIdEnable" value="false"/>
+                           <setting name="OsIfSoftwareSemaphoredEnable" value="false"/>
                            <struct name="OsIfOperatingSystemType">
                               <setting name="Name" value="OsIfOperatingSystemType"/>
                               <setting name="Choice" value="OsIfBaremetalType"/>
@@ -6251,7 +5202,6 @@
                            <array name="CanEcucPartitionRef"/>
                            <array name="CanOsCounterRef"/>
                            <array name="CanSupportTTCANRef"/>
-                           <setting name="CanMBCountExtensionSupport" value="false"/>
                            <array name="CanApiEnableMbAbort">
                               <setting name="0" value="true"/>
                            </array>
@@ -6290,6 +5240,7 @@
                                  <setting name="CanControllerPrExcEn" value="false"/>
                                  <setting name="CanControllerEdgeFilter" value="false"/>
                                  <setting name="CanControllerFdISO" value="true"/>
+                                 <setting name="CanLowestBufferTransmittedFirst" value="false"/>
                                  <setting name="CanControllerDefaultBaudrate" value="/Can_43_FLEXCAN/Can/CanConfigSet/CanController_0/CanControllerBaudrateConfig_0"/>
                                  <array name="CanControllerEcucPartitionRef"/>
                                  <setting name="CanCpuClockRef" value="/Mcu/Mcu/McuModuleConfiguration/McuClockSettingConfig_0/FLEXCAN_PE_CLK0_2"/>
@@ -6382,41 +5333,49 @@
                                        <setting name="Name" value="CanHwFilter_0"/>
                                        <setting name="CanHwFilterCode" value="1008"/>
                                        <setting name="CanHwFilterMask" value="536870911"/>
+                                       <setting name="CanHwFilterIDE" value="false"/>
                                     </struct>
                                     <struct name="1">
                                        <setting name="Name" value="CanHwFilter_1"/>
                                        <setting name="CanHwFilterCode" value="1009"/>
                                        <setting name="CanHwFilterMask" value="536870911"/>
+                                       <setting name="CanHwFilterIDE" value="false"/>
                                     </struct>
                                     <struct name="2">
                                        <setting name="Name" value="CanHwFilter_2"/>
                                        <setting name="CanHwFilterCode" value="1010"/>
                                        <setting name="CanHwFilterMask" value="536870911"/>
+                                       <setting name="CanHwFilterIDE" value="false"/>
                                     </struct>
                                     <struct name="3">
                                        <setting name="Name" value="CanHwFilter_3"/>
                                        <setting name="CanHwFilterCode" value="1011"/>
                                        <setting name="CanHwFilterMask" value="536870911"/>
+                                       <setting name="CanHwFilterIDE" value="false"/>
                                     </struct>
                                     <struct name="4">
                                        <setting name="Name" value="CanHwFilter_4"/>
                                        <setting name="CanHwFilterCode" value="1012"/>
                                        <setting name="CanHwFilterMask" value="536870911"/>
+                                       <setting name="CanHwFilterIDE" value="false"/>
                                     </struct>
                                     <struct name="5">
                                        <setting name="Name" value="CanHwFilter_5"/>
                                        <setting name="CanHwFilterCode" value="1013"/>
                                        <setting name="CanHwFilterMask" value="536870911"/>
+                                       <setting name="CanHwFilterIDE" value="false"/>
                                     </struct>
                                     <struct name="6">
                                        <setting name="Name" value="CanHwFilter_6"/>
                                        <setting name="CanHwFilterCode" value="1014"/>
                                        <setting name="CanHwFilterMask" value="536870911"/>
+                                       <setting name="CanHwFilterIDE" value="false"/>
                                     </struct>
                                     <struct name="7">
                                        <setting name="Name" value="CanHwFilter_7"/>
                                        <setting name="CanHwFilterCode" value="1015"/>
                                        <setting name="CanHwFilterMask" value="536870911"/>
+                                       <setting name="CanHwFilterIDE" value="false"/>
                                     </struct>
                                  </array>
                                  <array name="CanTTHardwareObjectTrigger"/>
@@ -6444,6 +5403,7 @@
                                        <setting name="Name" value="CanHwFilter_0"/>
                                        <setting name="CanHwFilterCode" value="0"/>
                                        <setting name="CanHwFilterMask" value="0"/>
+                                       <setting name="CanHwFilterIDE" value="false"/>
                                     </struct>
                                  </array>
                                  <array name="CanTTHardwareObjectTrigger"/>
@@ -6469,6 +5429,7 @@
                                        <setting name="Name" value="CanHwFilter_0"/>
                                        <setting name="CanHwFilterCode" value="0"/>
                                        <setting name="CanHwFilterMask" value="0"/>
+                                       <setting name="CanHwFilterIDE" value="false"/>
                                     </struct>
                                  </array>
                                  <array name="CanTTHardwareObjectTrigger"/>
@@ -6543,6 +5504,7 @@
                            <setting name="PlatformMcmConfigurable" value="false"/>
                            <setting name="PlatformMpuM7Configurable" value="false"/>
                            <setting name="PlatformEnableIntCtrlConfiguration" value="true"/>
+                           <setting name="PlatformEnableMSIConfiguration" value="false"/>
                            <setting name="PlatformIpAPIsAvailable" value="false"/>
                            <setting name="PlatformEnableUserModeSupport" value="false"/>
                            <setting name="PlatformMulticoreSupport" value="false"/>
@@ -7602,19 +6564,19 @@
                         </array>
                      </config_set>
                   </instance>
-                  <instance name="Port" uuid="dff20924-0032-4c71-a7c8-e8cea5a0e098" type="Port" type_id="Port" mode="autosar" enabled="true" comment="" custom_name_enabled="true" editing_lock="false">
+                  <instance name="Port" uuid="83985576-b66a-49da-bffa-5f146ce41b99" type="Port" type_id="Port" mode="autosar" enabled="true" comment="" custom_name_enabled="false" editing_lock="false">
                      <config_set name="Port">
                         <setting name="Name" value="Port"/>
                         <struct name="ConfigTimeSupport">
-                           <setting name="POST_BUILD_VARIANT_USED" value="true"/>
+                           <setting name="POST_BUILD_VARIANT_USED" value="false"/>
                            <setting name="IMPLEMENTATION_CONFIG_VARIANT" value="VARIANT-PRE-COMPILE"/>
                         </struct>
                         <struct name="PortGeneral">
                            <setting name="Name" value="PortGeneral"/>
-                           <setting name="PortDevErrorDetect" value="false"/>
+                           <setting name="PortDevErrorDetect" value="true"/>
                            <setting name="SIUL2PortIPDevErrorDetect" value="false"/>
-                           <setting name="PortSetPinDirectionApi" value="false"/>
-                           <setting name="PortSetPinModeApi" value="false"/>
+                           <setting name="PortSetPinDirectionApi" value="true"/>
+                           <setting name="PortSetPinModeApi" value="true"/>
                            <setting name="PortVersionInfoApi" value="true"/>
                            <setting name="PortSetPinModeDoesNotTouchGpioLevel" value="false"/>
                            <setting name="PortSetAsUnusedPinApi" value="false"/>
@@ -7634,14 +6596,15 @@
                               <setting name="PortPinPue" value="false"/>
                               <setting name="PortPinPus" value="false"/>
                               <setting name="PortPinDirection" value="PORT_PIN_IN"/>
-                              <setting name="PortPinLevelValue" value="PORT_PIN_LEVEL_LOW"/>
+                              <setting name="PortPinLevelValue" value="PORT_PIN_LEVEL_HIGH"/>
+                              <setting name="PortPinMode" value="SKIP"/>
                            </struct>
                            <array name="PortContainer">
                               <struct name="0">
-                                 <setting name="Name" value="Dio_Pins"/>
+                                 <setting name="Name" value="Adc_Pins"/>
                                  <array name="PortPin">
                                     <struct name="0">
-                                       <setting name="Name" value="RGBLED0_RED"/>
+                                       <setting name="Name" value="PortPin_0"/>
                                        <setting name="PortPinPue" value="false"/>
                                        <setting name="PortPinPus" value="false"/>
                                        <setting name="PortPinSafeMode" value="false"/>
@@ -7649,12 +6612,37 @@
                                        <setting name="PortPinWithReadBack" value="false"/>
                                        <setting name="PortPinPke" value="false"/>
                                        <setting name="PortPinIfe" value="false"/>
-                                       <setting name="PortPinDirectionChangeable" value="false"/>
-                                       <setting name="PortPinModeChangeable" value="false"/>
+                                       <setting name="PortPinDirectionChangeable" value="true"/>
+                                       <setting name="PortPinModeChangeable" value="true"/>
                                        <setting name="PortPinInvertControl" value="false"/>
                                        <setting name="PortPinSiul2Instance" value="SIUL2_0"/>
                                        <setting name="PortPinId" value="1"/>
-                                       <setting name="PortPinPcr" value="29"/>
+                                       <setting name="PortPinInitialMode" value="PORT_GPIO_MODE"/>
+                                       <setting name="OBEGroupSelect" value="NO_OBE_GROUP"/>
+                                       <setting name="MscrPdacSlot" value="VIRTUAL_WRAPPER_PDAC0"/>
+                                       <setting name="ImcrPdacSlot" value="VIRTUAL_WRAPPER_PDAC0"/>
+                                       <array name="IGFSettings"/>
+                                       <array name="PortPinEcucPartitionRef"/>
+                                    </struct>
+                                 </array>
+                              </struct>
+                              <struct name="1">
+                                 <setting name="Name" value="Can_Pins"/>
+                                 <array name="PortPin">
+                                    <struct name="0">
+                                       <setting name="Name" value="PortPin_1"/>
+                                       <setting name="PortPinPue" value="false"/>
+                                       <setting name="PortPinPus" value="false"/>
+                                       <setting name="PortPinSafeMode" value="false"/>
+                                       <setting name="PortPinDse" value="false"/>
+                                       <setting name="PortPinWithReadBack" value="false"/>
+                                       <setting name="PortPinPke" value="false"/>
+                                       <setting name="PortPinIfe" value="false"/>
+                                       <setting name="PortPinDirectionChangeable" value="true"/>
+                                       <setting name="PortPinModeChangeable" value="true"/>
+                                       <setting name="PortPinInvertControl" value="false"/>
+                                       <setting name="PortPinSiul2Instance" value="SIUL2_0"/>
+                                       <setting name="PortPinId" value="2"/>
                                        <setting name="PortPinInitialMode" value="PORT_GPIO_MODE"/>
                                        <setting name="OBEGroupSelect" value="NO_OBE_GROUP"/>
                                        <setting name="MscrPdacSlot" value="VIRTUAL_WRAPPER_PDAC0"/>
@@ -7663,7 +6651,7 @@
                                        <array name="PortPinEcucPartitionRef"/>
                                     </struct>
                                     <struct name="1">
-                                       <setting name="Name" value="RGBLED0_GREEN"/>
+                                       <setting name="Name" value="PortPin_2"/>
                                        <setting name="PortPinPue" value="false"/>
                                        <setting name="PortPinPus" value="false"/>
                                        <setting name="PortPinSafeMode" value="false"/>
@@ -7671,12 +6659,11 @@
                                        <setting name="PortPinWithReadBack" value="false"/>
                                        <setting name="PortPinPke" value="false"/>
                                        <setting name="PortPinIfe" value="false"/>
-                                       <setting name="PortPinDirectionChangeable" value="false"/>
-                                       <setting name="PortPinModeChangeable" value="false"/>
+                                       <setting name="PortPinDirectionChangeable" value="true"/>
+                                       <setting name="PortPinModeChangeable" value="true"/>
                                        <setting name="PortPinInvertControl" value="false"/>
                                        <setting name="PortPinSiul2Instance" value="SIUL2_0"/>
-                                       <setting name="PortPinId" value="2"/>
-                                       <setting name="PortPinPcr" value="30"/>
+                                       <setting name="PortPinId" value="3"/>
                                        <setting name="PortPinInitialMode" value="PORT_GPIO_MODE"/>
                                        <setting name="OBEGroupSelect" value="NO_OBE_GROUP"/>
                                        <setting name="MscrPdacSlot" value="VIRTUAL_WRAPPER_PDAC0"/>
@@ -7685,29 +6672,7 @@
                                        <array name="PortPinEcucPartitionRef"/>
                                     </struct>
                                     <struct name="2">
-                                       <setting name="Name" value="RGBLED0_BLUE"/>
-                                       <setting name="PortPinPue" value="false"/>
-                                       <setting name="PortPinPus" value="false"/>
-                                       <setting name="PortPinSafeMode" value="false"/>
-                                       <setting name="PortPinDse" value="false"/>
-                                       <setting name="PortPinWithReadBack" value="false"/>
-                                       <setting name="PortPinPke" value="false"/>
-                                       <setting name="PortPinIfe" value="false"/>
-                                       <setting name="PortPinDirectionChangeable" value="false"/>
-                                       <setting name="PortPinModeChangeable" value="false"/>
-                                       <setting name="PortPinInvertControl" value="false"/>
-                                       <setting name="PortPinSiul2Instance" value="SIUL2_0"/>
-                                       <setting name="PortPinId" value="3"/>
-                                       <setting name="PortPinPcr" value="31"/>
-                                       <setting name="PortPinInitialMode" value="PORT_GPIO_MODE"/>
-                                       <setting name="OBEGroupSelect" value="NO_OBE_GROUP"/>
-                                       <setting name="MscrPdacSlot" value="VIRTUAL_WRAPPER_PDAC0"/>
-                                       <setting name="ImcrPdacSlot" value="VIRTUAL_WRAPPER_PDAC0"/>
-                                       <array name="IGFSettings"/>
-                                       <array name="PortPinEcucPartitionRef"/>
-                                    </struct>
-                                    <struct name="3">
-                                       <setting name="Name" value="RGBLED1_RED"/>
+                                       <setting name="Name" value="PortPin_3"/>
                                        <setting name="PortPinPue" value="false"/>
                                        <setting name="PortPinPus" value="false"/>
                                        <setting name="PortPinSafeMode" value="false"/>
@@ -7720,7 +6685,6 @@
                                        <setting name="PortPinInvertControl" value="false"/>
                                        <setting name="PortPinSiul2Instance" value="SIUL2_0"/>
                                        <setting name="PortPinId" value="4"/>
-                                       <setting name="PortPinPcr" value="50"/>
                                        <setting name="PortPinInitialMode" value="PORT_GPIO_MODE"/>
                                        <setting name="OBEGroupSelect" value="NO_OBE_GROUP"/>
                                        <setting name="MscrPdacSlot" value="VIRTUAL_WRAPPER_PDAC0"/>
@@ -7728,8 +6692,8 @@
                                        <array name="IGFSettings"/>
                                        <array name="PortPinEcucPartitionRef"/>
                                     </struct>
-                                    <struct name="4">
-                                       <setting name="Name" value="RGBLED1_GREEN"/>
+                                    <struct name="3">
+                                       <setting name="Name" value="PortPin_4"/>
                                        <setting name="PortPinPue" value="false"/>
                                        <setting name="PortPinPus" value="false"/>
                                        <setting name="PortPinSafeMode" value="false"/>
@@ -7742,7 +6706,6 @@
                                        <setting name="PortPinInvertControl" value="false"/>
                                        <setting name="PortPinSiul2Instance" value="SIUL2_0"/>
                                        <setting name="PortPinId" value="5"/>
-                                       <setting name="PortPinPcr" value="57"/>
                                        <setting name="PortPinInitialMode" value="PORT_GPIO_MODE"/>
                                        <setting name="OBEGroupSelect" value="NO_OBE_GROUP"/>
                                        <setting name="MscrPdacSlot" value="VIRTUAL_WRAPPER_PDAC0"/>
@@ -7750,8 +6713,8 @@
                                        <array name="IGFSettings"/>
                                        <array name="PortPinEcucPartitionRef"/>
                                     </struct>
-                                    <struct name="5">
-                                       <setting name="Name" value="RGBLED1_BLUE"/>
+                                    <struct name="4">
+                                       <setting name="Name" value="PortPin_5"/>
                                        <setting name="PortPinPue" value="false"/>
                                        <setting name="PortPinPus" value="false"/>
                                        <setting name="PortPinSafeMode" value="false"/>
@@ -7764,7 +6727,6 @@
                                        <setting name="PortPinInvertControl" value="false"/>
                                        <setting name="PortPinSiul2Instance" value="SIUL2_0"/>
                                        <setting name="PortPinId" value="6"/>
-                                       <setting name="PortPinPcr" value="140"/>
                                        <setting name="PortPinInitialMode" value="PORT_GPIO_MODE"/>
                                        <setting name="OBEGroupSelect" value="NO_OBE_GROUP"/>
                                        <setting name="MscrPdacSlot" value="VIRTUAL_WRAPPER_PDAC0"/>
@@ -7772,8 +6734,13 @@
                                        <array name="IGFSettings"/>
                                        <array name="PortPinEcucPartitionRef"/>
                                     </struct>
-                                    <struct name="6">
-                                       <setting name="Name" value="USER_SW0"/>
+                                 </array>
+                              </struct>
+                              <struct name="2">
+                                 <setting name="Name" value="Dio_Pins"/>
+                                 <array name="PortPin">
+                                    <struct name="0">
+                                       <setting name="Name" value="PortPin_6"/>
                                        <setting name="PortPinPue" value="false"/>
                                        <setting name="PortPinPus" value="false"/>
                                        <setting name="PortPinSafeMode" value="false"/>
@@ -7781,12 +6748,11 @@
                                        <setting name="PortPinWithReadBack" value="false"/>
                                        <setting name="PortPinPke" value="false"/>
                                        <setting name="PortPinIfe" value="false"/>
-                                       <setting name="PortPinDirectionChangeable" value="false"/>
-                                       <setting name="PortPinModeChangeable" value="false"/>
+                                       <setting name="PortPinDirectionChangeable" value="true"/>
+                                       <setting name="PortPinModeChangeable" value="true"/>
                                        <setting name="PortPinInvertControl" value="false"/>
                                        <setting name="PortPinSiul2Instance" value="SIUL2_0"/>
                                        <setting name="PortPinId" value="7"/>
-                                       <setting name="PortPinPcr" value="58"/>
                                        <setting name="PortPinInitialMode" value="PORT_GPIO_MODE"/>
                                        <setting name="OBEGroupSelect" value="NO_OBE_GROUP"/>
                                        <setting name="MscrPdacSlot" value="VIRTUAL_WRAPPER_PDAC0"/>
@@ -7794,8 +6760,8 @@
                                        <array name="IGFSettings"/>
                                        <array name="PortPinEcucPartitionRef"/>
                                     </struct>
-                                    <struct name="7">
-                                       <setting name="Name" value="USER_SW1"/>
+                                    <struct name="1">
+                                       <setting name="Name" value="PortPin_7"/>
                                        <setting name="PortPinPue" value="false"/>
                                        <setting name="PortPinPus" value="false"/>
                                        <setting name="PortPinSafeMode" value="false"/>
@@ -7803,12 +6769,11 @@
                                        <setting name="PortPinWithReadBack" value="false"/>
                                        <setting name="PortPinPke" value="false"/>
                                        <setting name="PortPinIfe" value="false"/>
-                                       <setting name="PortPinDirectionChangeable" value="false"/>
-                                       <setting name="PortPinModeChangeable" value="false"/>
+                                       <setting name="PortPinDirectionChangeable" value="true"/>
+                                       <setting name="PortPinModeChangeable" value="true"/>
                                        <setting name="PortPinInvertControl" value="false"/>
                                        <setting name="PortPinSiul2Instance" value="SIUL2_0"/>
                                        <setting name="PortPinId" value="8"/>
-                                       <setting name="PortPinPcr" value="51"/>
                                        <setting name="PortPinInitialMode" value="PORT_GPIO_MODE"/>
                                        <setting name="OBEGroupSelect" value="NO_OBE_GROUP"/>
                                        <setting name="MscrPdacSlot" value="VIRTUAL_WRAPPER_PDAC0"/>
@@ -7816,8 +6781,8 @@
                                        <array name="IGFSettings"/>
                                        <array name="PortPinEcucPartitionRef"/>
                                     </struct>
-                                    <struct name="8">
-                                       <setting name="Name" value="GD_RST"/>
+                                    <struct name="2">
+                                       <setting name="Name" value="PortPin_8"/>
                                        <setting name="PortPinPue" value="false"/>
                                        <setting name="PortPinPus" value="false"/>
                                        <setting name="PortPinSafeMode" value="false"/>
@@ -7830,7 +6795,6 @@
                                        <setting name="PortPinInvertControl" value="false"/>
                                        <setting name="PortPinSiul2Instance" value="SIUL2_0"/>
                                        <setting name="PortPinId" value="9"/>
-                                       <setting name="PortPinPcr" value="45"/>
                                        <setting name="PortPinInitialMode" value="PORT_GPIO_MODE"/>
                                        <setting name="OBEGroupSelect" value="NO_OBE_GROUP"/>
                                        <setting name="MscrPdacSlot" value="VIRTUAL_WRAPPER_PDAC0"/>
@@ -7838,8 +6802,8 @@
                                        <array name="IGFSettings"/>
                                        <array name="PortPinEcucPartitionRef"/>
                                     </struct>
-                                    <struct name="9">
-                                       <setting name="Name" value="GD_EN"/>
+                                    <struct name="3">
+                                       <setting name="Name" value="PortPin_9"/>
                                        <setting name="PortPinPue" value="false"/>
                                        <setting name="PortPinPus" value="false"/>
                                        <setting name="PortPinSafeMode" value="false"/>
@@ -7852,7 +6816,6 @@
                                        <setting name="PortPinInvertControl" value="false"/>
                                        <setting name="PortPinSiul2Instance" value="SIUL2_0"/>
                                        <setting name="PortPinId" value="10"/>
-                                       <setting name="PortPinPcr" value="44"/>
                                        <setting name="PortPinInitialMode" value="PORT_GPIO_MODE"/>
                                        <setting name="OBEGroupSelect" value="NO_OBE_GROUP"/>
                                        <setting name="MscrPdacSlot" value="VIRTUAL_WRAPPER_PDAC0"/>
@@ -7860,8 +6823,8 @@
                                        <array name="IGFSettings"/>
                                        <array name="PortPinEcucPartitionRef"/>
                                     </struct>
-                                    <struct name="10">
-                                       <setting name="Name" value="GD_CS"/>
+                                    <struct name="4">
+                                       <setting name="Name" value="PortPin_10"/>
                                        <setting name="PortPinPue" value="false"/>
                                        <setting name="PortPinPus" value="false"/>
                                        <setting name="PortPinSafeMode" value="false"/>
@@ -7874,144 +6837,6 @@
                                        <setting name="PortPinInvertControl" value="false"/>
                                        <setting name="PortPinSiul2Instance" value="SIUL2_0"/>
                                        <setting name="PortPinId" value="11"/>
-                                       <setting name="PortPinPcr" value="49"/>
-                                       <setting name="PortPinInitialMode" value="PORT_GPIO_MODE"/>
-                                       <setting name="OBEGroupSelect" value="NO_OBE_GROUP"/>
-                                       <setting name="MscrPdacSlot" value="VIRTUAL_WRAPPER_PDAC0"/>
-                                       <setting name="ImcrPdacSlot" value="VIRTUAL_WRAPPER_PDAC0"/>
-                                       <array name="IGFSettings"/>
-                                       <array name="PortPinEcucPartitionRef"/>
-                                    </struct>
-                                    <struct name="11">
-                                       <setting name="Name" value="PTB21Pin"/>
-                                       <setting name="PortPinPue" value="false"/>
-                                       <setting name="PortPinPus" value="false"/>
-                                       <setting name="PortPinSafeMode" value="false"/>
-                                       <setting name="PortPinDse" value="false"/>
-                                       <setting name="PortPinWithReadBack" value="false"/>
-                                       <setting name="PortPinPke" value="false"/>
-                                       <setting name="PortPinIfe" value="false"/>
-                                       <setting name="PortPinDirectionChangeable" value="true"/>
-                                       <setting name="PortPinModeChangeable" value="true"/>
-                                       <setting name="PortPinInvertControl" value="false"/>
-                                       <setting name="PortPinSiul2Instance" value="SIUL2_0"/>
-                                       <setting name="PortPinId" value="25"/>
-                                       <setting name="PortPinPcr" value="53"/>
-                                       <setting name="PortPinInitialMode" value="PORT_GPIO_MODE"/>
-                                       <setting name="OBEGroupSelect" value="NO_OBE_GROUP"/>
-                                       <setting name="MscrPdacSlot" value="VIRTUAL_WRAPPER_PDAC0"/>
-                                       <setting name="ImcrPdacSlot" value="VIRTUAL_WRAPPER_PDAC0"/>
-                                       <array name="IGFSettings"/>
-                                       <array name="PortPinEcucPartitionRef"/>
-                                    </struct>
-                                 </array>
-                              </struct>
-                              <struct name="1">
-                                 <setting name="Name" value="Lcu_Pins"/>
-                                 <array name="PortPin">
-                                    <struct name="0">
-                                       <setting name="Name" value="PWMA_LS"/>
-                                       <setting name="PortPinPue" value="false"/>
-                                       <setting name="PortPinPus" value="false"/>
-                                       <setting name="PortPinSafeMode" value="false"/>
-                                       <setting name="PortPinDse" value="false"/>
-                                       <setting name="PortPinWithReadBack" value="false"/>
-                                       <setting name="PortPinPke" value="false"/>
-                                       <setting name="PortPinIfe" value="false"/>
-                                       <setting name="PortPinDirectionChangeable" value="true"/>
-                                       <setting name="PortPinModeChangeable" value="true"/>
-                                       <setting name="PortPinInvertControl" value="false"/>
-                                       <setting name="PortPinSiul2Instance" value="SIUL2_0"/>
-                                       <setting name="PortPinId" value="19"/>
-                                       <setting name="PortPinPcr" value="99"/>
-                                       <setting name="PortPinInitialMode" value="PORT_GPIO_MODE"/>
-                                       <setting name="OBEGroupSelect" value="NO_OBE_GROUP"/>
-                                       <setting name="MscrPdacSlot" value="VIRTUAL_WRAPPER_PDAC0"/>
-                                       <setting name="ImcrPdacSlot" value="VIRTUAL_WRAPPER_PDAC0"/>
-                                       <array name="IGFSettings"/>
-                                       <array name="PortPinEcucPartitionRef"/>
-                                    </struct>
-                                    <struct name="1">
-                                       <setting name="Name" value="PWMA_HS"/>
-                                       <setting name="PortPinPue" value="false"/>
-                                       <setting name="PortPinPus" value="false"/>
-                                       <setting name="PortPinSafeMode" value="false"/>
-                                       <setting name="PortPinDse" value="false"/>
-                                       <setting name="PortPinWithReadBack" value="false"/>
-                                       <setting name="PortPinPke" value="false"/>
-                                       <setting name="PortPinIfe" value="false"/>
-                                       <setting name="PortPinDirectionChangeable" value="true"/>
-                                       <setting name="PortPinModeChangeable" value="true"/>
-                                       <setting name="PortPinInvertControl" value="false"/>
-                                       <setting name="PortPinSiul2Instance" value="SIUL2_0"/>
-                                       <setting name="PortPinId" value="20"/>
-                                       <setting name="PortPinPcr" value="98"/>
-                                       <setting name="PortPinInitialMode" value="PORT_GPIO_MODE"/>
-                                       <setting name="OBEGroupSelect" value="NO_OBE_GROUP"/>
-                                       <setting name="MscrPdacSlot" value="VIRTUAL_WRAPPER_PDAC0"/>
-                                       <setting name="ImcrPdacSlot" value="VIRTUAL_WRAPPER_PDAC0"/>
-                                       <array name="IGFSettings"/>
-                                       <array name="PortPinEcucPartitionRef"/>
-                                    </struct>
-                                    <struct name="2">
-                                       <setting name="Name" value="PWMB_LS"/>
-                                       <setting name="PortPinPue" value="false"/>
-                                       <setting name="PortPinPus" value="false"/>
-                                       <setting name="PortPinSafeMode" value="false"/>
-                                       <setting name="PortPinDse" value="false"/>
-                                       <setting name="PortPinWithReadBack" value="false"/>
-                                       <setting name="PortPinPke" value="false"/>
-                                       <setting name="PortPinIfe" value="false"/>
-                                       <setting name="PortPinDirectionChangeable" value="true"/>
-                                       <setting name="PortPinModeChangeable" value="true"/>
-                                       <setting name="PortPinInvertControl" value="false"/>
-                                       <setting name="PortPinSiul2Instance" value="SIUL2_0"/>
-                                       <setting name="PortPinId" value="21"/>
-                                       <setting name="PortPinPcr" value="3"/>
-                                       <setting name="PortPinInitialMode" value="PORT_GPIO_MODE"/>
-                                       <setting name="OBEGroupSelect" value="NO_OBE_GROUP"/>
-                                       <setting name="MscrPdacSlot" value="VIRTUAL_WRAPPER_PDAC0"/>
-                                       <setting name="ImcrPdacSlot" value="VIRTUAL_WRAPPER_PDAC0"/>
-                                       <array name="IGFSettings"/>
-                                       <array name="PortPinEcucPartitionRef"/>
-                                    </struct>
-                                    <struct name="3">
-                                       <setting name="Name" value="PWMB_HS"/>
-                                       <setting name="PortPinPue" value="false"/>
-                                       <setting name="PortPinPus" value="false"/>
-                                       <setting name="PortPinSafeMode" value="false"/>
-                                       <setting name="PortPinDse" value="false"/>
-                                       <setting name="PortPinWithReadBack" value="false"/>
-                                       <setting name="PortPinPke" value="false"/>
-                                       <setting name="PortPinIfe" value="false"/>
-                                       <setting name="PortPinDirectionChangeable" value="true"/>
-                                       <setting name="PortPinModeChangeable" value="true"/>
-                                       <setting name="PortPinInvertControl" value="false"/>
-                                       <setting name="PortPinSiul2Instance" value="SIUL2_0"/>
-                                       <setting name="PortPinId" value="22"/>
-                                       <setting name="PortPinPcr" value="2"/>
-                                       <setting name="PortPinInitialMode" value="PORT_GPIO_MODE"/>
-                                       <setting name="OBEGroupSelect" value="NO_OBE_GROUP"/>
-                                       <setting name="MscrPdacSlot" value="VIRTUAL_WRAPPER_PDAC0"/>
-                                       <setting name="ImcrPdacSlot" value="VIRTUAL_WRAPPER_PDAC0"/>
-                                       <array name="IGFSettings"/>
-                                       <array name="PortPinEcucPartitionRef"/>
-                                    </struct>
-                                    <struct name="4">
-                                       <setting name="Name" value="PWMC_LS"/>
-                                       <setting name="PortPinPue" value="false"/>
-                                       <setting name="PortPinPus" value="false"/>
-                                       <setting name="PortPinSafeMode" value="false"/>
-                                       <setting name="PortPinDse" value="false"/>
-                                       <setting name="PortPinWithReadBack" value="false"/>
-                                       <setting name="PortPinPke" value="false"/>
-                                       <setting name="PortPinIfe" value="false"/>
-                                       <setting name="PortPinDirectionChangeable" value="true"/>
-                                       <setting name="PortPinModeChangeable" value="true"/>
-                                       <setting name="PortPinInvertControl" value="false"/>
-                                       <setting name="PortPinSiul2Instance" value="SIUL2_0"/>
-                                       <setting name="PortPinId" value="23"/>
-                                       <setting name="PortPinPcr" value="0"/>
                                        <setting name="PortPinInitialMode" value="PORT_GPIO_MODE"/>
                                        <setting name="OBEGroupSelect" value="NO_OBE_GROUP"/>
                                        <setting name="MscrPdacSlot" value="VIRTUAL_WRAPPER_PDAC0"/>
@@ -8020,34 +6845,7 @@
                                        <array name="PortPinEcucPartitionRef"/>
                                     </struct>
                                     <struct name="5">
-                                       <setting name="Name" value="PWMC_HS"/>
-                                       <setting name="PortPinPue" value="false"/>
-                                       <setting name="PortPinPus" value="false"/>
-                                       <setting name="PortPinSafeMode" value="false"/>
-                                       <setting name="PortPinDse" value="false"/>
-                                       <setting name="PortPinWithReadBack" value="false"/>
-                                       <setting name="PortPinPke" value="false"/>
-                                       <setting name="PortPinIfe" value="false"/>
-                                       <setting name="PortPinDirectionChangeable" value="true"/>
-                                       <setting name="PortPinModeChangeable" value="true"/>
-                                       <setting name="PortPinInvertControl" value="false"/>
-                                       <setting name="PortPinSiul2Instance" value="SIUL2_0"/>
-                                       <setting name="PortPinId" value="24"/>
-                                       <setting name="PortPinPcr" value="1"/>
-                                       <setting name="PortPinInitialMode" value="PORT_GPIO_MODE"/>
-                                       <setting name="OBEGroupSelect" value="NO_OBE_GROUP"/>
-                                       <setting name="MscrPdacSlot" value="VIRTUAL_WRAPPER_PDAC0"/>
-                                       <setting name="ImcrPdacSlot" value="VIRTUAL_WRAPPER_PDAC0"/>
-                                       <array name="IGFSettings"/>
-                                       <array name="PortPinEcucPartitionRef"/>
-                                    </struct>
-                                 </array>
-                              </struct>
-                              <struct name="2">
-                                 <setting name="Name" value="Spi_Pins"/>
-                                 <array name="PortPin">
-                                    <struct name="0">
-                                       <setting name="Name" value="LPSPI1SCK"/>
+                                       <setting name="Name" value="PortPin_11"/>
                                        <setting name="PortPinPue" value="false"/>
                                        <setting name="PortPinPus" value="false"/>
                                        <setting name="PortPinSafeMode" value="false"/>
@@ -8060,7 +6858,6 @@
                                        <setting name="PortPinInvertControl" value="false"/>
                                        <setting name="PortPinSiul2Instance" value="SIUL2_0"/>
                                        <setting name="PortPinId" value="12"/>
-                                       <setting name="PortPinPcr" value="46"/>
                                        <setting name="PortPinInitialMode" value="PORT_GPIO_MODE"/>
                                        <setting name="OBEGroupSelect" value="NO_OBE_GROUP"/>
                                        <setting name="MscrPdacSlot" value="VIRTUAL_WRAPPER_PDAC0"/>
@@ -8068,8 +6865,8 @@
                                        <array name="IGFSettings"/>
                                        <array name="PortPinEcucPartitionRef"/>
                                     </struct>
-                                    <struct name="1">
-                                       <setting name="Name" value="LPSPI1SIN"/>
+                                    <struct name="6">
+                                       <setting name="Name" value="PortPin_12"/>
                                        <setting name="PortPinPue" value="false"/>
                                        <setting name="PortPinPus" value="false"/>
                                        <setting name="PortPinSafeMode" value="false"/>
@@ -8082,7 +6879,6 @@
                                        <setting name="PortPinInvertControl" value="false"/>
                                        <setting name="PortPinSiul2Instance" value="SIUL2_0"/>
                                        <setting name="PortPinId" value="13"/>
-                                       <setting name="PortPinPcr" value="47"/>
                                        <setting name="PortPinInitialMode" value="PORT_GPIO_MODE"/>
                                        <setting name="OBEGroupSelect" value="NO_OBE_GROUP"/>
                                        <setting name="MscrPdacSlot" value="VIRTUAL_WRAPPER_PDAC0"/>
@@ -8090,8 +6886,8 @@
                                        <array name="IGFSettings"/>
                                        <array name="PortPinEcucPartitionRef"/>
                                     </struct>
-                                    <struct name="2">
-                                       <setting name="Name" value="LPSPI1SOUT"/>
+                                    <struct name="7">
+                                       <setting name="Name" value="PortPin_13"/>
                                        <setting name="PortPinPue" value="false"/>
                                        <setting name="PortPinPus" value="false"/>
                                        <setting name="PortPinSafeMode" value="false"/>
@@ -8104,7 +6900,6 @@
                                        <setting name="PortPinInvertControl" value="false"/>
                                        <setting name="PortPinSiul2Instance" value="SIUL2_0"/>
                                        <setting name="PortPinId" value="14"/>
-                                       <setting name="PortPinPcr" value="48"/>
                                        <setting name="PortPinInitialMode" value="PORT_GPIO_MODE"/>
                                        <setting name="OBEGroupSelect" value="NO_OBE_GROUP"/>
                                        <setting name="MscrPdacSlot" value="VIRTUAL_WRAPPER_PDAC0"/>
@@ -8112,13 +6907,8 @@
                                        <array name="IGFSettings"/>
                                        <array name="PortPinEcucPartitionRef"/>
                                     </struct>
-                                 </array>
-                              </struct>
-                              <struct name="3">
-                                 <setting name="Name" value="Uart_Pins"/>
-                                 <array name="PortPin">
-                                    <struct name="0">
-                                       <setting name="Name" value="UART6_RX"/>
+                                    <struct name="8">
+                                       <setting name="Name" value="PortPin_14"/>
                                        <setting name="PortPinPue" value="false"/>
                                        <setting name="PortPinPus" value="false"/>
                                        <setting name="PortPinSafeMode" value="false"/>
@@ -8131,7 +6921,6 @@
                                        <setting name="PortPinInvertControl" value="false"/>
                                        <setting name="PortPinSiul2Instance" value="SIUL2_0"/>
                                        <setting name="PortPinId" value="15"/>
-                                       <setting name="PortPinPcr" value="15"/>
                                        <setting name="PortPinInitialMode" value="PORT_GPIO_MODE"/>
                                        <setting name="OBEGroupSelect" value="NO_OBE_GROUP"/>
                                        <setting name="MscrPdacSlot" value="VIRTUAL_WRAPPER_PDAC0"/>
@@ -8139,8 +6928,8 @@
                                        <array name="IGFSettings"/>
                                        <array name="PortPinEcucPartitionRef"/>
                                     </struct>
-                                    <struct name="1">
-                                       <setting name="Name" value="UART6_TX"/>
+                                    <struct name="9">
+                                       <setting name="Name" value="PortPin_15"/>
                                        <setting name="PortPinPue" value="false"/>
                                        <setting name="PortPinPus" value="false"/>
                                        <setting name="PortPinSafeMode" value="false"/>
@@ -8153,7 +6942,6 @@
                                        <setting name="PortPinInvertControl" value="false"/>
                                        <setting name="PortPinSiul2Instance" value="SIUL2_0"/>
                                        <setting name="PortPinId" value="16"/>
-                                       <setting name="PortPinPcr" value="16"/>
                                        <setting name="PortPinInitialMode" value="PORT_GPIO_MODE"/>
                                        <setting name="OBEGroupSelect" value="NO_OBE_GROUP"/>
                                        <setting name="MscrPdacSlot" value="VIRTUAL_WRAPPER_PDAC0"/>
@@ -8161,8 +6949,34 @@
                                        <array name="IGFSettings"/>
                                        <array name="PortPinEcucPartitionRef"/>
                                     </struct>
-                                    <struct name="2">
-                                       <setting name="Name" value="UART13_RX"/>
+                                    <struct name="10">
+                                       <setting name="Name" value="PortPin_31"/>
+                                       <setting name="PortPinPue" value="false"/>
+                                       <setting name="PortPinPus" value="false"/>
+                                       <setting name="PortPinSafeMode" value="false"/>
+                                       <setting name="PortPinDse" value="false"/>
+                                       <setting name="PortPinWithReadBack" value="false"/>
+                                       <setting name="PortPinPke" value="false"/>
+                                       <setting name="PortPinIfe" value="false"/>
+                                       <setting name="PortPinDirectionChangeable" value="true"/>
+                                       <setting name="PortPinModeChangeable" value="true"/>
+                                       <setting name="PortPinInvertControl" value="false"/>
+                                       <setting name="PortPinSiul2Instance" value="SIUL2_0"/>
+                                       <setting name="PortPinId" value="23"/>
+                                       <setting name="PortPinInitialMode" value="PORT_GPIO_MODE"/>
+                                       <setting name="OBEGroupSelect" value="NO_OBE_GROUP"/>
+                                       <setting name="MscrPdacSlot" value="VIRTUAL_WRAPPER_PDAC0"/>
+                                       <setting name="ImcrPdacSlot" value="VIRTUAL_WRAPPER_PDAC0"/>
+                                       <array name="IGFSettings"/>
+                                       <array name="PortPinEcucPartitionRef"/>
+                                    </struct>
+                                 </array>
+                              </struct>
+                              <struct name="3">
+                                 <setting name="Name" value="Pwm_Pins"/>
+                                 <array name="PortPin">
+                                    <struct name="0">
+                                       <setting name="Name" value="PortPin_16"/>
                                        <setting name="PortPinPue" value="false"/>
                                        <setting name="PortPinPus" value="false"/>
                                        <setting name="PortPinSafeMode" value="false"/>
@@ -8175,7 +6989,6 @@
                                        <setting name="PortPinInvertControl" value="false"/>
                                        <setting name="PortPinSiul2Instance" value="SIUL2_0"/>
                                        <setting name="PortPinId" value="17"/>
-                                       <setting name="PortPinPcr" value="91"/>
                                        <setting name="PortPinInitialMode" value="PORT_GPIO_MODE"/>
                                        <setting name="OBEGroupSelect" value="NO_OBE_GROUP"/>
                                        <setting name="MscrPdacSlot" value="VIRTUAL_WRAPPER_PDAC0"/>
@@ -8183,8 +6996,8 @@
                                        <array name="IGFSettings"/>
                                        <array name="PortPinEcucPartitionRef"/>
                                     </struct>
-                                    <struct name="3">
-                                       <setting name="Name" value="UART13_TX"/>
+                                    <struct name="1">
+                                       <setting name="Name" value="PortPin_17"/>
                                        <setting name="PortPinPue" value="false"/>
                                        <setting name="PortPinPus" value="false"/>
                                        <setting name="PortPinSafeMode" value="false"/>
@@ -8197,7 +7010,273 @@
                                        <setting name="PortPinInvertControl" value="false"/>
                                        <setting name="PortPinSiul2Instance" value="SIUL2_0"/>
                                        <setting name="PortPinId" value="18"/>
-                                       <setting name="PortPinPcr" value="90"/>
+                                       <setting name="PortPinInitialMode" value="PORT_GPIO_MODE"/>
+                                       <setting name="OBEGroupSelect" value="NO_OBE_GROUP"/>
+                                       <setting name="MscrPdacSlot" value="VIRTUAL_WRAPPER_PDAC0"/>
+                                       <setting name="ImcrPdacSlot" value="VIRTUAL_WRAPPER_PDAC0"/>
+                                       <array name="IGFSettings"/>
+                                       <array name="PortPinEcucPartitionRef"/>
+                                    </struct>
+                                    <struct name="2">
+                                       <setting name="Name" value="PortPin_18"/>
+                                       <setting name="PortPinPue" value="false"/>
+                                       <setting name="PortPinPus" value="false"/>
+                                       <setting name="PortPinSafeMode" value="false"/>
+                                       <setting name="PortPinDse" value="false"/>
+                                       <setting name="PortPinWithReadBack" value="false"/>
+                                       <setting name="PortPinPke" value="false"/>
+                                       <setting name="PortPinIfe" value="false"/>
+                                       <setting name="PortPinDirectionChangeable" value="true"/>
+                                       <setting name="PortPinModeChangeable" value="true"/>
+                                       <setting name="PortPinInvertControl" value="false"/>
+                                       <setting name="PortPinSiul2Instance" value="SIUL2_0"/>
+                                       <setting name="PortPinId" value="19"/>
+                                       <setting name="PortPinInitialMode" value="PORT_GPIO_MODE"/>
+                                       <setting name="OBEGroupSelect" value="NO_OBE_GROUP"/>
+                                       <setting name="MscrPdacSlot" value="VIRTUAL_WRAPPER_PDAC0"/>
+                                       <setting name="ImcrPdacSlot" value="VIRTUAL_WRAPPER_PDAC0"/>
+                                       <array name="IGFSettings"/>
+                                       <array name="PortPinEcucPartitionRef"/>
+                                    </struct>
+                                 </array>
+                              </struct>
+                              <struct name="4">
+                                 <setting name="Name" value="Spi_Pins"/>
+                                 <array name="PortPin">
+                                    <struct name="0">
+                                       <setting name="Name" value="PortPin_19"/>
+                                       <setting name="PortPinPue" value="false"/>
+                                       <setting name="PortPinPus" value="false"/>
+                                       <setting name="PortPinSafeMode" value="false"/>
+                                       <setting name="PortPinDse" value="false"/>
+                                       <setting name="PortPinWithReadBack" value="false"/>
+                                       <setting name="PortPinPke" value="false"/>
+                                       <setting name="PortPinIfe" value="false"/>
+                                       <setting name="PortPinDirectionChangeable" value="true"/>
+                                       <setting name="PortPinModeChangeable" value="true"/>
+                                       <setting name="PortPinInvertControl" value="false"/>
+                                       <setting name="PortPinSiul2Instance" value="SIUL2_0"/>
+                                       <setting name="PortPinId" value="20"/>
+                                       <setting name="PortPinInitialMode" value="PORT_GPIO_MODE"/>
+                                       <setting name="OBEGroupSelect" value="NO_OBE_GROUP"/>
+                                       <setting name="MscrPdacSlot" value="VIRTUAL_WRAPPER_PDAC0"/>
+                                       <setting name="ImcrPdacSlot" value="VIRTUAL_WRAPPER_PDAC0"/>
+                                       <array name="IGFSettings"/>
+                                       <array name="PortPinEcucPartitionRef"/>
+                                    </struct>
+                                    <struct name="1">
+                                       <setting name="Name" value="PortPin_20"/>
+                                       <setting name="PortPinPue" value="false"/>
+                                       <setting name="PortPinPus" value="false"/>
+                                       <setting name="PortPinSafeMode" value="false"/>
+                                       <setting name="PortPinDse" value="false"/>
+                                       <setting name="PortPinWithReadBack" value="false"/>
+                                       <setting name="PortPinPke" value="false"/>
+                                       <setting name="PortPinIfe" value="false"/>
+                                       <setting name="PortPinDirectionChangeable" value="true"/>
+                                       <setting name="PortPinModeChangeable" value="true"/>
+                                       <setting name="PortPinInvertControl" value="false"/>
+                                       <setting name="PortPinSiul2Instance" value="SIUL2_0"/>
+                                       <setting name="PortPinId" value="21"/>
+                                       <setting name="PortPinInitialMode" value="PORT_GPIO_MODE"/>
+                                       <setting name="OBEGroupSelect" value="NO_OBE_GROUP"/>
+                                       <setting name="MscrPdacSlot" value="VIRTUAL_WRAPPER_PDAC0"/>
+                                       <setting name="ImcrPdacSlot" value="VIRTUAL_WRAPPER_PDAC0"/>
+                                       <array name="IGFSettings"/>
+                                       <array name="PortPinEcucPartitionRef"/>
+                                    </struct>
+                                    <struct name="2">
+                                       <setting name="Name" value="PortPin_21"/>
+                                       <setting name="PortPinPue" value="false"/>
+                                       <setting name="PortPinPus" value="false"/>
+                                       <setting name="PortPinSafeMode" value="false"/>
+                                       <setting name="PortPinDse" value="false"/>
+                                       <setting name="PortPinWithReadBack" value="false"/>
+                                       <setting name="PortPinPke" value="false"/>
+                                       <setting name="PortPinIfe" value="false"/>
+                                       <setting name="PortPinDirectionChangeable" value="true"/>
+                                       <setting name="PortPinModeChangeable" value="true"/>
+                                       <setting name="PortPinInvertControl" value="false"/>
+                                       <setting name="PortPinSiul2Instance" value="SIUL2_0"/>
+                                       <setting name="PortPinId" value="22"/>
+                                       <setting name="PortPinInitialMode" value="PORT_GPIO_MODE"/>
+                                       <setting name="OBEGroupSelect" value="NO_OBE_GROUP"/>
+                                       <setting name="MscrPdacSlot" value="VIRTUAL_WRAPPER_PDAC0"/>
+                                       <setting name="ImcrPdacSlot" value="VIRTUAL_WRAPPER_PDAC0"/>
+                                       <array name="IGFSettings"/>
+                                       <array name="PortPinEcucPartitionRef"/>
+                                    </struct>
+                                 </array>
+                              </struct>
+                              <struct name="5">
+                                 <setting name="Name" value="Uart_Pins"/>
+                                 <array name="PortPin">
+                                    <struct name="0">
+                                       <setting name="Name" value="PortPin_23"/>
+                                       <setting name="PortPinPue" value="false"/>
+                                       <setting name="PortPinPus" value="false"/>
+                                       <setting name="PortPinSafeMode" value="false"/>
+                                       <setting name="PortPinDse" value="false"/>
+                                       <setting name="PortPinWithReadBack" value="false"/>
+                                       <setting name="PortPinPke" value="false"/>
+                                       <setting name="PortPinIfe" value="false"/>
+                                       <setting name="PortPinDirectionChangeable" value="true"/>
+                                       <setting name="PortPinModeChangeable" value="true"/>
+                                       <setting name="PortPinInvertControl" value="false"/>
+                                       <setting name="PortPinSiul2Instance" value="SIUL2_0"/>
+                                       <setting name="PortPinId" value="24"/>
+                                       <setting name="PortPinInitialMode" value="PORT_GPIO_MODE"/>
+                                       <setting name="OBEGroupSelect" value="NO_OBE_GROUP"/>
+                                       <setting name="MscrPdacSlot" value="VIRTUAL_WRAPPER_PDAC0"/>
+                                       <setting name="ImcrPdacSlot" value="VIRTUAL_WRAPPER_PDAC0"/>
+                                       <array name="IGFSettings"/>
+                                       <array name="PortPinEcucPartitionRef"/>
+                                    </struct>
+                                    <struct name="1">
+                                       <setting name="Name" value="PortPin_24"/>
+                                       <setting name="PortPinPue" value="false"/>
+                                       <setting name="PortPinPus" value="false"/>
+                                       <setting name="PortPinSafeMode" value="false"/>
+                                       <setting name="PortPinDse" value="false"/>
+                                       <setting name="PortPinWithReadBack" value="false"/>
+                                       <setting name="PortPinPke" value="false"/>
+                                       <setting name="PortPinIfe" value="false"/>
+                                       <setting name="PortPinDirectionChangeable" value="true"/>
+                                       <setting name="PortPinModeChangeable" value="true"/>
+                                       <setting name="PortPinInvertControl" value="false"/>
+                                       <setting name="PortPinSiul2Instance" value="SIUL2_0"/>
+                                       <setting name="PortPinId" value="25"/>
+                                       <setting name="PortPinInitialMode" value="PORT_GPIO_MODE"/>
+                                       <setting name="OBEGroupSelect" value="NO_OBE_GROUP"/>
+                                       <setting name="MscrPdacSlot" value="VIRTUAL_WRAPPER_PDAC0"/>
+                                       <setting name="ImcrPdacSlot" value="VIRTUAL_WRAPPER_PDAC0"/>
+                                       <array name="IGFSettings"/>
+                                       <array name="PortPinEcucPartitionRef"/>
+                                    </struct>
+                                 </array>
+                              </struct>
+                              <struct name="6">
+                                 <setting name="Name" value="Lcu_Pins"/>
+                                 <array name="PortPin">
+                                    <struct name="0">
+                                       <setting name="Name" value="PortPin_25"/>
+                                       <setting name="PortPinPue" value="false"/>
+                                       <setting name="PortPinPus" value="false"/>
+                                       <setting name="PortPinSafeMode" value="false"/>
+                                       <setting name="PortPinDse" value="false"/>
+                                       <setting name="PortPinWithReadBack" value="false"/>
+                                       <setting name="PortPinPke" value="false"/>
+                                       <setting name="PortPinIfe" value="false"/>
+                                       <setting name="PortPinDirectionChangeable" value="true"/>
+                                       <setting name="PortPinModeChangeable" value="true"/>
+                                       <setting name="PortPinInvertControl" value="false"/>
+                                       <setting name="PortPinSiul2Instance" value="SIUL2_0"/>
+                                       <setting name="PortPinId" value="26"/>
+                                       <setting name="PortPinInitialMode" value="PORT_GPIO_MODE"/>
+                                       <setting name="OBEGroupSelect" value="NO_OBE_GROUP"/>
+                                       <setting name="MscrPdacSlot" value="VIRTUAL_WRAPPER_PDAC0"/>
+                                       <setting name="ImcrPdacSlot" value="VIRTUAL_WRAPPER_PDAC0"/>
+                                       <array name="IGFSettings"/>
+                                       <array name="PortPinEcucPartitionRef"/>
+                                    </struct>
+                                    <struct name="1">
+                                       <setting name="Name" value="PortPin_26"/>
+                                       <setting name="PortPinPue" value="false"/>
+                                       <setting name="PortPinPus" value="false"/>
+                                       <setting name="PortPinSafeMode" value="false"/>
+                                       <setting name="PortPinDse" value="false"/>
+                                       <setting name="PortPinWithReadBack" value="false"/>
+                                       <setting name="PortPinPke" value="false"/>
+                                       <setting name="PortPinIfe" value="false"/>
+                                       <setting name="PortPinDirectionChangeable" value="true"/>
+                                       <setting name="PortPinModeChangeable" value="true"/>
+                                       <setting name="PortPinInvertControl" value="false"/>
+                                       <setting name="PortPinSiul2Instance" value="SIUL2_0"/>
+                                       <setting name="PortPinId" value="27"/>
+                                       <setting name="PortPinInitialMode" value="PORT_GPIO_MODE"/>
+                                       <setting name="OBEGroupSelect" value="NO_OBE_GROUP"/>
+                                       <setting name="MscrPdacSlot" value="VIRTUAL_WRAPPER_PDAC0"/>
+                                       <setting name="ImcrPdacSlot" value="VIRTUAL_WRAPPER_PDAC0"/>
+                                       <array name="IGFSettings"/>
+                                       <array name="PortPinEcucPartitionRef"/>
+                                    </struct>
+                                    <struct name="2">
+                                       <setting name="Name" value="PortPin_27"/>
+                                       <setting name="PortPinPue" value="false"/>
+                                       <setting name="PortPinPus" value="false"/>
+                                       <setting name="PortPinSafeMode" value="false"/>
+                                       <setting name="PortPinDse" value="false"/>
+                                       <setting name="PortPinWithReadBack" value="false"/>
+                                       <setting name="PortPinPke" value="false"/>
+                                       <setting name="PortPinIfe" value="false"/>
+                                       <setting name="PortPinDirectionChangeable" value="true"/>
+                                       <setting name="PortPinModeChangeable" value="true"/>
+                                       <setting name="PortPinInvertControl" value="false"/>
+                                       <setting name="PortPinSiul2Instance" value="SIUL2_0"/>
+                                       <setting name="PortPinId" value="28"/>
+                                       <setting name="PortPinInitialMode" value="PORT_GPIO_MODE"/>
+                                       <setting name="OBEGroupSelect" value="NO_OBE_GROUP"/>
+                                       <setting name="MscrPdacSlot" value="VIRTUAL_WRAPPER_PDAC0"/>
+                                       <setting name="ImcrPdacSlot" value="VIRTUAL_WRAPPER_PDAC0"/>
+                                       <array name="IGFSettings"/>
+                                       <array name="PortPinEcucPartitionRef"/>
+                                    </struct>
+                                    <struct name="3">
+                                       <setting name="Name" value="PortPin_28"/>
+                                       <setting name="PortPinPue" value="false"/>
+                                       <setting name="PortPinPus" value="false"/>
+                                       <setting name="PortPinSafeMode" value="false"/>
+                                       <setting name="PortPinDse" value="false"/>
+                                       <setting name="PortPinWithReadBack" value="false"/>
+                                       <setting name="PortPinPke" value="false"/>
+                                       <setting name="PortPinIfe" value="false"/>
+                                       <setting name="PortPinDirectionChangeable" value="true"/>
+                                       <setting name="PortPinModeChangeable" value="true"/>
+                                       <setting name="PortPinInvertControl" value="false"/>
+                                       <setting name="PortPinSiul2Instance" value="SIUL2_0"/>
+                                       <setting name="PortPinId" value="29"/>
+                                       <setting name="PortPinInitialMode" value="PORT_GPIO_MODE"/>
+                                       <setting name="OBEGroupSelect" value="NO_OBE_GROUP"/>
+                                       <setting name="MscrPdacSlot" value="VIRTUAL_WRAPPER_PDAC0"/>
+                                       <setting name="ImcrPdacSlot" value="VIRTUAL_WRAPPER_PDAC0"/>
+                                       <array name="IGFSettings"/>
+                                       <array name="PortPinEcucPartitionRef"/>
+                                    </struct>
+                                    <struct name="4">
+                                       <setting name="Name" value="PortPin_29"/>
+                                       <setting name="PortPinPue" value="false"/>
+                                       <setting name="PortPinPus" value="false"/>
+                                       <setting name="PortPinSafeMode" value="false"/>
+                                       <setting name="PortPinDse" value="false"/>
+                                       <setting name="PortPinWithReadBack" value="false"/>
+                                       <setting name="PortPinPke" value="false"/>
+                                       <setting name="PortPinIfe" value="false"/>
+                                       <setting name="PortPinDirectionChangeable" value="true"/>
+                                       <setting name="PortPinModeChangeable" value="true"/>
+                                       <setting name="PortPinInvertControl" value="false"/>
+                                       <setting name="PortPinSiul2Instance" value="SIUL2_0"/>
+                                       <setting name="PortPinId" value="30"/>
+                                       <setting name="PortPinInitialMode" value="PORT_GPIO_MODE"/>
+                                       <setting name="OBEGroupSelect" value="NO_OBE_GROUP"/>
+                                       <setting name="MscrPdacSlot" value="VIRTUAL_WRAPPER_PDAC0"/>
+                                       <setting name="ImcrPdacSlot" value="VIRTUAL_WRAPPER_PDAC0"/>
+                                       <array name="IGFSettings"/>
+                                       <array name="PortPinEcucPartitionRef"/>
+                                    </struct>
+                                    <struct name="5">
+                                       <setting name="Name" value="PortPin_30"/>
+                                       <setting name="PortPinPue" value="false"/>
+                                       <setting name="PortPinPus" value="false"/>
+                                       <setting name="PortPinSafeMode" value="false"/>
+                                       <setting name="PortPinDse" value="false"/>
+                                       <setting name="PortPinWithReadBack" value="false"/>
+                                       <setting name="PortPinPke" value="false"/>
+                                       <setting name="PortPinIfe" value="false"/>
+                                       <setting name="PortPinDirectionChangeable" value="true"/>
+                                       <setting name="PortPinModeChangeable" value="true"/>
+                                       <setting name="PortPinInvertControl" value="false"/>
+                                       <setting name="PortPinSiul2Instance" value="SIUL2_0"/>
+                                       <setting name="PortPinId" value="31"/>
                                        <setting name="PortPinInitialMode" value="PORT_GPIO_MODE"/>
                                        <setting name="OBEGroupSelect" value="NO_OBE_GROUP"/>
                                        <setting name="MscrPdacSlot" value="VIRTUAL_WRAPPER_PDAC0"/>
@@ -8208,37 +7287,16 @@
                                  </array>
                               </struct>
                            </array>
-                           <array name="UnTouchedPortPin">
-                              <struct name="0">
-                                 <setting name="Name" value="UnTouchedPortPin_0"/>
-                                 <setting name="PortPinSiul2Instance" value="SIUL2_0"/>
-                                 <setting name="PortPinPcr" value="4"/>
-                              </struct>
-                              <struct name="1">
-                                 <setting name="Name" value="UnTouchedPortPin_1"/>
-                                 <setting name="PortPinSiul2Instance" value="SIUL2_0"/>
-                                 <setting name="PortPinPcr" value="10"/>
-                              </struct>
-                              <struct name="2">
-                                 <setting name="Name" value="UnTouchedPortPin_2"/>
-                                 <setting name="PortPinSiul2Instance" value="SIUL2_0"/>
-                                 <setting name="PortPinPcr" value="68"/>
-                              </struct>
-                              <struct name="3">
-                                 <setting name="Name" value="UnTouchedPortPin_3"/>
-                                 <setting name="PortPinSiul2Instance" value="SIUL2_0"/>
-                                 <setting name="PortPinPcr" value="69"/>
-                              </struct>
-                           </array>
+                           <array name="UnTouchedPortPin"/>
                            <array name="UntouchedIMCR"/>
                         </struct>
-                        <struct name="CommonPublishedInformation">
+                        <struct name="CommonPublishedInformation" quick_selection="Default">
                            <setting name="Name" value="CommonPublishedInformation"/>
                            <setting name="ArReleaseMajorVersion" value="4"/>
                            <setting name="ArReleaseMinorVersion" value="7"/>
                            <setting name="ArReleaseRevisionVersion" value="0"/>
                            <setting name="ModuleId" value="124"/>
-                           <setting name="SwMajorVersion" value="4"/>
+                           <setting name="SwMajorVersion" value="6"/>
                            <setting name="SwMinorVersion" value="0"/>
                            <setting name="SwPatchVersion" value="0"/>
                            <setting name="VendorApiInfix" value=""/>
