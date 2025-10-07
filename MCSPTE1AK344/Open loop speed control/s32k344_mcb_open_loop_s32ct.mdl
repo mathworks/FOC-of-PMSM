@@ -19,9 +19,9 @@ __MWOPC_PART_BEGIN__ /[Content_Types].xml
   <Override ContentType="application/vnd.mathworks.simulink.configSetInfo+xml" PartName="/simulink/configSetInfo.xml"/>
   <Override ContentType="application/vnd.mathworks.simulink.graphicalInterface+json" PartName="/simulink/graphicalInterface.json"/>
   <Override ContentType="application/vnd.mathworks.simulink.mf0+xml" PartName="/simulink/modelDictionary.xml"/>
+  <Override ContentType="application/vnd.mathworks.simulink.pluginParameters+xml" PartName="/simulink/plugins/LogicAnalyzerPlugin.xml"/>
   <Override ContentType="application/vnd.mathworks.simulink.ScheduleCore+xml" PartName="/simulink/ScheduleCore.xml"/>
   <Override ContentType="application/vnd.mathworks.simulink.ScheduleEditor+xml" PartName="/simulink/ScheduleEditor.xml"/>
-  <Override ContentType="application/vnd.mathworks.stateflow.chart+xml" PartName="/simulink/stateflow/chart_7.xml"/>
   <Override ContentType="application/vnd.mathworks.stateflow.machine+xml" PartName="/simulink/stateflow/machine.xml"/>
   <Override ContentType="application/vnd.mathworks.simulink.blockDiagram+xml" PartName="/simulink/windowsInfo.xml"/>
 </Types>
@@ -137,9 +137,9 @@ __MWOPC_PART_BEGIN__ /metadata/coreProperties.xml
     
     
 </dc:description>
-  <cp:lastModifiedBy>snarayan</cp:lastModifiedBy>
-  <dcterms:modified xsi:type="dcterms:W3CDTF">2025-09-22T09:35:57Z</dcterms:modified>
-  <cp:revision>10.24</cp:revision>
+  <cp:lastModifiedBy>nxf64875</cp:lastModifiedBy>
+  <dcterms:modified xsi:type="dcterms:W3CDTF">2025-10-02T08:33:46Z</dcterms:modified>
+  <cp:revision>10.26</cp:revision>
   <cp:version>R2024b</cp:version>
 </cp:coreProperties>
 
@@ -161,11 +161,11 @@ __MWOPC_PART_BEGIN__ /metadata/mwcorePropertiesReleaseInfo.xml
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Version information for MathWorks R2024b Release -->
 <MathWorks_version_info>
-  <version>24.2.0.2923080</version>
+  <version>24.2.0.2740171</version>
   <release>R2024b</release>
-  <description>Update 6</description>
-  <date>Mar 28 2025</date>
-  <checksum>3365125298</checksum>
+  <description>Update 1</description>
+  <date>Sep 20 2024</date>
+  <checksum>4024810896</checksum>
 </MathWorks_version_info>
 
 __MWOPC_PART_BEGIN__ /simulink/_rels/blockdiagram.xml.rels
@@ -174,6 +174,7 @@ __MWOPC_PART_BEGIN__ /simulink/_rels/blockdiagram.xml.rels
   <Relationship Id="LibrarySourceProduct_8631" Target="bdmxdata/LibrarySourceProduct_8631.mxarray" Type="http://schemas.mathworks.com/simulinkModel/2015/relationships/modelMxArray"/>
   <Relationship Id="LibrarySourceProduct_8735" Target="bdmxdata/LibrarySourceProduct_8735.mxarray" Type="http://schemas.mathworks.com/simulinkModel/2015/relationships/modelMxArray"/>
   <Relationship Id="LibrarySourceProduct_9139" Target="bdmxdata/LibrarySourceProduct_9139.mxarray" Type="http://schemas.mathworks.com/simulinkModel/2015/relationships/modelMxArray"/>
+  <Relationship Id="LogicAnalyzerPlugin" Target="plugins/LogicAnalyzerPlugin.xml" Type="http://schemas.mathworks.com/simulinkModel/2014/relationships/pluginParameters"/>
   <Relationship Id="ScheduleCore" Target="ScheduleCore.xml" Type="http://schemas.mathworks.com/simulink/2013/relationships/ScheduleCore"/>
   <Relationship Id="ScheduleEditor" Target="ScheduleEditor.xml" Type="http://schemas.mathworks.com/simulink/2013/relationships/ScheduleEditor"/>
   <Relationship Id="diagnosticSuppressor" Target="diagnosticSuppressor.json" Type="http://schemas.mathworks.com/simulink/2024/relationships/diagnosticSuppressorTable"/>
@@ -244,7 +245,7 @@ mbd_s32k3.common.nxp.model_callbacks.initFcn();</P>
     <ConfigManagerSettings>
       <P Name="ModifiedByFormat">%&lt;Auto&gt;</P>
       <P Name="ModifiedDateFormat">%&lt;Auto&gt;</P>
-      <P Name="ModelVersionFormat">%&lt;AutoIncrement:10.24&gt;</P>
+      <P Name="ModelVersionFormat">%&lt;AutoIncrement:10.26&gt;</P>
     </ConfigManagerSettings>
     <EditorSettings>
       <P Name="ShowPortDataTypes">on</P>
@@ -350,11 +351,11 @@ mbd_s32k3.common.nxp.model_callbacks.initFcn();</P>
             </Object>
           </Object>
         </Array>
-        <Array PropName="OutputFunctionMappings" Type="Simulink.CoderDictionary.PeriodicFunctionMapping" Dimension="1*5">
+        <Array PropName="OutputFunctionMappings" Type="Simulink.CoderDictionary.PeriodicFunctionMapping" Dimension="1*4">
           <Object ObjectID="17">
             <P Name="PartitionName" Class="char"/>
-            <P Name="Id" Class="int32">5</P>
-            <P Name="Period" Class="double">5.0e-5</P>
+            <P Name="Id" Class="int32">1</P>
+            <P Name="Period" Class="double">0.0001</P>
             <P Name="Offset" Class="double">0.0</P>
             <P Name="Prototype" Class="char"/>
             <P Name="SimulinkFunctionName" Class="char">Step0</P>
@@ -376,8 +377,8 @@ mbd_s32k3.common.nxp.model_callbacks.initFcn();</P>
           </Object>
           <Object ObjectID="23">
             <P Name="PartitionName" Class="char"/>
-            <P Name="Id" Class="int32">1</P>
-            <P Name="Period" Class="double">0.0001</P>
+            <P Name="Id" Class="int32">3</P>
+            <P Name="Period" Class="double">0.002</P>
             <P Name="Offset" Class="double">0.0</P>
             <P Name="Prototype" Class="char"/>
             <P Name="SimulinkFunctionName" Class="char">Step1</P>
@@ -399,8 +400,8 @@ mbd_s32k3.common.nxp.model_callbacks.initFcn();</P>
           </Object>
           <Object ObjectID="29">
             <P Name="PartitionName" Class="char"/>
-            <P Name="Id" Class="int32">3</P>
-            <P Name="Period" Class="double">0.002</P>
+            <P Name="Id" Class="int32">2</P>
+            <P Name="Period" Class="double">0.01</P>
             <P Name="Offset" Class="double">0.0</P>
             <P Name="Prototype" Class="char"/>
             <P Name="SimulinkFunctionName" Class="char">Step2</P>
@@ -422,8 +423,8 @@ mbd_s32k3.common.nxp.model_callbacks.initFcn();</P>
           </Object>
           <Object ObjectID="35">
             <P Name="PartitionName" Class="char"/>
-            <P Name="Id" Class="int32">2</P>
-            <P Name="Period" Class="double">0.01</P>
+            <P Name="Id" Class="int32">4</P>
+            <P Name="Period" Class="double">0.1</P>
             <P Name="Offset" Class="double">0.0</P>
             <P Name="Prototype" Class="char"/>
             <P Name="SimulinkFunctionName" Class="char">Step3</P>
@@ -443,29 +444,6 @@ mbd_s32k3.common.nxp.model_callbacks.initFcn();</P>
               </Object>
             </Object>
           </Object>
-          <Object ObjectID="41">
-            <P Name="PartitionName" Class="char"/>
-            <P Name="Id" Class="int32">4</P>
-            <P Name="Period" Class="double">0.1</P>
-            <P Name="Offset" Class="double">0.0</P>
-            <P Name="Prototype" Class="char"/>
-            <P Name="SimulinkFunctionName" Class="char">Step4</P>
-            <Object Reference="true" PropName="ParentMapping" ObjectID="4"/>
-            <Object PropName="FunctionReference" ObjectID="42" ClassName="Simulink.FunctionReferenceClass">
-              <Object PropName="FunctionClass" ObjectID="43" ClassName="Simulink.MapDataRef">
-                <P Name="UUID" Class="char"/>
-              </Object>
-              <Object PropName="MemorySection" ObjectID="44" ClassName="Simulink.MapDataRef">
-                <P Name="UUID" Class="char"/>
-              </Object>
-            </Object>
-            <Object PropName="Deployment" ObjectID="45" ClassName="Simulink.FunctionDeployment">
-              <P Name="ExecutionCore" Class="char">Auto</P>
-              <Object PropName="TimerService" ObjectID="46" ClassName="Simulink.MapDataRef">
-                <P Name="UUID" Class="char"/>
-              </Object>
-            </Object>
-          </Object>
         </Array>
         <P Name="UpdateFunctionMappings" Class="double">[]</P>
         <P Name="AperiodicFunctionMappings" Class="double">[]</P>
@@ -479,6 +457,45 @@ mbd_s32k3.common.nxp.model_callbacks.initFcn();</P>
         <P Name="RateTransitions" Class="double">[]</P>
         <P Name="SignalDataTransfers" Class="double">[]</P>
         <Array PropName="DataStores" Type="Simulink.CoderDictionary.DataStoreMapping" Dimension="1*6">
+          <Object ObjectID="41">
+            <Object Reference="true" PropName="ParentMapping" ObjectID="4"/>
+            <Object PropName="MappedTo" ObjectID="42" ClassName="Simulink.DataReferenceClass">
+              <P Name="MappedTo" Class="char">StorageClass</P>
+              <P Name="StorageClass" Class="double">[]</P>
+              <P Name="ServicePort" Class="double">[]</P>
+              <P Name="CSCAttributes" Class="char"/>
+              <P Name="MemorySection" Class="double">[]</P>
+              <P Name="Identifier" Class="char"/>
+            </Object>
+            <P Name="BlockSID" Class="char">8691</P>
+            <P Name="StereotypeProperties" Class="char"/>
+          </Object>
+          <Object ObjectID="43">
+            <Object Reference="true" PropName="ParentMapping" ObjectID="4"/>
+            <Object PropName="MappedTo" ObjectID="44" ClassName="Simulink.DataReferenceClass">
+              <P Name="MappedTo" Class="char">StorageClass</P>
+              <P Name="StorageClass" Class="double">[]</P>
+              <P Name="ServicePort" Class="double">[]</P>
+              <P Name="CSCAttributes" Class="char"/>
+              <P Name="MemorySection" Class="double">[]</P>
+              <P Name="Identifier" Class="char"/>
+            </Object>
+            <P Name="BlockSID" Class="char">8693</P>
+            <P Name="StereotypeProperties" Class="char"/>
+          </Object>
+          <Object ObjectID="45">
+            <Object Reference="true" PropName="ParentMapping" ObjectID="4"/>
+            <Object PropName="MappedTo" ObjectID="46" ClassName="Simulink.DataReferenceClass">
+              <P Name="MappedTo" Class="char">StorageClass</P>
+              <P Name="StorageClass" Class="double">[]</P>
+              <P Name="ServicePort" Class="double">[]</P>
+              <P Name="CSCAttributes" Class="char"/>
+              <P Name="MemorySection" Class="double">[]</P>
+              <P Name="Identifier" Class="char"/>
+            </Object>
+            <P Name="BlockSID" Class="char">8694</P>
+            <P Name="StereotypeProperties" Class="char"/>
+          </Object>
           <Object ObjectID="47">
             <Object Reference="true" PropName="ParentMapping" ObjectID="4"/>
             <Object PropName="MappedTo" ObjectID="48" ClassName="Simulink.DataReferenceClass">
@@ -489,7 +506,7 @@ mbd_s32k3.common.nxp.model_callbacks.initFcn();</P>
               <P Name="MemorySection" Class="double">[]</P>
               <P Name="Identifier" Class="char"/>
             </Object>
-            <P Name="BlockSID" Class="char">8691</P>
+            <P Name="BlockSID" Class="char">8697</P>
             <P Name="StereotypeProperties" Class="char"/>
           </Object>
           <Object ObjectID="49">
@@ -502,7 +519,7 @@ mbd_s32k3.common.nxp.model_callbacks.initFcn();</P>
               <P Name="MemorySection" Class="double">[]</P>
               <P Name="Identifier" Class="char"/>
             </Object>
-            <P Name="BlockSID" Class="char">8693</P>
+            <P Name="BlockSID" Class="char">8698</P>
             <P Name="StereotypeProperties" Class="char"/>
           </Object>
           <Object ObjectID="51">
@@ -515,10 +532,14 @@ mbd_s32k3.common.nxp.model_callbacks.initFcn();</P>
               <P Name="MemorySection" Class="double">[]</P>
               <P Name="Identifier" Class="char"/>
             </Object>
-            <P Name="BlockSID" Class="char">8694</P>
+            <P Name="BlockSID" Class="char">8692</P>
             <P Name="StereotypeProperties" Class="char"/>
           </Object>
+        </Array>
+        <Array PropName="States" Type="Simulink.CoderDictionary.StateMapping" Dimension="1*8">
           <Object ObjectID="53">
+            <P Name="StateIdentifier" Class="int32">0</P>
+            <P Name="Identifier" Class="int32">0</P>
             <Object Reference="true" PropName="ParentMapping" ObjectID="4"/>
             <Object PropName="MappedTo" ObjectID="54" ClassName="Simulink.DataReferenceClass">
               <P Name="MappedTo" Class="char">StorageClass</P>
@@ -528,10 +549,12 @@ mbd_s32k3.common.nxp.model_callbacks.initFcn();</P>
               <P Name="MemorySection" Class="double">[]</P>
               <P Name="Identifier" Class="char"/>
             </Object>
-            <P Name="BlockSID" Class="char">8697</P>
+            <P Name="BlockSID" Class="char">8608</P>
             <P Name="StereotypeProperties" Class="char"/>
           </Object>
           <Object ObjectID="55">
+            <P Name="StateIdentifier" Class="int32">0</P>
+            <P Name="Identifier" Class="int32">0</P>
             <Object Reference="true" PropName="ParentMapping" ObjectID="4"/>
             <Object PropName="MappedTo" ObjectID="56" ClassName="Simulink.DataReferenceClass">
               <P Name="MappedTo" Class="char">StorageClass</P>
@@ -541,10 +564,12 @@ mbd_s32k3.common.nxp.model_callbacks.initFcn();</P>
               <P Name="MemorySection" Class="double">[]</P>
               <P Name="Identifier" Class="char"/>
             </Object>
-            <P Name="BlockSID" Class="char">8698</P>
+            <P Name="BlockSID" Class="char">8609</P>
             <P Name="StereotypeProperties" Class="char"/>
           </Object>
           <Object ObjectID="57">
+            <P Name="StateIdentifier" Class="int32">0</P>
+            <P Name="Identifier" Class="int32">0</P>
             <Object Reference="true" PropName="ParentMapping" ObjectID="4"/>
             <Object PropName="MappedTo" ObjectID="58" ClassName="Simulink.DataReferenceClass">
               <P Name="MappedTo" Class="char">StorageClass</P>
@@ -554,11 +579,9 @@ mbd_s32k3.common.nxp.model_callbacks.initFcn();</P>
               <P Name="MemorySection" Class="double">[]</P>
               <P Name="Identifier" Class="char"/>
             </Object>
-            <P Name="BlockSID" Class="char">8692</P>
+            <P Name="BlockSID" Class="char">9174:5516</P>
             <P Name="StereotypeProperties" Class="char"/>
           </Object>
-        </Array>
-        <Array PropName="States" Type="Simulink.CoderDictionary.StateMapping" Dimension="1*8">
           <Object ObjectID="59">
             <P Name="StateIdentifier" Class="int32">0</P>
             <P Name="Identifier" Class="int32">0</P>
@@ -571,7 +594,7 @@ mbd_s32k3.common.nxp.model_callbacks.initFcn();</P>
               <P Name="MemorySection" Class="double">[]</P>
               <P Name="Identifier" Class="char"/>
             </Object>
-            <P Name="BlockSID" Class="char">8608</P>
+            <P Name="BlockSID" Class="char">9174:5537</P>
             <P Name="StereotypeProperties" Class="char"/>
           </Object>
           <Object ObjectID="61">
@@ -586,7 +609,7 @@ mbd_s32k3.common.nxp.model_callbacks.initFcn();</P>
               <P Name="MemorySection" Class="double">[]</P>
               <P Name="Identifier" Class="char"/>
             </Object>
-            <P Name="BlockSID" Class="char">8609</P>
+            <P Name="BlockSID" Class="char">9269</P>
             <P Name="StereotypeProperties" Class="char"/>
           </Object>
           <Object ObjectID="63">
@@ -601,7 +624,7 @@ mbd_s32k3.common.nxp.model_callbacks.initFcn();</P>
               <P Name="MemorySection" Class="double">[]</P>
               <P Name="Identifier" Class="char"/>
             </Object>
-            <P Name="BlockSID" Class="char">9174:5516</P>
+            <P Name="BlockSID" Class="char">9410</P>
             <P Name="StereotypeProperties" Class="char"/>
           </Object>
           <Object ObjectID="65">
@@ -616,7 +639,7 @@ mbd_s32k3.common.nxp.model_callbacks.initFcn();</P>
               <P Name="MemorySection" Class="double">[]</P>
               <P Name="Identifier" Class="char"/>
             </Object>
-            <P Name="BlockSID" Class="char">9174:5537</P>
+            <P Name="BlockSID" Class="char">9411</P>
             <P Name="StereotypeProperties" Class="char"/>
           </Object>
           <Object ObjectID="67">
@@ -631,58 +654,37 @@ mbd_s32k3.common.nxp.model_callbacks.initFcn();</P>
               <P Name="MemorySection" Class="double">[]</P>
               <P Name="Identifier" Class="char"/>
             </Object>
-            <P Name="BlockSID" Class="char">9269</P>
-            <P Name="StereotypeProperties" Class="char"/>
-          </Object>
-          <Object ObjectID="69">
-            <P Name="StateIdentifier" Class="int32">0</P>
-            <P Name="Identifier" Class="int32">0</P>
-            <Object Reference="true" PropName="ParentMapping" ObjectID="4"/>
-            <Object PropName="MappedTo" ObjectID="70" ClassName="Simulink.DataReferenceClass">
-              <P Name="MappedTo" Class="char">StorageClass</P>
-              <P Name="StorageClass" Class="double">[]</P>
-              <P Name="ServicePort" Class="double">[]</P>
-              <P Name="CSCAttributes" Class="char"/>
-              <P Name="MemorySection" Class="double">[]</P>
-              <P Name="Identifier" Class="char"/>
-            </Object>
-            <P Name="BlockSID" Class="char">9410</P>
-            <P Name="StereotypeProperties" Class="char"/>
-          </Object>
-          <Object ObjectID="71">
-            <P Name="StateIdentifier" Class="int32">0</P>
-            <P Name="Identifier" Class="int32">0</P>
-            <Object Reference="true" PropName="ParentMapping" ObjectID="4"/>
-            <Object PropName="MappedTo" ObjectID="72" ClassName="Simulink.DataReferenceClass">
-              <P Name="MappedTo" Class="char">StorageClass</P>
-              <P Name="StorageClass" Class="double">[]</P>
-              <P Name="ServicePort" Class="double">[]</P>
-              <P Name="CSCAttributes" Class="char"/>
-              <P Name="MemorySection" Class="double">[]</P>
-              <P Name="Identifier" Class="char"/>
-            </Object>
-            <P Name="BlockSID" Class="char">9411</P>
-            <P Name="StereotypeProperties" Class="char"/>
-          </Object>
-          <Object ObjectID="73">
-            <P Name="StateIdentifier" Class="int32">0</P>
-            <P Name="Identifier" Class="int32">0</P>
-            <Object Reference="true" PropName="ParentMapping" ObjectID="4"/>
-            <Object PropName="MappedTo" ObjectID="74" ClassName="Simulink.DataReferenceClass">
-              <P Name="MappedTo" Class="char">StorageClass</P>
-              <P Name="StorageClass" Class="double">[]</P>
-              <P Name="ServicePort" Class="double">[]</P>
-              <P Name="CSCAttributes" Class="char"/>
-              <P Name="MemorySection" Class="double">[]</P>
-              <P Name="Identifier" Class="char"/>
-            </Object>
             <P Name="BlockSID" Class="char">9174:9421:452:25:843</P>
             <P Name="StereotypeProperties" Class="char"/>
           </Object>
         </Array>
-        <Object PropName="DefaultsMapping" ObjectID="75" ClassName="Simulink.CoderDictionary.DefaultsMapping">
+        <Object PropName="DefaultsMapping" ObjectID="69" ClassName="Simulink.CoderDictionary.DefaultsMapping">
           <Object Reference="true" PropName="ParentMapping" ObjectID="4"/>
-          <Object PropName="Inports" ObjectID="76" ClassName="Simulink.DataReferenceClass">
+          <Object PropName="Inports" ObjectID="70" ClassName="Simulink.DataReferenceClass">
+            <P Name="MappedTo" Class="char">StorageClass</P>
+            <Object PropName="StorageClass" ObjectID="71" ClassName="Simulink.MapDataRef">
+              <P Name="UUID" Class="char"/>
+            </Object>
+            <P Name="ServicePort" Class="double">[]</P>
+            <P Name="CSCAttributes" Class="char"/>
+            <Object PropName="MemorySection" ObjectID="72" ClassName="Simulink.MapDataRef">
+              <P Name="UUID" Class="char"/>
+            </Object>
+            <P Name="Identifier" Class="char"/>
+          </Object>
+          <Object PropName="Outports" ObjectID="73" ClassName="Simulink.DataReferenceClass">
+            <P Name="MappedTo" Class="char">StorageClass</P>
+            <Object PropName="StorageClass" ObjectID="74" ClassName="Simulink.MapDataRef">
+              <P Name="UUID" Class="char"/>
+            </Object>
+            <P Name="ServicePort" Class="double">[]</P>
+            <P Name="CSCAttributes" Class="char"/>
+            <Object PropName="MemorySection" ObjectID="75" ClassName="Simulink.MapDataRef">
+              <P Name="UUID" Class="char"/>
+            </Object>
+            <P Name="Identifier" Class="char"/>
+          </Object>
+          <Object PropName="GlobalParameters" ObjectID="76" ClassName="Simulink.DataReferenceClass">
             <P Name="MappedTo" Class="char">StorageClass</P>
             <Object PropName="StorageClass" ObjectID="77" ClassName="Simulink.MapDataRef">
               <P Name="UUID" Class="char"/>
@@ -694,7 +696,7 @@ mbd_s32k3.common.nxp.model_callbacks.initFcn();</P>
             </Object>
             <P Name="Identifier" Class="char"/>
           </Object>
-          <Object PropName="Outports" ObjectID="79" ClassName="Simulink.DataReferenceClass">
+          <Object PropName="SharedParameters" ObjectID="79" ClassName="Simulink.DataReferenceClass">
             <P Name="MappedTo" Class="char">StorageClass</P>
             <Object PropName="StorageClass" ObjectID="80" ClassName="Simulink.MapDataRef">
               <P Name="UUID" Class="char"/>
@@ -706,33 +708,9 @@ mbd_s32k3.common.nxp.model_callbacks.initFcn();</P>
             </Object>
             <P Name="Identifier" Class="char"/>
           </Object>
-          <Object PropName="GlobalParameters" ObjectID="82" ClassName="Simulink.DataReferenceClass">
+          <Object PropName="PerInstanceParameters" ObjectID="82" ClassName="Simulink.DataReferenceClass">
             <P Name="MappedTo" Class="char">StorageClass</P>
             <Object PropName="StorageClass" ObjectID="83" ClassName="Simulink.MapDataRef">
-              <P Name="UUID" Class="char"/>
-            </Object>
-            <P Name="ServicePort" Class="double">[]</P>
-            <P Name="CSCAttributes" Class="char"/>
-            <Object PropName="MemorySection" ObjectID="84" ClassName="Simulink.MapDataRef">
-              <P Name="UUID" Class="char"/>
-            </Object>
-            <P Name="Identifier" Class="char"/>
-          </Object>
-          <Object PropName="SharedParameters" ObjectID="85" ClassName="Simulink.DataReferenceClass">
-            <P Name="MappedTo" Class="char">StorageClass</P>
-            <Object PropName="StorageClass" ObjectID="86" ClassName="Simulink.MapDataRef">
-              <P Name="UUID" Class="char"/>
-            </Object>
-            <P Name="ServicePort" Class="double">[]</P>
-            <P Name="CSCAttributes" Class="char"/>
-            <Object PropName="MemorySection" ObjectID="87" ClassName="Simulink.MapDataRef">
-              <P Name="UUID" Class="char"/>
-            </Object>
-            <P Name="Identifier" Class="char"/>
-          </Object>
-          <Object PropName="PerInstanceParameters" ObjectID="88" ClassName="Simulink.DataReferenceClass">
-            <P Name="MappedTo" Class="char">StorageClass</P>
-            <Object PropName="StorageClass" ObjectID="89" ClassName="Simulink.MapDataRef">
               <P Name="UUID" Class="char"/>
             </Object>
             <P Name="ServicePort" Class="double">[]</P>
@@ -740,7 +718,31 @@ mbd_s32k3.common.nxp.model_callbacks.initFcn();</P>
             <P Name="MemorySection" Class="double">[]</P>
             <P Name="Identifier" Class="char"/>
           </Object>
-          <Object PropName="SharedLocalDataStores" ObjectID="90" ClassName="Simulink.DataReferenceClass">
+          <Object PropName="SharedLocalDataStores" ObjectID="84" ClassName="Simulink.DataReferenceClass">
+            <P Name="MappedTo" Class="char">StorageClass</P>
+            <Object PropName="StorageClass" ObjectID="85" ClassName="Simulink.MapDataRef">
+              <P Name="UUID" Class="char"/>
+            </Object>
+            <P Name="ServicePort" Class="double">[]</P>
+            <P Name="CSCAttributes" Class="char"/>
+            <Object PropName="MemorySection" ObjectID="86" ClassName="Simulink.MapDataRef">
+              <P Name="UUID" Class="char"/>
+            </Object>
+            <P Name="Identifier" Class="char"/>
+          </Object>
+          <Object PropName="GlobalDataStores" ObjectID="87" ClassName="Simulink.DataReferenceClass">
+            <P Name="MappedTo" Class="char">StorageClass</P>
+            <Object PropName="StorageClass" ObjectID="88" ClassName="Simulink.MapDataRef">
+              <P Name="UUID" Class="char"/>
+            </Object>
+            <P Name="ServicePort" Class="double">[]</P>
+            <P Name="CSCAttributes" Class="char"/>
+            <Object PropName="MemorySection" ObjectID="89" ClassName="Simulink.MapDataRef">
+              <P Name="UUID" Class="char"/>
+            </Object>
+            <P Name="Identifier" Class="char"/>
+          </Object>
+          <Object PropName="InternalData" ObjectID="90" ClassName="Simulink.DataReferenceClass">
             <P Name="MappedTo" Class="char">StorageClass</P>
             <Object PropName="StorageClass" ObjectID="91" ClassName="Simulink.MapDataRef">
               <P Name="UUID" Class="char"/>
@@ -752,7 +754,7 @@ mbd_s32k3.common.nxp.model_callbacks.initFcn();</P>
             </Object>
             <P Name="Identifier" Class="char"/>
           </Object>
-          <Object PropName="GlobalDataStores" ObjectID="93" ClassName="Simulink.DataReferenceClass">
+          <Object PropName="Constants" ObjectID="93" ClassName="Simulink.DataReferenceClass">
             <P Name="MappedTo" Class="char">StorageClass</P>
             <Object PropName="StorageClass" ObjectID="94" ClassName="Simulink.MapDataRef">
               <P Name="UUID" Class="char"/>
@@ -764,51 +766,27 @@ mbd_s32k3.common.nxp.model_callbacks.initFcn();</P>
             </Object>
             <P Name="Identifier" Class="char"/>
           </Object>
-          <Object PropName="InternalData" ObjectID="96" ClassName="Simulink.DataReferenceClass">
-            <P Name="MappedTo" Class="char">StorageClass</P>
-            <Object PropName="StorageClass" ObjectID="97" ClassName="Simulink.MapDataRef">
+          <Object PropName="InitTermFunctions" ObjectID="96" ClassName="Simulink.FunctionReferenceClass">
+            <Object PropName="FunctionClass" ObjectID="97" ClassName="Simulink.MapDataRef">
               <P Name="UUID" Class="char"/>
             </Object>
-            <P Name="ServicePort" Class="double">[]</P>
-            <P Name="CSCAttributes" Class="char"/>
             <Object PropName="MemorySection" ObjectID="98" ClassName="Simulink.MapDataRef">
               <P Name="UUID" Class="char"/>
             </Object>
-            <P Name="Identifier" Class="char"/>
           </Object>
-          <Object PropName="Constants" ObjectID="99" ClassName="Simulink.DataReferenceClass">
-            <P Name="MappedTo" Class="char">StorageClass</P>
-            <Object PropName="StorageClass" ObjectID="100" ClassName="Simulink.MapDataRef">
+          <Object PropName="ExecutionFunctions" ObjectID="99" ClassName="Simulink.FunctionReferenceClass">
+            <Object PropName="FunctionClass" ObjectID="100" ClassName="Simulink.MapDataRef">
               <P Name="UUID" Class="char"/>
             </Object>
-            <P Name="ServicePort" Class="double">[]</P>
-            <P Name="CSCAttributes" Class="char"/>
             <Object PropName="MemorySection" ObjectID="101" ClassName="Simulink.MapDataRef">
               <P Name="UUID" Class="char"/>
             </Object>
-            <P Name="Identifier" Class="char"/>
           </Object>
-          <Object PropName="InitTermFunctions" ObjectID="102" ClassName="Simulink.FunctionReferenceClass">
+          <Object PropName="SharedUtilityFunctions" ObjectID="102" ClassName="Simulink.FunctionReferenceClass">
             <Object PropName="FunctionClass" ObjectID="103" ClassName="Simulink.MapDataRef">
               <P Name="UUID" Class="char"/>
             </Object>
             <Object PropName="MemorySection" ObjectID="104" ClassName="Simulink.MapDataRef">
-              <P Name="UUID" Class="char"/>
-            </Object>
-          </Object>
-          <Object PropName="ExecutionFunctions" ObjectID="105" ClassName="Simulink.FunctionReferenceClass">
-            <Object PropName="FunctionClass" ObjectID="106" ClassName="Simulink.MapDataRef">
-              <P Name="UUID" Class="char"/>
-            </Object>
-            <Object PropName="MemorySection" ObjectID="107" ClassName="Simulink.MapDataRef">
-              <P Name="UUID" Class="char"/>
-            </Object>
-          </Object>
-          <Object PropName="SharedUtilityFunctions" ObjectID="108" ClassName="Simulink.FunctionReferenceClass">
-            <Object PropName="FunctionClass" ObjectID="109" ClassName="Simulink.MapDataRef">
-              <P Name="UUID" Class="char"/>
-            </Object>
-            <Object PropName="MemorySection" ObjectID="110" ClassName="Simulink.MapDataRef">
               <P Name="UUID" Class="char"/>
             </Object>
           </Object>
@@ -1627,9 +1605,9 @@ __MWOPC_PART_BEGIN__ /simulink/configSet0.xml
             <Field Name="Download_type" Class="char">USB Multilink/Embedded Debugger - JTAG</Field>
             <Field Name="Target_memory" Class="char">FLASH</Field>
             <Field Name="Configuration_tool" Class="char">S32 Config Tool</Field>
-            <Field Name="S32DS_ConfigTools_location" Class="char">tools\S32ConfigTools.2024.R1.7</Field>
+            <Field Name="S32DS_ConfigTools_location" Class="char">tools\S32ConfigTools.2024.R1.8</Field>
             <Field Name="Browse_S32DSConfigTool" Class="char"/>
-            <Field Name="SDK_location" Class="char">S32K3_RTD\SW32K3_S32M27x_RTD_R21-11_5.0.0</Field>
+            <Field Name="SDK_location" Class="char">S32K3_RTD\SW32K3_S32M27x_RTD_R21-11_6.0.0</Field>
             <Field Name="Mbd_browseSDK" Class="char"/>
             <Field Name="export_prj_loc" Class="char">C:\repos\mbdt_s32k3_sv\S32K3\src\S32K3_Examples\mc\PMSM</Field>
             <Field Name="export_prj" Class="char"/>
@@ -2627,7 +2605,7 @@ SpiPublishedInformation/SpiMaxHwUnit - 0
                 <Field Name="EnableProfilerChecks" Class="char">1</Field>
               </MATStruct>
             </Array>
-            <Field Name="Tresos_Tools_location" Class="char"/>
+            <Field Name="Tresos_Tools_location" Class="char">C:\EB\tresos</Field>
             <Field Name="Browse_TresosTool" Class="char"/>
             <Field Name="pwm_info" Class="char">/*
 CommonPublishedInformation - CommonPublishedInformation 
@@ -7015,7 +6993,7 @@ ECUC-MODULE-DEF - /TS_T40D34M20I0R0/CanIf
             <Field Name="open_board_init" Class="char"/>
             <Array PropName="Initialization" Type="Struct" Dimension="1*1">
               <MATStruct>
-                <Field Name="Sequence" Class="char">{&quot;ModelComponents&quot;:[{&quot;Name&quot;:&quot;Skipped&quot;,&quot;Priority&quot;:[],&quot;Code&quot;:&quot;&quot;,&quot;Tokens&quot;:[],&quot;Header&quot;:&quot;&quot;,&quot;Enabled&quot;:false},{&quot;Name&quot;:&quot;Mcu&quot;,&quot;Priority&quot;:10,&quot;Code&quot;:[&quot;Mcu_Init(NULL_PTR);&quot;,&quot;Mcu_SetMode(McuModeSettingConf_0);&quot;,&quot;Mcu_InitClock(McuClockSettingConfig_0);&quot;,&quot;#if(MCU_NO_PLL==STD_OFF)&quot;,&quot;while ( MCU_PLL_LOCKED != Mcu_GetPllStatus() )&quot;,&quot;{&quot;,&quot;    /* wait until all enabled PLLs are locked */&quot;,&quot;}&quot;,&quot;/* switch system clock tree to PLL */&quot;,&quot;Mcu_DistributePllClock();&quot;,&quot;#endif&quot;],&quot;Tokens&quot;:{&quot;McuClockSettingConfig&quot;:&quot;/Mcu/McuModuleConfiguration/McuClockSettingConfig&quot;,&quot;McuModeSettingConf&quot;:&quot;/Mcu/McuModuleConfiguration/McuModeSettingConf&quot;},&quot;Header&quot;:[&quot;Mcu.h&quot;],&quot;Enabled&quot;:true},{&quot;Name&quot;:&quot;BaseNXP&quot;,&quot;Priority&quot;:20,&quot;Code&quot;:[&quot;OsIf_Init(NULL_PTR);&quot;],&quot;Tokens&quot;:[],&quot;Header&quot;:[&quot;OsIf.h&quot;],&quot;Enabled&quot;:true},{&quot;Name&quot;:&quot;Port&quot;,&quot;Priority&quot;:30,&quot;Code&quot;:[&quot;Port_Init(NULL_PTR);&quot;],&quot;Tokens&quot;:[],&quot;Header&quot;:[&quot;Port.h&quot;],&quot;Enabled&quot;:true},{&quot;Name&quot;:&quot;Adc&quot;,&quot;Priority&quot;:40,&quot;Code&quot;:[&quot;Adc_Init(NULL_PTR);&quot;],&quot;Tokens&quot;:[],&quot;Header&quot;:[&quot;Adc.h&quot;],&quot;Enabled&quot;:true},{&quot;Name&quot;:&quot;Gpt&quot;,&quot;Priority&quot;:50,&quot;Code&quot;:[&quot;Gpt_Init(&amp;Gpt_Config_MBDT);&quot;],&quot;Tokens&quot;:[],&quot;Header&quot;:[&quot;Gpt.h&quot;],&quot;Enabled&quot;:true},{&quot;Name&quot;:&quot;Spi&quot;,&quot;Priority&quot;:70,&quot;Code&quot;:[&quot;Spi_Init(&amp;Spi_Config_MBDT);&quot;],&quot;Tokens&quot;:[],&quot;Header&quot;:[&quot;Spi.h&quot;],&quot;Enabled&quot;:true},{&quot;Name&quot;:&quot;Mcl&quot;,&quot;Priority&quot;:80,&quot;Code&quot;:[&quot;Mcl_Init(NULL_PTR);&quot;],&quot;Tokens&quot;:[],&quot;Header&quot;:[&quot;Mcl.h&quot;],&quot;Enabled&quot;:true},{&quot;Name&quot;:&quot;Icu&quot;,&quot;Priority&quot;:100,&quot;Code&quot;:[&quot;Icu_Init(NULL_PTR);&quot;],&quot;Tokens&quot;:[],&quot;Header&quot;:[&quot;Icu.h&quot;],&quot;Enabled&quot;:true},{&quot;Name&quot;:&quot;Uart&quot;,&quot;Priority&quot;:110,&quot;Code&quot;:[&quot;Uart_Init(&amp;Uart_xConfig_MBDT);&quot;],&quot;Tokens&quot;:[],&quot;Header&quot;:[&quot;CDD_Uart.h&quot;],&quot;Enabled&quot;:true},{&quot;Name&quot;:&quot;Platform&quot;,&quot;Priority&quot;:200,&quot;Code&quot;:[&quot;Platform_Init(NULL_PTR);&quot;],&quot;Tokens&quot;:[],&quot;Header&quot;:[&quot;Platform.h&quot;],&quot;Enabled&quot;:true},{&quot;Name&quot;:&quot;Custom&quot;,&quot;Priority&quot;:201,&quot;Code&quot;:[&quot;Adc_EnableCtuControlMode(AdcHwUnit_0);&quot;],&quot;Tokens&quot;:[],&quot;Header&quot;:[&quot;Adc.h&quot;],&quot;Enabled&quot;:true},{&quot;Name&quot;:&quot;Custom&quot;,&quot;Priority&quot;:202,&quot;Code&quot;:[&quot;Adc_EnableCtuControlMode(AdcHwUnit_1);&quot;],&quot;Tokens&quot;:[],&quot;Header&quot;:[&quot;Adc.h&quot;],&quot;Enabled&quot;:true},{&quot;Name&quot;:&quot;Custom&quot;,&quot;Priority&quot;:203,&quot;Code&quot;:[&quot;/******************************************************************************************&quot;,&quot;* GD3000&quot;,&quot;******************************************************************************************/&quot;,&quot;status_t GDStatus;&quot;,&quot;uint16 GD3000_InitCounter = 0;&quot;,&quot;/* Initialize GD3000 through TPPSDK. */&quot;,&quot;do{&quot;,&quot;\tGDStatus = GD3000_Init();&quot;,&quot;\tGD3000_InitCounter++;&quot;,&quot;}while((GDStatus != kStatus_Success)&amp;&amp;(GD3000_InitCounter &lt; 100));&quot;],&quot;Tokens&quot;:[],&quot;Header&quot;:[&quot;gd3000_init.h&quot;],&quot;Enabled&quot;:true},{&quot;Name&quot;:&quot;Pwm&quot;,&quot;Priority&quot;:204,&quot;Code&quot;:[&quot;Pwm_Init(&amp;Pwm_Config_MBDT);&quot;],&quot;Tokens&quot;:[],&quot;Header&quot;:[&quot;Pwm.h&quot;],&quot;Enabled&quot;:true}]}</Field>
+                <Field Name="Sequence" Class="char">{&quot;ModelComponents&quot;:[{&quot;Name&quot;:&quot;Skipped&quot;,&quot;Priority&quot;:[],&quot;Code&quot;:&quot;&quot;,&quot;Tokens&quot;:[],&quot;Header&quot;:&quot;&quot;,&quot;Enabled&quot;:false},{&quot;Name&quot;:&quot;Mcu&quot;,&quot;Priority&quot;:10,&quot;Code&quot;:[&quot;Mcu_Init(NULL_PTR);&quot;,&quot;Mcu_SetMode(McuModeSettingConf_0);&quot;,&quot;Mcu_InitClock(McuClockSettingConfig_0);&quot;,&quot;#if(MCU_NO_PLL==STD_OFF)&quot;,&quot;while ( MCU_PLL_LOCKED != Mcu_GetPllStatus() )&quot;,&quot;{&quot;,&quot;    /* wait until all enabled PLLs are locked */&quot;,&quot;}&quot;,&quot;/* switch system clock tree to PLL */&quot;,&quot;Mcu_DistributePllClock();&quot;,&quot;#endif&quot;],&quot;Tokens&quot;:{&quot;McuClockSettingConfig&quot;:&quot;/Mcu/McuModuleConfiguration/McuClockSettingConfig&quot;,&quot;McuModeSettingConf&quot;:&quot;/Mcu/McuModuleConfiguration/McuModeSettingConf&quot;},&quot;Header&quot;:[&quot;Mcu.h&quot;],&quot;Enabled&quot;:true},{&quot;Name&quot;:&quot;BaseNXP&quot;,&quot;Priority&quot;:20,&quot;Code&quot;:[&quot;OsIf_Init(NULL_PTR);&quot;],&quot;Tokens&quot;:[],&quot;Header&quot;:[&quot;OsIf.h&quot;],&quot;Enabled&quot;:true},{&quot;Name&quot;:&quot;Port&quot;,&quot;Priority&quot;:30,&quot;Code&quot;:[&quot;Port_Init(NULL_PTR);&quot;],&quot;Tokens&quot;:[],&quot;Header&quot;:[&quot;Port.h&quot;],&quot;Enabled&quot;:true},{&quot;Name&quot;:&quot;Adc&quot;,&quot;Priority&quot;:40,&quot;Code&quot;:[&quot;Adc_Init(NULL_PTR);&quot;],&quot;Tokens&quot;:[],&quot;Header&quot;:[&quot;Adc.h&quot;],&quot;Enabled&quot;:true},{&quot;Name&quot;:&quot;Gpt&quot;,&quot;Priority&quot;:50,&quot;Code&quot;:[&quot;Gpt_Init(&amp;Gpt_Config_MBDT);&quot;],&quot;Tokens&quot;:[],&quot;Header&quot;:[&quot;Gpt.h&quot;],&quot;Enabled&quot;:true},{&quot;Name&quot;:&quot;Spi&quot;,&quot;Priority&quot;:70,&quot;Code&quot;:[&quot;Spi_Init(&amp;Spi_Config_MBDT);&quot;],&quot;Tokens&quot;:[],&quot;Header&quot;:[&quot;Spi.h&quot;],&quot;Enabled&quot;:true},{&quot;Name&quot;:&quot;Mcl&quot;,&quot;Priority&quot;:80,&quot;Code&quot;:[&quot;Mcl_Init(NULL_PTR);&quot;],&quot;Tokens&quot;:[],&quot;Header&quot;:[&quot;Mcl.h&quot;],&quot;Enabled&quot;:true},{&quot;Name&quot;:&quot;Icu&quot;,&quot;Priority&quot;:100,&quot;Code&quot;:[&quot;Icu_Init(NULL_PTR);&quot;],&quot;Tokens&quot;:[],&quot;Header&quot;:[&quot;Icu.h&quot;],&quot;Enabled&quot;:true},{&quot;Name&quot;:&quot;Uart&quot;,&quot;Priority&quot;:110,&quot;Code&quot;:[&quot;Uart_Init(&amp;Uart_xConfig_MBDT);&quot;],&quot;Tokens&quot;:[],&quot;Header&quot;:[&quot;CDD_Uart.h&quot;],&quot;Enabled&quot;:true},{&quot;Name&quot;:&quot;Platform&quot;,&quot;Priority&quot;:200,&quot;Code&quot;:[&quot;Platform_Init(NULL_PTR);&quot;],&quot;Tokens&quot;:[],&quot;Header&quot;:[&quot;Platform.h&quot;],&quot;Enabled&quot;:true},{&quot;Name&quot;:&quot;Custom&quot;,&quot;Priority&quot;:201,&quot;Code&quot;:[&quot;Adc_EnableCtuControlMode(AdcHwUnit_0);&quot;],&quot;Tokens&quot;:[],&quot;Header&quot;:[&quot;Adc.h&quot;],&quot;Enabled&quot;:true},{&quot;Name&quot;:&quot;Custom&quot;,&quot;Priority&quot;:202,&quot;Code&quot;:[&quot;Adc_EnableCtuControlMode(AdcHwUnit_1);&quot;],&quot;Tokens&quot;:[],&quot;Header&quot;:[&quot;Adc.h&quot;],&quot;Enabled&quot;:true},{&quot;Name&quot;:&quot;Tpp&quot;,&quot;Priority&quot;:203,&quot;Code&quot;:[&quot;Tpp_GdInit();&quot;],&quot;Tokens&quot;:[],&quot;Header&quot;:[&quot;tpp_init.h&quot;],&quot;Enabled&quot;:true},{&quot;Name&quot;:&quot;Pwm&quot;,&quot;Priority&quot;:204,&quot;Code&quot;:[&quot;Pwm_Init(&amp;Pwm_Config_MBDT);&quot;],&quot;Tokens&quot;:[],&quot;Header&quot;:[&quot;Pwm.h&quot;],&quot;Enabled&quot;:true}]}</Field>
                 <Field Name="Enable" Class="double">0.0</Field>
                 <Field Name="Location" Class="char">Initialization stored in model</Field>
                 <Field Name="Browse" Class="char"/>
@@ -7466,6 +7444,21 @@ xsi_schemaLocation - http://autosar.org/schema/r4.0 AUTOSAR_00050.xsd
                 <Field Name="BrowseS32DS" Class="char"/>
               </MATStruct>
             </Array>
+            <Array PropName="RefConfig" Type="Struct" Dimension="1*1">
+              <MATStruct>
+                <Field Name="Enable" Class="double">0.0</Field>
+                <Field Name="Location" Class="char">Select the Referenced Configuration location</Field>
+                <Field Name="Change" Class="char"/>
+                <Field Name="Create" Class="char"/>
+              </MATStruct>
+            </Array>
+            <Array PropName="Polyspace" Type="Struct" Dimension="1*1">
+              <MATStruct>
+                <Field Name="Enable" Class="double">0.0</Field>
+                <Field Name="Drivers" Class="double">0.0</Field>
+                <Field Name="UpdateProject" Class="char"/>
+              </MATStruct>
+            </Array>
           </MATStruct>
         </Array>
         <P Name="UseSoCProfilerForTargets">off</P>
@@ -7475,14 +7468,13 @@ xsi_schemaLocation - http://autosar.org/schema/r4.0 AUTOSAR_00050.xsd
         <P Name="Description"/>
         <Array PropName="Components" Type="Handle" Dimension="1*1">
           <Object ObjectID="15" Version="24.1.0" ClassName="simmechanics.ConfigurationSet">
-            <P Name="Version">24.1.0</P>
-            <P Name="DisabledProps">[]</P>
+            <P Name="DisabledProps" Class="double">[]</P>
             <P Name="Description">Simscape Multibody</P>
             <Array PropName="Components" Type="Handle" Dimension="1*2">
-              <Object ObjectID="16" ClassName="simmechanics.DiagnosticsConfigSet">
-                <P Name="DisabledProps">[]</P>
+              <Object ObjectID="16" Version="24.1.0" ClassName="simmechanics.DiagnosticsConfigSet">
+                <P Name="DisabledProps" Class="double">[]</P>
                 <P Name="Description">Diagnostics</P>
-                <P Name="Components">[]</P>
+                <P Name="Components" Class="double">[]</P>
                 <P Name="Name">DiagnosticsConfigSet</P>
                 <P Name="SimMechanicsInvalidVisualProperty">warning</P>
                 <P Name="SimMechanicsCrossSectionNullEdge">warning</P>
@@ -7494,13 +7486,16 @@ xsi_schemaLocation - http://autosar.org/schema/r4.0 AUTOSAR_00050.xsd
                 <P Name="SimMechanicsUnsatisfiedHighPriorityTargets">warning</P>
                 <P Name="SimMechanicsJointTargetOverSpecification">error</P>
               </Object>
-              <Object ObjectID="17" ClassName="simmechanics.ExplorerConfigSet">
-                <P Name="DisabledProps">[]</P>
+              <Object ObjectID="17" Version="24.1.0" ClassName="simmechanics.ExplorerConfigSet">
+                <P Name="DisabledProps" Class="double">[]</P>
                 <P Name="Description">Explorer</P>
-                <P Name="Components">[]</P>
+                <P Name="Components" Class="double">[]</P>
                 <P Name="Name">ExplorerConfigSet</P>
                 <P Name="SimMechanicsOpenEditorOnUpdate">on</P>
                 <P Name="InternalSimMechanicsExplorerSettings"/>
+                <P Name="InternalSimMechanicsSavePlaybackData">none</P>
+                <P Name="InternalSimMechanicsSavePlaybackDataVariable">smplaybacklog</P>
+                <P Name="InternalSimMechanicsPlaybackDataRate">30</P>
               </Object>
             </Array>
             <P Name="Name">SimscapeMultibody</P>
@@ -7529,8 +7524,8 @@ xsi_schemaLocation - http://autosar.org/schema/r4.0 AUTOSAR_00050.xsd
       </Object>
     </Array>
     <P Name="Name">Configuration</P>
-    <P Name="CurrentDlgPage">Solver</P>
-    <P Name="ConfigPrmDlgPosition">[ 449, 119, 1466, 794 ]</P>
+    <P Name="CurrentDlgPage">Hardware Implementation</P>
+    <P Name="ConfigPrmDlgPosition">[ 384, 119, 1466, 794 ]</P>
     <P Name="ExtraOptions">-aBlockCommentType=&quot;BlockPathComment&quot; -aIgnoreTestpoints=0 -aInlineSetEventsForThisBaseRateFcn=TLC_FALSE -aSuppressMultiTaskScheduler=TLC_FALSE -aRateBasedStepFcn=1</P>
   </Object>
 </ConfigSet>
@@ -7679,6 +7674,12 @@ __MWOPC_PART_BEGIN__ /simulink/graphicalInterface.json
                 "Type":"LIBRARY_BLOCK"
             },
             {
+                "Path":"$bdroot\/Microcontroller\/Initialize Function\/TPP Config",
+                "Reference":"mbd_s32k3_utility_library\/TPP Blocks\/TPP Config",
+                "SID":"9422",
+                "Type":"LIBRARY_BLOCK"
+            },
+            {
                 "Path":"$bdroot\/Microcontroller\/Input Scaling\/CalculatePhaseCurrents\/Compare To Constant",
                 "Reference":"simulink\/Logic and Bit\nOperations\/Compare\nTo Constant",
                 "SID":"9402",
@@ -7801,26 +7802,11 @@ __MWOPC_PART_BEGIN__ /simulink/graphicalInterface.json
                 "FullBlockPath":"$bdroot\/Microcontroller\/Subsystem\/Application Abstraction\/ Calculate Position and Speed",
                 "LogSignal":true,
                 "MaxPoints":5000,
-                "SignalName":""
-            },
-            {
-                "Decimation":2,
-                "FullBlockPath":"$bdroot\/Microcontroller\/Subsystem\/Application Abstraction\/ Calculate Position and Speed",
-                "LogSignal":true,
-                "MaxPoints":5000,
-                "PortIndex":2,
-                "SignalName":""
-            },
-            {
-                "Decimation":2,
-                "FullBlockPath":"$bdroot\/Microcontroller\/Subsystem\/Application Abstraction\/Observer",
-                "LogSignal":true,
-                "MaxPoints":5000,
                 "SignalName":"Theta"
             },
             {
                 "Decimation":2,
-                "FullBlockPath":"$bdroot\/Microcontroller\/Subsystem\/Application Abstraction\/Observer",
+                "FullBlockPath":"$bdroot\/Microcontroller\/Subsystem\/Application Abstraction\/ Calculate Position and Speed",
                 "LogSignal":true,
                 "MaxPoints":5000,
                 "PortIndex":2,
@@ -7836,11 +7822,18 @@ __MWOPC_PART_BEGIN__ /simulink/modelDictionary.xml
     <Interface type="Interface" uuid="6a3507c5-ed57-4ff8-9af9-a35956d6b5ef"/>
   </System>
 </MF0>
+__MWOPC_PART_BEGIN__ /simulink/plugins/LogicAnalyzerPlugin.xml
+<?xml version="1.0" encoding="utf-8"?>
+<LogicAnalyzerPlugin>
+  <P Name="LogicAnalyzerSignalOrdering">cb0be33d-620b-4155-a790-009b18291d91,a613eb74-8e58-4719-a906-730af3bfc63e,0ba277a5-52d3-4b93-baf7-f6cfa89ad73a,da110927-835b-43f6-a352-0408b81bd59a,ce71ca0e-7ec6-42cb-9e8d-c177c0ee14f0</P>
+</LogicAnalyzerPlugin>
+
 __MWOPC_PART_BEGIN__ /simulink/ScheduleCore.xml
 <?xml version="1.0" encoding="UTF-8"?>
 <sltp_graph version="1.1" packageUris="http://schema.mathworks.com/mf0/sltp_mm/R2024b_202402211119">
   <sltp.mm.core.Context type="sltp.mm.core.Context" uuid="f12a5abe-f005-4a73-88ef-dcc05ebe3fb8">
     <priorityDirection>HighNumberLast</priorityDirection>
+    <unusedTaskIds>5</unusedTaskIds>
     <defaultEventBehavior type="sltp.mm.core.EventBehavior" uuid="3bffde2c-f0f3-473e-90dd-ab265487373a"/>
     <editorState type="sltp.mm.core.EditorState" uuid="116d3538-d255-4d19-9b57-62ceed4e7f70">
       <isSynchronized>true</isSynchronized>
@@ -7852,25 +7845,9 @@ __MWOPC_PART_BEGIN__ /simulink/ScheduleCore.xml
       <name>Default</name>
       <priority>-2147483648</priority>
       <subgraph type="sltp.mm.core.Graph" uuid="868f2e4d-d51e-4b8a-9a69-37b35531d6b7">
-        <connections type="sltp.mm.core.Connection" uuid="182083ed-c9ce-4729-9fba-d5e8cabf4927">
-          <dst type="sltp.mm.core.Task" uuid="56469e9f-9b15-4f9e-a400-cacdfa622515"/>
-          <src type="sltp.mm.core.Task" uuid="5d9bb335-9f71-47c3-80da-451d58b4563e"/>
-        </connections>
-        <connections type="sltp.mm.core.Connection" uuid="2374b206-d371-4000-bfac-e3b2ee1ff35a">
-          <dst type="sltp.mm.core.Task" uuid="a9a57113-5ac1-40fb-8d1f-12f48e516c83"/>
-          <src type="sltp.mm.core.Task" uuid="56469e9f-9b15-4f9e-a400-cacdfa622515"/>
-        </connections>
-        <connections type="sltp.mm.core.Connection" uuid="241d9709-0d7c-4479-8590-96bf31919c3d">
-          <dst type="sltp.mm.core.Task" uuid="acfd7298-2d56-4a6b-a5f4-08a903a2b7a5"/>
-          <src type="sltp.mm.core.Task" uuid="56469e9f-9b15-4f9e-a400-cacdfa622515"/>
-        </connections>
         <connections type="sltp.mm.core.Connection" uuid="4936f282-bbef-4d31-9950-2e15e51aeb8e">
           <dst type="sltp.mm.core.Task" uuid="1f708ae7-e4e9-481c-8b22-b8295003f114"/>
           <src type="sltp.mm.core.Task" uuid="5d9bb335-9f71-47c3-80da-451d58b4563e"/>
-        </connections>
-        <connections type="sltp.mm.core.Connection" uuid="4c9cdfb4-3167-4f9a-a85a-a1bb0019cc8c">
-          <dst type="sltp.mm.core.Task" uuid="1f708ae7-e4e9-481c-8b22-b8295003f114"/>
-          <src type="sltp.mm.core.Task" uuid="56469e9f-9b15-4f9e-a400-cacdfa622515"/>
         </connections>
         <connections type="sltp.mm.core.Connection" uuid="691e38a3-4e0b-4542-be9d-1a95e10aa49d">
           <dst type="sltp.mm.core.Task" uuid="acfd7298-2d56-4a6b-a5f4-08a903a2b7a5"/>
@@ -7884,109 +7861,72 @@ __MWOPC_PART_BEGIN__ /simulink/ScheduleCore.xml
           <dst type="sltp.mm.core.Task" uuid="a9a57113-5ac1-40fb-8d1f-12f48e516c83"/>
           <src type="sltp.mm.core.Task" uuid="1f708ae7-e4e9-481c-8b22-b8295003f114"/>
         </connections>
-        <connections type="sltp.mm.core.Connection" uuid="c2469571-4803-4d4a-be7a-d25cb4c38222">
-          <dst type="sltp.mm.core.Task" uuid="5d9bb335-9f71-47c3-80da-451d58b4563e"/>
-          <src type="sltp.mm.core.Task" uuid="56469e9f-9b15-4f9e-a400-cacdfa622515"/>
-        </connections>
-        <connections type="sltp.mm.core.Connection" uuid="d6581746-f856-4dee-990a-b1f396017ae3">
-          <dst type="sltp.mm.core.Task" uuid="56469e9f-9b15-4f9e-a400-cacdfa622515"/>
-          <src type="sltp.mm.core.Task" uuid="1f708ae7-e4e9-481c-8b22-b8295003f114"/>
-        </connections>
         <connections type="sltp.mm.core.Connection" uuid="fdbab57e-e42f-4f45-8ed7-5097394911d9">
           <dst type="sltp.mm.core.Task" uuid="acfd7298-2d56-4a6b-a5f4-08a903a2b7a5"/>
           <src type="sltp.mm.core.Task" uuid="5d9bb335-9f71-47c3-80da-451d58b4563e"/>
         </connections>
-        <tasks type="sltp.mm.core.Task" uuid="56469e9f-9b15-4f9e-a400-cacdfa622515">
-          <context type="sltp.mm.core.Context" uuid="f12a5abe-f005-4a73-88ef-dcc05ebe3fb8"/>
-          <explicit>false</explicit>
-          <id>5</id>
-          <inConnections type="sltp.mm.core.Connection" uuid="182083ed-c9ce-4729-9fba-d5e8cabf4927"/>
-          <inConnections type="sltp.mm.core.Connection" uuid="d6581746-f856-4dee-990a-b1f396017ae3"/>
-          <isTimed>true</isTimed>
-          <name>D1</name>
-          <outConnections type="sltp.mm.core.Connection" uuid="2374b206-d371-4000-bfac-e3b2ee1ff35a"/>
-          <outConnections type="sltp.mm.core.Connection" uuid="241d9709-0d7c-4479-8590-96bf31919c3d"/>
-          <outConnections type="sltp.mm.core.Connection" uuid="4c9cdfb4-3167-4f9a-a85a-a1bb0019cc8c"/>
-          <outConnections type="sltp.mm.core.Connection" uuid="c2469571-4803-4d4a-be7a-d25cb4c38222"/>
-          <priority>40</priority>
-          <rates type="sltp.mm.core.Rate" uuid="1961f0db-a710-4425-8bdf-11c1fdf7c6bc">
-            <annotation>D1</annotation>
-            <color>-12240129</color>
-            <hasBlocks>true</hasBlocks>
-            <identifier>ClassicPeriodicDiscrete5e-050</identifier>
-            <rateIndex>0</rateIndex>
-            <rateSpec type="sltp.mm.core.RateSpec">
-              <period>5e-05</period>
-            </rateSpec>
-            <sti>0</sti>
-          </rates>
-        </tasks>
         <tasks type="sltp.mm.core.Task" uuid="1f708ae7-e4e9-481c-8b22-b8295003f114">
           <context type="sltp.mm.core.Context" uuid="f12a5abe-f005-4a73-88ef-dcc05ebe3fb8"/>
           <explicit>false</explicit>
           <id>1</id>
           <inConnections type="sltp.mm.core.Connection" uuid="4936f282-bbef-4d31-9950-2e15e51aeb8e"/>
-          <inConnections type="sltp.mm.core.Connection" uuid="4c9cdfb4-3167-4f9a-a85a-a1bb0019cc8c"/>
           <isTimed>true</isTimed>
-          <name>D2</name>
+          <name>D1</name>
           <outConnections type="sltp.mm.core.Connection" uuid="691e38a3-4e0b-4542-be9d-1a95e10aa49d"/>
           <outConnections type="sltp.mm.core.Connection" uuid="6d93c91e-c80e-4d8f-b712-3c74ec57466d"/>
           <outConnections type="sltp.mm.core.Connection" uuid="b26e1c3f-b897-4531-9561-fc340867d720"/>
-          <outConnections type="sltp.mm.core.Connection" uuid="d6581746-f856-4dee-990a-b1f396017ae3"/>
-          <priority>41</priority>
+          <priority>40</priority>
           <rates type="sltp.mm.core.Rate" uuid="ba33b5c0-e2e2-40f8-a283-6c15f2022963">
-            <annotation>D2</annotation>
-            <color>986198527</color>
+            <annotation>D1</annotation>
+            <color>-12240129</color>
             <hasBlocks>true</hasBlocks>
             <identifier>ClassicPeriodicDiscrete0.00010</identifier>
-            <rateIndex>1</rateIndex>
+            <rateIndex>0</rateIndex>
             <rateSpec type="sltp.mm.core.RateSpec">
               <period>.0001</period>
             </rateSpec>
-            <sti>1</sti>
+            <sti>0</sti>
           </rates>
         </tasks>
         <tasks type="sltp.mm.core.Task" uuid="acfd7298-2d56-4a6b-a5f4-08a903a2b7a5">
           <context type="sltp.mm.core.Context" uuid="f12a5abe-f005-4a73-88ef-dcc05ebe3fb8"/>
           <explicit>false</explicit>
           <id>3</id>
-          <inConnections type="sltp.mm.core.Connection" uuid="241d9709-0d7c-4479-8590-96bf31919c3d"/>
           <inConnections type="sltp.mm.core.Connection" uuid="691e38a3-4e0b-4542-be9d-1a95e10aa49d"/>
           <inConnections type="sltp.mm.core.Connection" uuid="fdbab57e-e42f-4f45-8ed7-5097394911d9"/>
           <isTimed>true</isTimed>
-          <name>D3</name>
-          <priority>42</priority>
+          <name>D2</name>
+          <priority>41</priority>
           <rates type="sltp.mm.core.Rate" uuid="85de0045-cb35-449f-95df-b0d0d1a76757">
-            <annotation>D3</annotation>
-            <color>234946559</color>
+            <annotation>D2</annotation>
+            <color>986198527</color>
             <hasBlocks>true</hasBlocks>
             <identifier>ClassicPeriodicDiscrete0.0020</identifier>
-            <rateIndex>2</rateIndex>
+            <rateIndex>1</rateIndex>
             <rateSpec type="sltp.mm.core.RateSpec">
               <period>.002</period>
             </rateSpec>
-            <sti>2</sti>
+            <sti>1</sti>
           </rates>
         </tasks>
         <tasks type="sltp.mm.core.Task" uuid="a9a57113-5ac1-40fb-8d1f-12f48e516c83">
           <context type="sltp.mm.core.Context" uuid="f12a5abe-f005-4a73-88ef-dcc05ebe3fb8"/>
           <explicit>false</explicit>
           <id>2</id>
-          <inConnections type="sltp.mm.core.Connection" uuid="2374b206-d371-4000-bfac-e3b2ee1ff35a"/>
           <inConnections type="sltp.mm.core.Connection" uuid="b26e1c3f-b897-4531-9561-fc340867d720"/>
           <isTimed>true</isTimed>
-          <name>D4</name>
-          <priority>43</priority>
+          <name>D3</name>
+          <priority>42</priority>
           <rates type="sltp.mm.core.Rate" uuid="834e44eb-f61e-469d-b175-7ed66efddaef">
-            <annotation>D4</annotation>
+            <annotation>D3</annotation>
             <color>234946559</color>
             <hasBlocks>true</hasBlocks>
             <identifier>ClassicPeriodicDiscrete0.010</identifier>
-            <rateIndex>3</rateIndex>
+            <rateIndex>2</rateIndex>
             <rateSpec type="sltp.mm.core.RateSpec">
               <period>.01</period>
             </rateSpec>
-            <sti>3</sti>
+            <sti>2</sti>
           </rates>
         </tasks>
         <tasks type="sltp.mm.core.Task" uuid="5d9bb335-9f71-47c3-80da-451d58b4563e">
@@ -7994,23 +7934,21 @@ __MWOPC_PART_BEGIN__ /simulink/ScheduleCore.xml
           <explicit>false</explicit>
           <id>4</id>
           <inConnections type="sltp.mm.core.Connection" uuid="6d93c91e-c80e-4d8f-b712-3c74ec57466d"/>
-          <inConnections type="sltp.mm.core.Connection" uuid="c2469571-4803-4d4a-be7a-d25cb4c38222"/>
           <isTimed>true</isTimed>
-          <name>D5</name>
-          <outConnections type="sltp.mm.core.Connection" uuid="182083ed-c9ce-4729-9fba-d5e8cabf4927"/>
+          <name>D4</name>
           <outConnections type="sltp.mm.core.Connection" uuid="4936f282-bbef-4d31-9950-2e15e51aeb8e"/>
           <outConnections type="sltp.mm.core.Connection" uuid="fdbab57e-e42f-4f45-8ed7-5097394911d9"/>
-          <priority>44</priority>
+          <priority>43</priority>
           <rates type="sltp.mm.core.Rate" uuid="c3e7df91-be1c-4614-92dd-5c92b47de958">
-            <annotation>D5</annotation>
+            <annotation>D4</annotation>
             <color>234946559</color>
             <hasBlocks>true</hasBlocks>
             <identifier>ClassicPeriodicDiscrete0.10</identifier>
-            <rateIndex>4</rateIndex>
+            <rateIndex>3</rateIndex>
             <rateSpec type="sltp.mm.core.RateSpec">
               <period>.1</period>
             </rateSpec>
-            <sti>4</sti>
+            <sti>3</sti>
           </rates>
         </tasks>
       </subgraph>
@@ -8061,138 +7999,65 @@ __MWOPC_PART_BEGIN__ /simulink/ScheduleEditor.xml
       <syntaxElement type="sltp.mm.syntax.Edge" uuid="2e22e5b3-cb9c-43a4-a81f-f63cc445b20b"/>
       <type>graph.Edge</type>
     </connections>
-    <connections type="diagram.editor.model.Connection" uuid="8a066f8b-3b55-42a4-b77f-97e48d187a7c">
-      <dstElement type="diagram.editor.model.Entity" uuid="be3838e1-382b-4752-ac48-6eb5b21acfa4"/>
-      <srcElement type="diagram.editor.model.Entity" uuid="dc9b2e8e-64fc-4ba3-90ea-26ec4a219eb3"/>
-      <position>0,0</position>
-      <size>0,0,0,0</size>
-      <syntaxElement type="sltp.mm.syntax.Edge" uuid="d4b64865-9410-4b2f-82aa-b3503892bc40"/>
-      <type>graph.Edge</type>
-    </connections>
-    <connections type="diagram.editor.model.Connection" uuid="68aa9509-8081-4774-9bfa-98f69c6e2a03">
-      <dstElement type="diagram.editor.model.Entity" uuid="be3838e1-382b-4752-ac48-6eb5b21acfa4"/>
-      <srcElement type="diagram.editor.model.Entity" uuid="bb51b339-178c-48f6-ba00-4344ab751537"/>
-      <position>0,0</position>
-      <size>0,0,0,0</size>
-      <syntaxElement type="sltp.mm.syntax.Edge" uuid="d3b4f2a6-9f05-4c00-8a69-f66be1d2dbe4"/>
-      <type>graph.Edge</type>
-    </connections>
-    <connections type="diagram.editor.model.Connection" uuid="093bf2c2-7b9d-4cc9-b781-e8132fac8d4b">
-      <dstElement type="diagram.editor.model.Entity" uuid="dc9b2e8e-64fc-4ba3-90ea-26ec4a219eb3"/>
-      <srcElement type="diagram.editor.model.Entity" uuid="be3838e1-382b-4752-ac48-6eb5b21acfa4"/>
-      <position>0,0</position>
-      <size>0,0,0,0</size>
-      <syntaxElement type="sltp.mm.syntax.Edge" uuid="f2051efe-7e18-4be3-9842-3cd50d6e402a"/>
-      <type>graph.Edge</type>
-    </connections>
-    <connections type="diagram.editor.model.Connection" uuid="47a66631-2e4e-4433-b875-6eba50a4e2ea">
-      <dstElement type="diagram.editor.model.Entity" uuid="4259df7d-29f4-4a14-bf72-0e15156b40df"/>
-      <srcElement type="diagram.editor.model.Entity" uuid="be3838e1-382b-4752-ac48-6eb5b21acfa4"/>
-      <position>0,0</position>
-      <size>0,0,0,0</size>
-      <syntaxElement type="sltp.mm.syntax.Edge" uuid="0bdb5935-497a-41be-8e23-6839ca4e5e31"/>
-      <type>graph.Edge</type>
-    </connections>
-    <connections type="diagram.editor.model.Connection" uuid="5a5a6a42-3baa-42b5-b411-f729a7852687">
-      <dstElement type="diagram.editor.model.Entity" uuid="bb51b339-178c-48f6-ba00-4344ab751537"/>
-      <srcElement type="diagram.editor.model.Entity" uuid="be3838e1-382b-4752-ac48-6eb5b21acfa4"/>
-      <position>0,0</position>
-      <size>0,0,0,0</size>
-      <syntaxElement type="sltp.mm.syntax.Edge" uuid="2d09a4a1-3cc3-4155-8235-0846c4692c69"/>
-      <type>graph.Edge</type>
-    </connections>
-    <connections type="diagram.editor.model.Connection" uuid="f051f532-cd93-42ed-8240-31c699bfb7b8">
-      <dstElement type="diagram.editor.model.Entity" uuid="4741236e-f59d-4c05-97c9-d56fcd6ce265"/>
-      <srcElement type="diagram.editor.model.Entity" uuid="be3838e1-382b-4752-ac48-6eb5b21acfa4"/>
-      <position>0,0</position>
-      <size>0,0,0,0</size>
-      <syntaxElement type="sltp.mm.syntax.Edge" uuid="72b3d7a0-5c67-4843-807e-084b0a1a9380"/>
-      <type>graph.Edge</type>
-    </connections>
     <entities type="diagram.editor.model.Entity" uuid="dc9b2e8e-64fc-4ba3-90ea-26ec4a219eb3">
       <inConnections type="diagram.editor.model.Connection" uuid="bf6e9e1b-016d-4f3c-9b34-5eb1874a64c7"/>
-      <inConnections type="diagram.editor.model.Connection" uuid="093bf2c2-7b9d-4cc9-b781-e8132fac8d4b"/>
       <outConnections type="diagram.editor.model.Connection" uuid="5c7490c4-7607-464d-a887-640ebce51e20"/>
       <outConnections type="diagram.editor.model.Connection" uuid="5c054f0a-5959-4305-8329-c6b20be47339"/>
       <outConnections type="diagram.editor.model.Connection" uuid="b13244ee-ec6d-457e-a1f4-db6a0cb930c3"/>
-      <outConnections type="diagram.editor.model.Connection" uuid="8a066f8b-3b55-42a4-b77f-97e48d187a7c"/>
       <position>0,0</position>
       <size>0,0,0,0</size>
       <syntaxElement type="sltp.mm.syntax.Node" uuid="4e96381b-d2bc-4b42-a7fb-558e37da6a13"/>
-      <title>D2</title>
+      <title>D1</title>
       <type>implicit-periodic</type>
       <subDiagram type="diagram.editor.model.Diagram" uuid="1ab66a34-894c-4ffe-b053-a7085930786d">
         <position>0,0</position>
         <syntaxElement type="sltp.mm.syntax.Graph" uuid="01367aca-32dd-40eb-818e-3a963a65b7c1"/>
-        <title>D2</title>
+        <title>D1</title>
         <type>graph.Graph</type>
       </subDiagram>
     </entities>
     <entities type="diagram.editor.model.Entity" uuid="4259df7d-29f4-4a14-bf72-0e15156b40df">
       <inConnections type="diagram.editor.model.Connection" uuid="34ab98eb-d936-4a0d-94b9-8fafbdb53e41"/>
       <inConnections type="diagram.editor.model.Connection" uuid="5c054f0a-5959-4305-8329-c6b20be47339"/>
-      <inConnections type="diagram.editor.model.Connection" uuid="47a66631-2e4e-4433-b875-6eba50a4e2ea"/>
       <position>0,0</position>
       <size>0,0,0,0</size>
       <syntaxElement type="sltp.mm.syntax.Node" uuid="512bdd47-08fc-40db-a398-3a5c9bb6520f"/>
-      <title>D3</title>
+      <title>D2</title>
       <type>implicit-periodic</type>
       <subDiagram type="diagram.editor.model.Diagram" uuid="ad19b471-0fe5-445f-9a5c-81b817ec6fb8">
         <position>0,0</position>
         <syntaxElement type="sltp.mm.syntax.Graph" uuid="2397d179-eea7-4e82-b9c2-4bdc21d8b773"/>
-        <title>D3</title>
+        <title>D2</title>
         <type>graph.Graph</type>
       </subDiagram>
     </entities>
     <entities type="diagram.editor.model.Entity" uuid="bb51b339-178c-48f6-ba00-4344ab751537">
       <inConnections type="diagram.editor.model.Connection" uuid="5c7490c4-7607-464d-a887-640ebce51e20"/>
-      <inConnections type="diagram.editor.model.Connection" uuid="5a5a6a42-3baa-42b5-b411-f729a7852687"/>
       <outConnections type="diagram.editor.model.Connection" uuid="34ab98eb-d936-4a0d-94b9-8fafbdb53e41"/>
       <outConnections type="diagram.editor.model.Connection" uuid="bf6e9e1b-016d-4f3c-9b34-5eb1874a64c7"/>
-      <outConnections type="diagram.editor.model.Connection" uuid="68aa9509-8081-4774-9bfa-98f69c6e2a03"/>
       <position>0,0</position>
       <size>0,0,0,0</size>
       <syntaxElement type="sltp.mm.syntax.Node" uuid="52c16075-53f5-4654-9a5a-08417eeb503a"/>
-      <title>D5</title>
+      <title>D4</title>
       <type>implicit-periodic</type>
       <subDiagram type="diagram.editor.model.Diagram" uuid="3971a051-0c85-42f2-9094-2ca04fb0a275">
         <position>0,0</position>
         <syntaxElement type="sltp.mm.syntax.Graph" uuid="92f74386-57e9-4047-865a-adf086a8e7b3"/>
-        <title>D5</title>
+        <title>D4</title>
         <type>graph.Graph</type>
       </subDiagram>
     </entities>
     <entities type="diagram.editor.model.Entity" uuid="4741236e-f59d-4c05-97c9-d56fcd6ce265">
       <inConnections type="diagram.editor.model.Connection" uuid="b13244ee-ec6d-457e-a1f4-db6a0cb930c3"/>
-      <inConnections type="diagram.editor.model.Connection" uuid="f051f532-cd93-42ed-8240-31c699bfb7b8"/>
       <position>0,0</position>
       <size>0,0,0,0</size>
       <syntaxElement type="sltp.mm.syntax.Node" uuid="6daee0da-5ae7-459a-a292-27bd59e5afd8"/>
-      <title>D4</title>
+      <title>D3</title>
       <type>implicit-periodic</type>
       <subDiagram type="diagram.editor.model.Diagram" uuid="f655cd86-6119-4717-b753-a002b32f7119">
         <position>0,0</position>
         <syntaxElement type="sltp.mm.syntax.Graph" uuid="2f66f2c8-9393-4e00-abe3-45e821cd09d4"/>
-        <title>D4</title>
-        <type>graph.Graph</type>
-      </subDiagram>
-    </entities>
-    <entities type="diagram.editor.model.Entity" uuid="be3838e1-382b-4752-ac48-6eb5b21acfa4">
-      <inConnections type="diagram.editor.model.Connection" uuid="8a066f8b-3b55-42a4-b77f-97e48d187a7c"/>
-      <inConnections type="diagram.editor.model.Connection" uuid="68aa9509-8081-4774-9bfa-98f69c6e2a03"/>
-      <outConnections type="diagram.editor.model.Connection" uuid="093bf2c2-7b9d-4cc9-b781-e8132fac8d4b"/>
-      <outConnections type="diagram.editor.model.Connection" uuid="47a66631-2e4e-4433-b875-6eba50a4e2ea"/>
-      <outConnections type="diagram.editor.model.Connection" uuid="5a5a6a42-3baa-42b5-b411-f729a7852687"/>
-      <outConnections type="diagram.editor.model.Connection" uuid="f051f532-cd93-42ed-8240-31c699bfb7b8"/>
-      <position>0,0</position>
-      <size>0,0,0,0</size>
-      <syntaxElement type="sltp.mm.syntax.Node" uuid="0e3de4f3-76e4-4755-863c-65c6e6e451ad"/>
-      <title>D1</title>
-      <type>implicit-periodic</type>
-      <subDiagram type="diagram.editor.model.Diagram" uuid="743f7571-f61d-4682-bcad-bdac3c5575f2">
-        <position>0,0</position>
-        <syntaxElement type="sltp.mm.syntax.Graph" uuid="5886ad6d-57a4-4b9b-ab4b-b303cb9f889a"/>
-        <title>D1</title>
+        <title>D3</title>
         <type>graph.Graph</type>
       </subDiagram>
     </entities>
@@ -8202,129 +8067,88 @@ __MWOPC_PART_BEGIN__ /simulink/ScheduleEditor.xml
   </diagram.editor.model.Diagram>
   <sltp.mm.syntax.Context type="sltp.mm.syntax.Context" uuid="67cc7f0f-b708-4a76-ab6a-7bcf8106fc19">
     <rootGraph type="sltp.mm.syntax.Graph" uuid="fee0fc1e-999a-43d1-9840-0b232dfba1b6">
-      <children type="sltp.mm.syntax.Node" uuid="0e3de4f3-76e4-4755-863c-65c6e6e451ad">
-        <inEdges type="sltp.mm.syntax.Edge" uuid="d3b4f2a6-9f05-4c00-8a69-f66be1d2dbe4"/>
-        <inEdges type="sltp.mm.syntax.Edge" uuid="d4b64865-9410-4b2f-82aa-b3503892bc40"/>
-        <outEdges type="sltp.mm.syntax.Edge" uuid="0bdb5935-497a-41be-8e23-6839ca4e5e31"/>
-        <outEdges type="sltp.mm.syntax.Edge" uuid="2d09a4a1-3cc3-4155-8235-0846c4692c69"/>
-        <outEdges type="sltp.mm.syntax.Edge" uuid="72b3d7a0-5c67-4843-807e-084b0a1a9380"/>
-        <outEdges type="sltp.mm.syntax.Edge" uuid="f2051efe-7e18-4be3-9842-3cd50d6e402a"/>
+      <children type="sltp.mm.syntax.Node" uuid="4e96381b-d2bc-4b42-a7fb-558e37da6a13">
+        <inEdges type="sltp.mm.syntax.Edge" uuid="2b7799a4-a9bc-4be7-b363-083ca9ab0369"/>
+        <outEdges type="sltp.mm.syntax.Edge" uuid="2e22e5b3-cb9c-43a4-a81f-f63cc445b20b"/>
+        <outEdges type="sltp.mm.syntax.Edge" uuid="95ada836-c2aa-4f20-a2dd-d9f6c0a99c66"/>
+        <outEdges type="sltp.mm.syntax.Edge" uuid="c915bafa-5149-4101-8e81-67c33dc0284e"/>
         <priority>40</priority>
         <rates type="sltp.mm.syntax.RateData">
           <color>#ff453a</color>
           <hasBlocks>true</hasBlocks>
-          <rate>5e-05</rate>
+          <rate>0.0001</rate>
           <title>D1</title>
         </rates>
         <title>D1</title>
         <type>implicit-periodic</type>
-        <diagramElement type="diagram.editor.model.Entity" uuid="be3838e1-382b-4752-ac48-6eb5b21acfa4"/>
-        <subgraph type="sltp.mm.syntax.Graph" uuid="5886ad6d-57a4-4b9b-ab4b-b303cb9f889a">
-          <title>D1</title>
-          <diagramElement type="diagram.editor.model.Diagram" uuid="743f7571-f61d-4682-bcad-bdac3c5575f2"/>
-        </subgraph>
-      </children>
-      <children type="sltp.mm.syntax.Node" uuid="4e96381b-d2bc-4b42-a7fb-558e37da6a13">
-        <inEdges type="sltp.mm.syntax.Edge" uuid="2b7799a4-a9bc-4be7-b363-083ca9ab0369"/>
-        <inEdges type="sltp.mm.syntax.Edge" uuid="f2051efe-7e18-4be3-9842-3cd50d6e402a"/>
-        <orderIndex>1</orderIndex>
-        <outEdges type="sltp.mm.syntax.Edge" uuid="2e22e5b3-cb9c-43a4-a81f-f63cc445b20b"/>
-        <outEdges type="sltp.mm.syntax.Edge" uuid="95ada836-c2aa-4f20-a2dd-d9f6c0a99c66"/>
-        <outEdges type="sltp.mm.syntax.Edge" uuid="c915bafa-5149-4101-8e81-67c33dc0284e"/>
-        <outEdges type="sltp.mm.syntax.Edge" uuid="d4b64865-9410-4b2f-82aa-b3503892bc40"/>
-        <priority>41</priority>
-        <rates type="sltp.mm.syntax.RateData">
-          <color>#3ac831</color>
-          <hasBlocks>true</hasBlocks>
-          <rate>0.0001</rate>
-          <title>D2</title>
-        </rates>
-        <title>D2</title>
-        <type>implicit-periodic</type>
         <diagramElement type="diagram.editor.model.Entity" uuid="dc9b2e8e-64fc-4ba3-90ea-26ec4a219eb3"/>
         <subgraph type="sltp.mm.syntax.Graph" uuid="01367aca-32dd-40eb-818e-3a963a65b7c1">
-          <title>D2</title>
+          <title>D1</title>
           <diagramElement type="diagram.editor.model.Diagram" uuid="1ab66a34-894c-4ffe-b053-a7085930786d"/>
         </subgraph>
       </children>
       <children type="sltp.mm.syntax.Node" uuid="512bdd47-08fc-40db-a398-3a5c9bb6520f">
-        <inEdges type="sltp.mm.syntax.Edge" uuid="0bdb5935-497a-41be-8e23-6839ca4e5e31"/>
         <inEdges type="sltp.mm.syntax.Edge" uuid="563f2dfe-c6be-4a12-95c9-d96d6a8ddf99"/>
         <inEdges type="sltp.mm.syntax.Edge" uuid="c915bafa-5149-4101-8e81-67c33dc0284e"/>
-        <orderIndex>2</orderIndex>
-        <priority>42</priority>
+        <orderIndex>1</orderIndex>
+        <priority>41</priority>
         <rates type="sltp.mm.syntax.RateData">
-          <color>#0e00ff</color>
+          <color>#3ac831</color>
           <hasBlocks>true</hasBlocks>
           <rate>0.002</rate>
-          <title>D3</title>
+          <title>D2</title>
         </rates>
-        <title>D3</title>
+        <title>D2</title>
         <type>implicit-periodic</type>
         <diagramElement type="diagram.editor.model.Entity" uuid="4259df7d-29f4-4a14-bf72-0e15156b40df"/>
         <subgraph type="sltp.mm.syntax.Graph" uuid="2397d179-eea7-4e82-b9c2-4bdc21d8b773">
-          <title>D3</title>
+          <title>D2</title>
           <diagramElement type="diagram.editor.model.Diagram" uuid="ad19b471-0fe5-445f-9a5c-81b817ec6fb8"/>
         </subgraph>
       </children>
       <children type="sltp.mm.syntax.Node" uuid="52c16075-53f5-4654-9a5a-08417eeb503a">
-        <inEdges type="sltp.mm.syntax.Edge" uuid="2d09a4a1-3cc3-4155-8235-0846c4692c69"/>
         <inEdges type="sltp.mm.syntax.Edge" uuid="95ada836-c2aa-4f20-a2dd-d9f6c0a99c66"/>
-        <orderIndex>4</orderIndex>
+        <orderIndex>3</orderIndex>
         <outEdges type="sltp.mm.syntax.Edge" uuid="2b7799a4-a9bc-4be7-b363-083ca9ab0369"/>
         <outEdges type="sltp.mm.syntax.Edge" uuid="563f2dfe-c6be-4a12-95c9-d96d6a8ddf99"/>
-        <outEdges type="sltp.mm.syntax.Edge" uuid="d3b4f2a6-9f05-4c00-8a69-f66be1d2dbe4"/>
-        <priority>44</priority>
+        <priority>43</priority>
         <rates type="sltp.mm.syntax.RateData">
           <color>#0e00ff</color>
           <hasBlocks>true</hasBlocks>
           <rate>0.1</rate>
-          <title>D5</title>
+          <title>D4</title>
         </rates>
-        <title>D5</title>
+        <title>D4</title>
         <type>implicit-periodic</type>
         <diagramElement type="diagram.editor.model.Entity" uuid="bb51b339-178c-48f6-ba00-4344ab751537"/>
         <subgraph type="sltp.mm.syntax.Graph" uuid="92f74386-57e9-4047-865a-adf086a8e7b3">
-          <title>D5</title>
+          <title>D4</title>
           <diagramElement type="diagram.editor.model.Diagram" uuid="3971a051-0c85-42f2-9094-2ca04fb0a275"/>
         </subgraph>
       </children>
       <children type="sltp.mm.syntax.Node" uuid="6daee0da-5ae7-459a-a292-27bd59e5afd8">
         <inEdges type="sltp.mm.syntax.Edge" uuid="2e22e5b3-cb9c-43a4-a81f-f63cc445b20b"/>
-        <inEdges type="sltp.mm.syntax.Edge" uuid="72b3d7a0-5c67-4843-807e-084b0a1a9380"/>
-        <orderIndex>3</orderIndex>
-        <priority>43</priority>
+        <orderIndex>2</orderIndex>
+        <priority>42</priority>
         <rates type="sltp.mm.syntax.RateData">
           <color>#0e00ff</color>
           <hasBlocks>true</hasBlocks>
           <rate>0.01</rate>
-          <title>D4</title>
+          <title>D3</title>
         </rates>
-        <title>D4</title>
+        <title>D3</title>
         <type>implicit-periodic</type>
         <diagramElement type="diagram.editor.model.Entity" uuid="4741236e-f59d-4c05-97c9-d56fcd6ce265"/>
         <subgraph type="sltp.mm.syntax.Graph" uuid="2f66f2c8-9393-4e00-abe3-45e821cd09d4">
-          <title>D4</title>
+          <title>D3</title>
           <diagramElement type="diagram.editor.model.Diagram" uuid="f655cd86-6119-4717-b753-a002b32f7119"/>
         </subgraph>
       </children>
-      <edges type="sltp.mm.syntax.Edge" uuid="0bdb5935-497a-41be-8e23-6839ca4e5e31">
-        <dst type="sltp.mm.syntax.Node" uuid="512bdd47-08fc-40db-a398-3a5c9bb6520f"/>
-        <src type="sltp.mm.syntax.Node" uuid="0e3de4f3-76e4-4755-863c-65c6e6e451ad"/>
-        <type>Dependency</type>
-        <diagramElement type="diagram.editor.model.Connection" uuid="47a66631-2e4e-4433-b875-6eba50a4e2ea"/>
-      </edges>
       <edges type="sltp.mm.syntax.Edge" uuid="2b7799a4-a9bc-4be7-b363-083ca9ab0369">
         <dst type="sltp.mm.syntax.Node" uuid="4e96381b-d2bc-4b42-a7fb-558e37da6a13"/>
         <src type="sltp.mm.syntax.Node" uuid="52c16075-53f5-4654-9a5a-08417eeb503a"/>
         <type>Delay</type>
         <diagramElement type="diagram.editor.model.Connection" uuid="bf6e9e1b-016d-4f3c-9b34-5eb1874a64c7"/>
-      </edges>
-      <edges type="sltp.mm.syntax.Edge" uuid="2d09a4a1-3cc3-4155-8235-0846c4692c69">
-        <dst type="sltp.mm.syntax.Node" uuid="52c16075-53f5-4654-9a5a-08417eeb503a"/>
-        <src type="sltp.mm.syntax.Node" uuid="0e3de4f3-76e4-4755-863c-65c6e6e451ad"/>
-        <type>Dependency</type>
-        <diagramElement type="diagram.editor.model.Connection" uuid="5a5a6a42-3baa-42b5-b411-f729a7852687"/>
       </edges>
       <edges type="sltp.mm.syntax.Edge" uuid="2e22e5b3-cb9c-43a4-a81f-f63cc445b20b">
         <dst type="sltp.mm.syntax.Node" uuid="6daee0da-5ae7-459a-a292-27bd59e5afd8"/>
@@ -8338,12 +8162,6 @@ __MWOPC_PART_BEGIN__ /simulink/ScheduleEditor.xml
         <type>Delay</type>
         <diagramElement type="diagram.editor.model.Connection" uuid="34ab98eb-d936-4a0d-94b9-8fafbdb53e41"/>
       </edges>
-      <edges type="sltp.mm.syntax.Edge" uuid="72b3d7a0-5c67-4843-807e-084b0a1a9380">
-        <dst type="sltp.mm.syntax.Node" uuid="6daee0da-5ae7-459a-a292-27bd59e5afd8"/>
-        <src type="sltp.mm.syntax.Node" uuid="0e3de4f3-76e4-4755-863c-65c6e6e451ad"/>
-        <type>Dependency</type>
-        <diagramElement type="diagram.editor.model.Connection" uuid="f051f532-cd93-42ed-8240-31c699bfb7b8"/>
-      </edges>
       <edges type="sltp.mm.syntax.Edge" uuid="95ada836-c2aa-4f20-a2dd-d9f6c0a99c66">
         <dst type="sltp.mm.syntax.Node" uuid="52c16075-53f5-4654-9a5a-08417eeb503a"/>
         <src type="sltp.mm.syntax.Node" uuid="4e96381b-d2bc-4b42-a7fb-558e37da6a13"/>
@@ -8356,141 +8174,23 @@ __MWOPC_PART_BEGIN__ /simulink/ScheduleEditor.xml
         <type>Dependency</type>
         <diagramElement type="diagram.editor.model.Connection" uuid="5c054f0a-5959-4305-8329-c6b20be47339"/>
       </edges>
-      <edges type="sltp.mm.syntax.Edge" uuid="d3b4f2a6-9f05-4c00-8a69-f66be1d2dbe4">
-        <dst type="sltp.mm.syntax.Node" uuid="0e3de4f3-76e4-4755-863c-65c6e6e451ad"/>
-        <src type="sltp.mm.syntax.Node" uuid="52c16075-53f5-4654-9a5a-08417eeb503a"/>
-        <type>Delay</type>
-        <diagramElement type="diagram.editor.model.Connection" uuid="68aa9509-8081-4774-9bfa-98f69c6e2a03"/>
-      </edges>
-      <edges type="sltp.mm.syntax.Edge" uuid="d4b64865-9410-4b2f-82aa-b3503892bc40">
-        <dst type="sltp.mm.syntax.Node" uuid="0e3de4f3-76e4-4755-863c-65c6e6e451ad"/>
-        <src type="sltp.mm.syntax.Node" uuid="4e96381b-d2bc-4b42-a7fb-558e37da6a13"/>
-        <type>Delay</type>
-        <diagramElement type="diagram.editor.model.Connection" uuid="8a066f8b-3b55-42a4-b77f-97e48d187a7c"/>
-      </edges>
-      <edges type="sltp.mm.syntax.Edge" uuid="f2051efe-7e18-4be3-9842-3cd50d6e402a">
-        <dst type="sltp.mm.syntax.Node" uuid="4e96381b-d2bc-4b42-a7fb-558e37da6a13"/>
-        <src type="sltp.mm.syntax.Node" uuid="0e3de4f3-76e4-4755-863c-65c6e6e451ad"/>
-        <type>Dependency</type>
-        <diagramElement type="diagram.editor.model.Connection" uuid="093bf2c2-7b9d-4cc9-b781-e8132fac8d4b"/>
-      </edges>
       <title>Default</title>
       <diagramElement type="diagram.editor.model.Diagram" uuid="1710fe23-e440-4e8c-8eec-36dfab8423d0"/>
     </rootGraph>
   </sltp.mm.syntax.Context>
 </sltp_editor>
-__MWOPC_PART_BEGIN__ /simulink/stateflow/_rels/machine.xml.rels
-<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
-<Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships">
-  <Relationship Id="chart_7" Target="chart_7.xml" Type="http://schemas.mathworks.com/simulinkModel/2018/relationships/stateflowMachine"/>
-</Relationships>
-
-__MWOPC_PART_BEGIN__ /simulink/stateflow/chart_7.xml
-<?xml version="1.0" encoding="utf-8"?>
-<chart id="7">
-  <P Name="name">Microcontroller/Initialize Function/ </P>
-  <P Name="windowPosition">[422 539.941 189 413]</P>
-  <P Name="viewLimits">[0 156.75 0 153.75]</P>
-  <P Name="screen">[1 1 3600 1200 1.180555555555556]</P>
-  <P Name="viewObj">7</P>
-  <P Name="ssIdHighWaterMark">5</P>
-  <P Name="decomposition">CLUSTER_CHART</P>
-  <P Name="type">EML_CHART</P>
-  <P Name="chartFileNumber">1</P>
-  <P Name="disableImplicitCasting">1</P>
-  <eml>
-    <P Name="name">GD3000Initialization</P>
-  </eml>
-  <Children>
-    <state SSID="1">
-      <P Name="labelString">eML_blk_kernel()</P>
-      <P Name="position">[18 64.5 118 66]</P>
-      <P Name="fontSize">12</P>
-      <P Name="superState">SUBCHART</P>
-      <P Name="subviewer">7</P>
-      <P Name="type">FUNC_STATE</P>
-      <P Name="decomposition">CLUSTER_STATE</P>
-      <eml>
-        <P Name="isEML">1</P>
-        <P Name="script">function GD3000Initialization
-    
-    % Add in makefile the MCAT Files from the mcat_src_files folder
-    % The src folder must be added first in Matlab&apos;s path
-
-    % Right click on mcat_src_files folder -&gt; Add to path -&gt; Selected folder
-    update_hand_code_build_info_PMSM();
-    
-    if( coder.target( &apos;Rtw&apos; ) )
-        %% Adding  header information to the generated code
-        coder.cinclude(&apos;gd3000_init.h&apos;);
-        coder.cinclude(&apos;tpp.h&apos;);
-        coder.cinclude(&apos;tpp_mc33937.h&apos;);
-        coder.cinclude(&apos;common_aml.h&apos;);
-        coder.cinclude(&apos;gpio_aml.h&apos;);
-        coder.cinclude(&apos;spi_aml.h&apos;);
-        coder.cinclude(&apos;wait_aml.h&apos;);
-
-        %% Adding source files to MakeFile
-        coder.updateBuildInfo( &apos;addSourceFiles&apos;, &apos;gd3000_init.c&apos;);
-        coder.updateBuildInfo( &apos;addSourceFiles&apos;, &apos;tpp.c&apos;);
-        coder.updateBuildInfo( &apos;addSourceFiles&apos;, &apos;spi_aml.c&apos;);
-        coder.updateBuildInfo( &apos;addSourceFiles&apos;, &apos;wait_aml.c&apos;);
-
-        %% Calling custom function
-        % coder.ceval(&apos;GD3000_Init&apos;);
-    end
-end</P>
-        <P Name="editorLayout" Class="double">Matrix(4,1)
-[10.0, 5.0, 700.0, 500.0]</P>
-        <P Name="vectorOutputs1D">1</P>
-      </eml>
-    </state>
-    <transition SSID="2">
-      <P Name="labelString">{eML_blk_kernel();}</P>
-      <P Name="labelPosition">[28.125 13.875 102.544 14.964]</P>
-      <P Name="fontSize">12</P>
-      <src>
-        <P Name="intersection">[0 0 1 0 23.5747 14.625 0 0]</P>
-      </src>
-      <dst>
-        <P Name="SSID">3</P>
-        <P Name="intersection">[1 0 -1 0 23.5747 42.5747 0 0]</P>
-      </dst>
-      <P Name="midPoint">[23.5747 24.9468]</P>
-      <P Name="dataLimits">[21.175 25.975 14.625 42.575]</P>
-      <P Name="subviewer">7</P>
-      <P Name="drawStyle">SMART</P>
-      <slide>
-        <P Name="sticky">BOTH_STICK</P>
-      </slide>
-      <P Name="executionOrder">1</P>
-    </transition>
-    <junction SSID="3">
-      <P Name="position">[23.5747 49.5747 7]</P>
-      <P Name="subviewer">7</P>
-      <P Name="type">CONNECTIVE_JUNCTION</P>
-    </junction>
-  </Children>
-</chart>
-
 __MWOPC_PART_BEGIN__ /simulink/stateflow/machine.xml
 <?xml version="1.0" encoding="utf-8"?>
 <Stateflow>
-  <machine id="6">
+  <machine id="1">
     <P Name="sfVersion">82450000</P>
     <Children>
-      <target id="12" name="sfun">
+      <target id="2" name="sfun">
         <P Name="description">Default Simulink S-Function Target.</P>
       </target>
-      <target id="13" name="rtw"/>
-      <chart Ref="chart_7"/>
+      <target id="3" name="rtw"/>
     </Children>
   </machine>
-  <instance id="11">
-    <P Name="machine">6</P>
-    <P Name="name">Microcontroller/Initialize Function/ </P>
-    <P Name="chart">7</P>
-  </instance>
 </Stateflow>
 
 __MWOPC_PART_BEGIN__ /simulink/systems/_rels/system_8582.xml.rels
@@ -8597,7 +8297,6 @@ __MWOPC_PART_BEGIN__ /simulink/systems/_rels/system_8750.xml.rels
 __MWOPC_PART_BEGIN__ /simulink/systems/_rels/system_8793.xml.rels
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
 <Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships">
-  <Relationship Id="system_8794" Target="system_8794.xml" Type="http://schemas.mathworks.com/simulink/2010/relationships/system"/>
   <Relationship Id="system_8795" Target="system_8795.xml" Type="http://schemas.mathworks.com/simulink/2010/relationships/system"/>
 </Relationships>
 
@@ -10143,7 +9842,7 @@ __MWOPC_PART_BEGIN__ /simulink/systems/system_8631.xml
     <P Name="ForegroundColor">[0.862745, 0.862745, 0.862745]</P>
     <P Name="BackgroundColor">[0.862745, 0.862745, 0.862745]</P>
     <P Name="AnnotationType">area_annotation</P>
-    <P Name="ZOrder">806</P>
+    <P Name="ZOrder">814</P>
     <P Name="FontName">Arial</P>
     <P Name="FontSize">20</P>
     <P Name="FontWeight">bold</P>
@@ -10158,7 +9857,7 @@ __MWOPC_PART_BEGIN__ /simulink/systems/system_8631.xml
     <P Name="ForegroundColor">[0.901961, 0.901961, 1.000000]</P>
     <P Name="BackgroundColor">[0.901961, 0.901961, 1.000000]</P>
     <P Name="AnnotationType">area_annotation</P>
-    <P Name="ZOrder">803</P>
+    <P Name="ZOrder">811</P>
     <P Name="FontName">Arial</P>
     <P Name="FontSize">20</P>
     <P Name="FontWeight">bold</P>
@@ -10172,7 +9871,7 @@ __MWOPC_PART_BEGIN__ /simulink/systems/system_8631.xml
     <P Name="ForegroundColor">[0.941176, 0.941176, 0.941176]</P>
     <P Name="BackgroundColor">[0.941176, 0.941176, 0.941176]</P>
     <P Name="AnnotationType">area_annotation</P>
-    <P Name="ZOrder">808</P>
+    <P Name="ZOrder">816</P>
     <P Name="FontName">Arial</P>
     <P Name="FontSize">20</P>
     <P Name="FontWeight">bold</P>
@@ -10187,7 +9886,7 @@ __MWOPC_PART_BEGIN__ /simulink/systems/system_8631.xml
     <P Name="ForegroundColor">[0.823529, 0.823529, 1.000000]</P>
     <P Name="BackgroundColor">[0.823529, 0.823529, 1.000000]</P>
     <P Name="AnnotationType">area_annotation</P>
-    <P Name="ZOrder">802</P>
+    <P Name="ZOrder">810</P>
     <P Name="FontName">Arial</P>
     <P Name="FontSize">20</P>
     <P Name="FontWeight">bold</P>
@@ -10201,7 +9900,7 @@ __MWOPC_PART_BEGIN__ /simulink/systems/system_8631.xml
     <P Name="ForegroundColor">[0.941176, 0.941176, 1.000000]</P>
     <P Name="BackgroundColor">[0.941176, 0.941176, 1.000000]</P>
     <P Name="AnnotationType">area_annotation</P>
-    <P Name="ZOrder">804</P>
+    <P Name="ZOrder">812</P>
     <P Name="FontName">Arial</P>
     <P Name="FontSize">20</P>
     <P Name="FontWeight">bold</P>
@@ -10215,7 +9914,7 @@ __MWOPC_PART_BEGIN__ /simulink/systems/system_8631.xml
     <P Name="ForegroundColor">[0.941176, 0.941176, 0.941176]</P>
     <P Name="BackgroundColor">[0.941176, 0.941176, 0.941176]</P>
     <P Name="AnnotationType">area_annotation</P>
-    <P Name="ZOrder">807</P>
+    <P Name="ZOrder">815</P>
     <P Name="FontName">Arial</P>
     <P Name="FontSize">20</P>
     <P Name="FontWeight">bold</P>
@@ -10230,7 +9929,7 @@ __MWOPC_PART_BEGIN__ /simulink/systems/system_8631.xml
     <P Name="ForegroundColor">[0.784314, 0.784314, 0.784314]</P>
     <P Name="BackgroundColor">[0.784314, 0.784314, 0.784314]</P>
     <P Name="AnnotationType">area_annotation</P>
-    <P Name="ZOrder">805</P>
+    <P Name="ZOrder">813</P>
     <P Name="FontName">Arial</P>
     <P Name="FontSize">20</P>
     <P Name="FontWeight">bold</P>
@@ -10245,7 +9944,7 @@ __MWOPC_PART_BEGIN__ /simulink/systems/system_8631.xml
     <P Name="ForegroundColor">[0.862745, 0.862745, 1.000000]</P>
     <P Name="BackgroundColor">[0.862745, 0.862745, 1.000000]</P>
     <P Name="AnnotationType">area_annotation</P>
-    <P Name="ZOrder">801</P>
+    <P Name="ZOrder">809</P>
     <P Name="FontName">Arial</P>
     <P Name="FontSize">20</P>
     <P Name="FontWeight">bold</P>
@@ -10573,7 +10272,7 @@ __MWOPC_PART_BEGIN__ /simulink/systems/system_8661.xml
     <PortCounts in="1"/>
     <P Name="Position">[220, -86, 440, -24]</P>
     <P Name="ZOrder">2016</P>
-    <P Name="LibraryVersion">3.20</P>
+    <P Name="LibraryVersion">3.24</P>
     <P Name="SourceBlock">mbd_s32k3_io_library/Dio</P>
     <P Name="SourceType">s32k3_dio</P>
     <P Name="SourceProductName">IO Blocks</P>
@@ -10688,7 +10387,7 @@ POST_BUILD_VARIANT_USED - false
     <PortCounts in="1"/>
     <P Name="Position">[220, 9, 440, 71]</P>
     <P Name="ZOrder">2018</P>
-    <P Name="LibraryVersion">3.20</P>
+    <P Name="LibraryVersion">3.24</P>
     <P Name="SourceBlock">mbd_s32k3_io_library/Dio</P>
     <P Name="SourceType">s32k3_dio</P>
     <P Name="SourceProductName">IO Blocks</P>
@@ -10803,7 +10502,7 @@ POST_BUILD_VARIANT_USED - false
     <PortCounts in="1"/>
     <P Name="Position">[220, 99, 440, 161]</P>
     <P Name="ZOrder">2020</P>
-    <P Name="LibraryVersion">3.20</P>
+    <P Name="LibraryVersion">3.24</P>
     <P Name="SourceBlock">mbd_s32k3_io_library/Dio</P>
     <P Name="SourceType">s32k3_dio</P>
     <P Name="SourceProductName">IO Blocks</P>
@@ -11018,7 +10717,7 @@ __MWOPC_PART_BEGIN__ /simulink/systems/system_8674.xml
     <PortCounts in="1"/>
     <P Name="Position">[170, 229, 395, 291]</P>
     <P Name="ZOrder">2024</P>
-    <P Name="LibraryVersion">3.20</P>
+    <P Name="LibraryVersion">3.24</P>
     <P Name="SourceBlock">mbd_s32k3_io_library/Dio</P>
     <P Name="SourceType">s32k3_dio</P>
     <P Name="SourceProductName">IO Blocks</P>
@@ -11133,7 +10832,7 @@ POST_BUILD_VARIANT_USED - false
     <PortCounts in="1"/>
     <P Name="Position">[170, 314, 395, 376]</P>
     <P Name="ZOrder">2025</P>
-    <P Name="LibraryVersion">3.20</P>
+    <P Name="LibraryVersion">3.24</P>
     <P Name="SourceBlock">mbd_s32k3_io_library/Dio</P>
     <P Name="SourceType">s32k3_dio</P>
     <P Name="SourceProductName">IO Blocks</P>
@@ -11248,7 +10947,7 @@ POST_BUILD_VARIANT_USED - false
     <PortCounts in="1"/>
     <P Name="Position">[170, 134, 395, 196]</P>
     <P Name="ZOrder">2027</P>
-    <P Name="LibraryVersion">3.20</P>
+    <P Name="LibraryVersion">3.24</P>
     <P Name="SourceBlock">mbd_s32k3_io_library/Dio</P>
     <P Name="SourceType">s32k3_dio</P>
     <P Name="SourceProductName">IO Blocks</P>
@@ -11406,7 +11105,7 @@ __MWOPC_PART_BEGIN__ /simulink/systems/system_8682.xml
     <PortCounts in="1"/>
     <P Name="Position">[255, 179, 480, 241]</P>
     <P Name="ZOrder">2028</P>
-    <P Name="LibraryVersion">3.20</P>
+    <P Name="LibraryVersion">3.24</P>
     <P Name="SourceBlock">mbd_s32k3_io_library/Dio</P>
     <P Name="SourceType">s32k3_dio</P>
     <P Name="SourceProductName">IO Blocks</P>
@@ -11521,7 +11220,7 @@ POST_BUILD_VARIANT_USED - false
     <PortCounts in="1"/>
     <P Name="Position">[255, 84, 480, 146]</P>
     <P Name="ZOrder">2029</P>
-    <P Name="LibraryVersion">3.20</P>
+    <P Name="LibraryVersion">3.24</P>
     <P Name="SourceBlock">mbd_s32k3_io_library/Dio</P>
     <P Name="SourceType">s32k3_dio</P>
     <P Name="SourceProductName">IO Blocks</P>
@@ -11636,7 +11335,7 @@ POST_BUILD_VARIANT_USED - false
     <PortCounts in="1"/>
     <P Name="Position">[255, 274, 480, 336]</P>
     <P Name="ZOrder">2031</P>
-    <P Name="LibraryVersion">3.20</P>
+    <P Name="LibraryVersion">3.24</P>
     <P Name="SourceBlock">mbd_s32k3_io_library/Dio</P>
     <P Name="SourceType">s32k3_dio</P>
     <P Name="SourceProductName">IO Blocks</P>
@@ -12193,25 +11892,31 @@ AdcGeneral/AdcPriorityQueueMaxDepth - 1
 AdcGeneral/AdcReadGroupApi - false 
 AdcGeneral/AdcResultAlignment - ADC_ALIGN_RIGHT 
 AdcGeneral/AdcVersionInfoApi - true 
-AdcInterrupt - AdcInterrupt_0 AdcInterrupt_1 AdcInterrupt_2 AdcInterrupt_3 AdcInterrupt_4 AdcInterrupt_5 
-AdcInterrupt_0/AdcInterruptEnable - false 
-AdcInterrupt_0/AdcInterruptSource - ADC0_EOC 
-AdcInterrupt_0/Index - 0 
-AdcInterrupt_1/AdcInterruptEnable - false 
-AdcInterrupt_1/AdcInterruptSource - ADC0_WD 
-AdcInterrupt_1/Index - 1 
-AdcInterrupt_2/AdcInterruptEnable - false 
-AdcInterrupt_2/AdcInterruptSource - ADC1_EOC 
-AdcInterrupt_2/Index - 2 
-AdcInterrupt_3/AdcInterruptEnable - false 
-AdcInterrupt_3/AdcInterruptSource - ADC1_WD 
-AdcInterrupt_3/Index - 3 
-AdcInterrupt_4/AdcInterruptEnable - false 
-AdcInterrupt_4/AdcInterruptSource - ADC2_EOC 
-AdcInterrupt_4/Index - 4 
-AdcInterrupt_5/AdcInterruptEnable - false 
-AdcInterrupt_5/AdcInterruptSource - ADC2_WD 
-AdcInterrupt_5/Index - 5 
+AdcHwConfiguration - AdcHwConfiguration_0 AdcHwConfiguration_1 AdcHwConfiguration_2 
+AdcHwConfiguration_0/AdcFifoFullInterruptEnable - false 
+AdcHwConfiguration_0/AdcHwConfiguredId - ADC0 
+AdcHwConfiguration_0/AdcInjectedInterruptEnable - false 
+AdcHwConfiguration_0/AdcNormalInterruptEnable - false 
+AdcHwConfiguration_0/CtuFifoOfInterruptEnable - false 
+AdcHwConfiguration_0/DmaTransferEnable - false 
+AdcHwConfiguration_0/Index - 0 
+AdcHwConfiguration_0/WdgThresholdEnable - false 
+AdcHwConfiguration_1/AdcFifoFullInterruptEnable - false 
+AdcHwConfiguration_1/AdcHwConfiguredId - ADC1 
+AdcHwConfiguration_1/AdcInjectedInterruptEnable - false 
+AdcHwConfiguration_1/AdcNormalInterruptEnable - false 
+AdcHwConfiguration_1/CtuFifoOfInterruptEnable - false 
+AdcHwConfiguration_1/DmaTransferEnable - false 
+AdcHwConfiguration_1/Index - 1 
+AdcHwConfiguration_1/WdgThresholdEnable - false 
+AdcHwConfiguration_2/AdcFifoFullInterruptEnable - false 
+AdcHwConfiguration_2/AdcHwConfiguredId - ADC2 
+AdcHwConfiguration_2/AdcInjectedInterruptEnable - false 
+AdcHwConfiguration_2/AdcNormalInterruptEnable - false 
+AdcHwConfiguration_2/CtuFifoOfInterruptEnable - false 
+AdcHwConfiguration_2/DmaTransferEnable - false 
+AdcHwConfiguration_2/Index - 2 
+AdcHwConfiguration_2/WdgThresholdEnable - false 
 AdcPublishedInformation - AdcPublishedInformation 
 AdcPublishedInformation/AdcChannelValueSigned - false 
 AdcPublishedInformation/AdcGroupFirstChannelFixed - false 
@@ -12222,7 +11927,7 @@ AutosarExt/AdcConvTimeOnce - true
 AutosarExt/AdcCtuHardwareTriggerOptimization - false 
 AutosarExt/AdcEnableApplyCalibration - false 
 AutosarExt/AdcEnableAsyncCalibration - false 
-AutosarExt/AdcEnableCalibration - false 
+AutosarExt/AdcEnableCalibration - true 
 AutosarExt/AdcEnableChDisableChApi - false 
 AutosarExt/AdcEnableCtuControlModeApi - true 
 AutosarExt/AdcEnableCtuTrigAutosarExtApi - false 
@@ -12239,15 +11944,18 @@ AutosarExt/AdcEnableThresholdConfigurationApi - false
 AutosarExt/AdcEnableUserModeSupport - false 
 AutosarExt/AdcEnableWatchdogApi - false 
 AutosarExt/AdcGetInjectedConvStatusApi - false 
+AutosarExt/AdcMaxPartitions - 1 
 AutosarExt/AdcMultiPartitionSupport - false 
 AutosarExt/AdcOptimizeDmaStreamingGroups - false 
 AutosarExt/AdcOptimizeOneShotHwTriggerConversions - false 
 AutosarExt/AdcPreSamplingOnce - true 
+AutosarExt/AdcSarEnable - true 
 AutosarExt/AdcSarEnableTempsenseApi - false 
 AutosarExt/AdcSarIpDevErrorDetect - false 
 AutosarExt/AdcSarPowerOnTempSense - false 
 AutosarExt/AdcSarTempSenseVsupply - 53 
 AutosarExt/AdcSetHwUnitPowerModeApi - false 
+AutosarExt/AdcSetUserGainAndOffset - false 
 AutosarExt/AdcTimeoutMethod - OSIF_COUNTER_SYSTEM 
 AutosarExt/AdcTimeoutVal - 1500000 
 AutosarExt/AdcUseHardwareNormalGroups - false 
@@ -12329,7 +12037,7 @@ __MWOPC_PART_BEGIN__ /simulink/systems/system_8738.xml
     <P Name="Position">[-475, -96, -225, -24]</P>
     <P Name="ZOrder">2006</P>
     <P Name="Priority">0</P>
-    <P Name="LibraryVersion">3.20</P>
+    <P Name="LibraryVersion">3.24</P>
     <P Name="SourceBlock">mbd_s32k3_io_library/Adc</P>
     <P Name="SourceType">s32k3_adc</P>
     <P Name="SourceProductName">IO Blocks</P>
@@ -12341,8 +12049,9 @@ __MWOPC_PART_BEGIN__ /simulink/systems/system_8738.xml
       <P Name="channel">PHB_I</P>
       <P Name="threshold_control">No ADC threshold control configured</P>
       <P Name="power_state">ADC_FULL_POWER</P>
+      <P Name="ctu_unit">BctuHwUnit_0</P>
       <P Name="ctu_trigger">AdcHwTrigger_0</P>
-      <P Name="ctu_fifo_idx">0</P>
+      <P Name="ctu_fifo_idx">BctuResultFifos_0</P>
       <P Name="text">AdcConfigSet - AdcConfigSet 
 AdcConfigSet/AdcHwTrigger - AdcHwTrigger_0 
 AdcConfigSet/AdcHwTrigger_0/AdcHwTrigSrc - BCTU_EMIOS_0_4 
@@ -12664,25 +12373,31 @@ AdcGeneral/AdcPriorityQueueMaxDepth - 1
 AdcGeneral/AdcReadGroupApi - false 
 AdcGeneral/AdcResultAlignment - ADC_ALIGN_RIGHT 
 AdcGeneral/AdcVersionInfoApi - true 
-AdcInterrupt - AdcInterrupt_0 AdcInterrupt_1 AdcInterrupt_2 AdcInterrupt_3 AdcInterrupt_4 AdcInterrupt_5 
-AdcInterrupt_0/AdcInterruptEnable - false 
-AdcInterrupt_0/AdcInterruptSource - ADC0_EOC 
-AdcInterrupt_0/Index - 0 
-AdcInterrupt_1/AdcInterruptEnable - false 
-AdcInterrupt_1/AdcInterruptSource - ADC0_WD 
-AdcInterrupt_1/Index - 1 
-AdcInterrupt_2/AdcInterruptEnable - false 
-AdcInterrupt_2/AdcInterruptSource - ADC1_EOC 
-AdcInterrupt_2/Index - 2 
-AdcInterrupt_3/AdcInterruptEnable - false 
-AdcInterrupt_3/AdcInterruptSource - ADC1_WD 
-AdcInterrupt_3/Index - 3 
-AdcInterrupt_4/AdcInterruptEnable - false 
-AdcInterrupt_4/AdcInterruptSource - ADC2_EOC 
-AdcInterrupt_4/Index - 4 
-AdcInterrupt_5/AdcInterruptEnable - false 
-AdcInterrupt_5/AdcInterruptSource - ADC2_WD 
-AdcInterrupt_5/Index - 5 
+AdcHwConfiguration - AdcHwConfiguration_0 AdcHwConfiguration_1 AdcHwConfiguration_2 
+AdcHwConfiguration_0/AdcFifoFullInterruptEnable - false 
+AdcHwConfiguration_0/AdcHwConfiguredId - ADC0 
+AdcHwConfiguration_0/AdcInjectedInterruptEnable - false 
+AdcHwConfiguration_0/AdcNormalInterruptEnable - false 
+AdcHwConfiguration_0/CtuFifoOfInterruptEnable - false 
+AdcHwConfiguration_0/DmaTransferEnable - false 
+AdcHwConfiguration_0/Index - 0 
+AdcHwConfiguration_0/WdgThresholdEnable - false 
+AdcHwConfiguration_1/AdcFifoFullInterruptEnable - false 
+AdcHwConfiguration_1/AdcHwConfiguredId - ADC1 
+AdcHwConfiguration_1/AdcInjectedInterruptEnable - false 
+AdcHwConfiguration_1/AdcNormalInterruptEnable - false 
+AdcHwConfiguration_1/CtuFifoOfInterruptEnable - false 
+AdcHwConfiguration_1/DmaTransferEnable - false 
+AdcHwConfiguration_1/Index - 1 
+AdcHwConfiguration_1/WdgThresholdEnable - false 
+AdcHwConfiguration_2/AdcFifoFullInterruptEnable - false 
+AdcHwConfiguration_2/AdcHwConfiguredId - ADC2 
+AdcHwConfiguration_2/AdcInjectedInterruptEnable - false 
+AdcHwConfiguration_2/AdcNormalInterruptEnable - false 
+AdcHwConfiguration_2/CtuFifoOfInterruptEnable - false 
+AdcHwConfiguration_2/DmaTransferEnable - false 
+AdcHwConfiguration_2/Index - 2 
+AdcHwConfiguration_2/WdgThresholdEnable - false 
 AdcPublishedInformation - AdcPublishedInformation 
 AdcPublishedInformation/AdcChannelValueSigned - false 
 AdcPublishedInformation/AdcGroupFirstChannelFixed - false 
@@ -12693,7 +12408,7 @@ AutosarExt/AdcConvTimeOnce - true
 AutosarExt/AdcCtuHardwareTriggerOptimization - false 
 AutosarExt/AdcEnableApplyCalibration - false 
 AutosarExt/AdcEnableAsyncCalibration - false 
-AutosarExt/AdcEnableCalibration - false 
+AutosarExt/AdcEnableCalibration - true 
 AutosarExt/AdcEnableChDisableChApi - false 
 AutosarExt/AdcEnableCtuControlModeApi - true 
 AutosarExt/AdcEnableCtuTrigAutosarExtApi - false 
@@ -12710,15 +12425,18 @@ AutosarExt/AdcEnableThresholdConfigurationApi - false
 AutosarExt/AdcEnableUserModeSupport - false 
 AutosarExt/AdcEnableWatchdogApi - false 
 AutosarExt/AdcGetInjectedConvStatusApi - false 
+AutosarExt/AdcMaxPartitions - 1 
 AutosarExt/AdcMultiPartitionSupport - false 
 AutosarExt/AdcOptimizeDmaStreamingGroups - false 
 AutosarExt/AdcOptimizeOneShotHwTriggerConversions - false 
 AutosarExt/AdcPreSamplingOnce - true 
+AutosarExt/AdcSarEnable - true 
 AutosarExt/AdcSarEnableTempsenseApi - false 
 AutosarExt/AdcSarIpDevErrorDetect - false 
 AutosarExt/AdcSarPowerOnTempSense - false 
 AutosarExt/AdcSarTempSenseVsupply - 53 
 AutosarExt/AdcSetHwUnitPowerModeApi - false 
+AutosarExt/AdcSetUserGainAndOffset - false 
 AutosarExt/AdcTimeoutMethod - OSIF_COUNTER_SYSTEM 
 AutosarExt/AdcTimeoutVal - 1500000 
 AutosarExt/AdcUseHardwareNormalGroups - false 
@@ -13168,7 +12886,7 @@ __MWOPC_PART_BEGIN__ /simulink/systems/system_8753.xml
     <P Name="Position">[1170, 362, 1395, 478]</P>
     <P Name="ZOrder">75721</P>
     <P Name="Priority">2</P>
-    <P Name="LibraryVersion">3.131</P>
+    <P Name="LibraryVersion">3.145</P>
     <P Name="SourceBlock">mbd_s32k3_cdd_library/Mcl</P>
     <P Name="SourceType">s32k3_mcl</P>
     <P Name="SourceProductName">CDD Blocks</P>
@@ -13885,20 +13603,8 @@ Generator</P>
 __MWOPC_PART_BEGIN__ /simulink/systems/system_8793.xml
 <?xml version="1.0" encoding="utf-8"?>
 <System>
-  <P Name="Location">[-1, -8, 2561, 1393]</P>
-  <P Name="ZoomFactor">325</P>
-  <Block BlockType="SubSystem" Name=" " SID="8794">
-    <PortCounts/>
-    <P Name="Position">[160, 254, 360, 311]</P>
-    <P Name="ZOrder">2137</P>
-    <P Name="Priority">2</P>
-    <P Name="ErrorFcn">Stateflow.Translate.translate</P>
-    <P Name="PermitHierarchicalResolution">ExplicitOnly</P>
-    <P Name="TreatAsAtomicUnit">on</P>
-    <P Name="SFBlockType">MATLAB Function</P>
-    <P Name="ContentPreviewEnabled">on</P>
-    <System Ref="system_8794"/>
-  </Block>
+  <P Name="Location">[284, 124, 1266, 876]</P>
+  <P Name="ZoomFactor">116</P>
   <Block BlockType="SubSystem" Name="Enable LCU" SID="8795">
     <PortCounts/>
     <P Name="Position">[160, 339, 360, 401]</P>
@@ -13912,53 +13618,37 @@ __MWOPC_PART_BEGIN__ /simulink/systems/system_8793.xml
     <P Name="DisableCoverage">on</P>
     <P Name="EventName">reset</P>
   </Block>
-</System>
-
-__MWOPC_PART_BEGIN__ /simulink/systems/system_8794.xml
-<?xml version="1.0" encoding="utf-8"?>
-<System>
-  <P Name="Location">[223, 338, 826, 833]</P>
-  <P Name="SIDHighWatermark">61</P>
-  <Block BlockType="Demux" Name=" Demux " SID="8794::59">
-    <PortCounts in="1" out="1"/>
-    <P Name="Position">[270, 100, 320, 140]</P>
-    <P Name="ZOrder">50</P>
-    <P Name="Outputs">1</P>
+  <Block BlockType="Reference" Name="TPP Config" SID="9422">
+    <PortCounts/>
+    <P Name="Position">[158, 239, 358, 301]</P>
+    <P Name="ZOrder">2141</P>
+    <P Name="LibraryVersion">3.65</P>
+    <P Name="SourceBlock">mbd_s32k3_utility_library/TPP Blocks/TPP Config</P>
+    <P Name="SourceType">s32k3_tpp_config</P>
+    <P Name="SourceProductName">Utility Blocks</P>
+    <InstanceData>
+      <P Name="MultithreadedSim">auto</P>
+      <P Name="inst">0</P>
+      <P Name="desat_mode">off</P>
+      <P Name="full_mode">on</P>
+      <P Name="locks_mode">on</P>
+      <P Name="dead_time">500</P>
+      <P Name="overtemp_int">on</P>
+      <P Name="desat_int">on</P>
+      <P Name="vls_undervol_int">on</P>
+      <P Name="overcurr_int">on</P>
+      <P Name="phase_err_int">on</P>
+      <P Name="frame_err_int">on</P>
+      <P Name="write_err_int">on</P>
+      <P Name="rst_ev_int">on</P>
+      <P Name="en1_chn">GD_EN</P>
+      <P Name="en2_chn">GD_EN</P>
+      <P Name="rst_chn">GD_RST</P>
+      <P Name="cs_chn">GD_CS</P>
+      <P Name="spi_chn">GD3000_SPI</P>
+      <P Name="spi_seq">GD3000_SpiReadSequence</P>
+    </InstanceData>
   </Block>
-  <Block BlockType="Ground" Name=" Ground " SID="8794::61">
-    <P Name="Position">[20, 111, 40, 129]</P>
-    <P Name="ZOrder">52</P>
-  </Block>
-  <Block BlockType="S-Function" Name=" SFunction " SID="8794::58">
-    <P Name="Tag">Stateflow S-Function 1</P>
-    <PortCounts in="1" out="1"/>
-    <P Name="Position">[180, 100, 230, 140]</P>
-    <P Name="ZOrder">49</P>
-    <P Name="FunctionName">sf_sfun</P>
-    <P Name="PortCounts">[1 1]</P>
-    <P Name="SFunctionDeploymentMode">off</P>
-    <P Name="EnableBusSupport">on</P>
-    <P Name="SFcnIsStateOwnerBlock">off</P>
-  </Block>
-  <Block BlockType="Terminator" Name=" Terminator " SID="8794::60">
-    <P Name="Position">[460, 111, 480, 129]</P>
-    <P Name="ZOrder">51</P>
-  </Block>
-  <Line>
-    <P Name="ZOrder">1</P>
-    <P Name="Src">8794::61#out:1</P>
-    <P Name="Dst">8794::58#in:1</P>
-  </Line>
-  <Line>
-    <P Name="ZOrder">2</P>
-    <P Name="Src">8794::59#out:1</P>
-    <P Name="Dst">8794::60#in:1</P>
-  </Line>
-  <Line>
-    <P Name="ZOrder">3</P>
-    <P Name="Src">8794::58#out:1</P>
-    <P Name="Dst">8794::59#in:1</P>
-  </Line>
 </System>
 
 __MWOPC_PART_BEGIN__ /simulink/systems/system_8795.xml
@@ -14111,7 +13801,7 @@ __MWOPC_PART_BEGIN__ /simulink/systems/system_8795.xml
     <P Name="Position">[1170, 362, 1395, 478]</P>
     <P Name="ZOrder">75721</P>
     <P Name="Priority">2</P>
-    <P Name="LibraryVersion">3.131</P>
+    <P Name="LibraryVersion">3.145</P>
     <P Name="SourceBlock">mbd_s32k3_cdd_library/Mcl</P>
     <P Name="SourceType">s32k3_mcl</P>
     <P Name="SourceProductName">CDD Blocks</P>
@@ -15783,7 +15473,7 @@ __MWOPC_PART_BEGIN__ /simulink/systems/system_9130.xml
 __MWOPC_PART_BEGIN__ /simulink/systems/system_9137.xml
 <?xml version="1.0" encoding="utf-8"?>
 <System>
-  <P Name="Location">[-1, -8, 2561, 1393]</P>
+  <P Name="Location">[284, 124, 1266, 876]</P>
   <Block BlockType="SubSystem" Name="Variant Subsystem" SID="9139">
     <PortCounts out="1"/>
     <P Name="Position">[360, -21, 460, 21]</P>
@@ -15807,7 +15497,7 @@ __MWOPC_PART_BEGIN__ /simulink/systems/system_9137.xml
 __MWOPC_PART_BEGIN__ /simulink/systems/system_9139.xml
 <?xml version="1.0" encoding="utf-8"?>
 <System>
-  <P Name="Location">[-1, -8, 2561, 1393]</P>
+  <P Name="Location">[284, 124, 1266, 876]</P>
   <Block BlockType="SubSystem" Name="CodeGeneration" SID="9140">
     <PortCounts out="1"/>
     <P Name="Position">[905, 344, 1005, 386]</P>
@@ -15834,7 +15524,7 @@ __MWOPC_PART_BEGIN__ /simulink/systems/system_9139.xml
 __MWOPC_PART_BEGIN__ /simulink/systems/system_9140.xml
 <?xml version="1.0" encoding="utf-8"?>
 <System>
-  <P Name="Location">[-1, -8, 2561, 1393]</P>
+  <P Name="Location">[284, 124, 1266, 876]</P>
   <Block BlockType="Constant" Name="Constant" SID="9285">
     <P Name="Position">[180, 87, 210, 133]</P>
     <P Name="ZOrder">100000</P>
@@ -15849,7 +15539,7 @@ __MWOPC_PART_BEGIN__ /simulink/systems/system_9140.xml
     <PortCounts in="1" out="2"/>
     <P Name="Position">[280, 80, 550, 140]</P>
     <P Name="ZOrder">100000</P>
-    <P Name="LibraryVersion">3.131</P>
+    <P Name="LibraryVersion">3.145</P>
     <P Name="SourceBlock">mbd_s32k3_cdd_library/Uart</P>
     <P Name="SourceType">s32k3_uart</P>
     <P Name="SourceProductName">CDD Blocks</P>
@@ -15936,7 +15626,7 @@ Uart/UartGlobalConfig/UartChannel_6/UartHwUsing - LPUART_IP
 __MWOPC_PART_BEGIN__ /simulink/systems/system_9160.xml
 <?xml version="1.0" encoding="utf-8"?>
 <System>
-  <P Name="Location">[-1, -8, 2561, 1393]</P>
+  <P Name="Location">[284, 124, 1266, 876]</P>
   <Block BlockType="Ground" Name="Ground" SID="9161">
     <P Name="Position">[505, 55, 525, 75]</P>
     <P Name="ZOrder">100000</P>
@@ -16765,7 +16455,7 @@ __MWOPC_PART_BEGIN__ /simulink/systems/system_9225.xml
     <PortCounts in="3"/>
     <P Name="Position">[745, -551, 1030, -449]</P>
     <P Name="ZOrder">100000</P>
-    <P Name="LibraryVersion">3.20</P>
+    <P Name="LibraryVersion">3.24</P>
     <P Name="SourceBlock">mbd_s32k3_io_library/Pwm</P>
     <P Name="SourceType">s32k3_pwm</P>
     <P Name="SourceProductName">IO Blocks</P>
@@ -16776,6 +16466,7 @@ __MWOPC_PART_BEGIN__ /simulink/systems/system_9225.xml
       <P Name="notification">PWM_RISING_EDGE</P>
       <P Name="moduleId">PWM_EMIOS_INSTANCE_0</P>
       <P Name="prescalerType">PWM_PRIMARY_PRESCALER</P>
+      <P Name="fault">PWM_FLEXPWM_0_FAULT_INPUT_0</P>
       <P Name="text">CommonPublishedInformation - CommonPublishedInformation Pwm 
 CommonPublishedInformation/ArReleaseMajorVersion - 4 
 CommonPublishedInformation/ArReleaseMinorVersion - 7 
@@ -16821,7 +16512,7 @@ PwmChannel_3/PwmDutycycleDefault - 5
 PwmChannel_3/PwmHwChannel - /Pwm/Pwm/PwmChannelConfigSet/PwmEmios_0/PwmEmiosChannels_3 
 PwmChannel_3/PwmIdleState - PWM_LOW 
 PwmChannel_3/PwmMcuClockReferencePoint - /Mcu/Mcu/McuModuleConfiguration/McuClockSettingConfig_0/CORE_CLK 
-PwmChannel_3/PwmPeriodDefault - 16000.0 
+PwmChannel_3/PwmPeriodDefault - 16000 
 PwmChannel_3/PwmPeriodInTicks - true 
 PwmChannel_3/PwmPolarity - PWM_HIGH 
 PwmConfigurationOfOptApiServices - PwmConfigurationOfOptApiServices 
@@ -16834,7 +16525,7 @@ PwmConfigurationOfOptApiServices/PwmSetChannelDeadTime - false
 PwmConfigurationOfOptApiServices/PwmSetChannelOutputApi - false 
 PwmConfigurationOfOptApiServices/PwmSetCounterBusApi - false 
 PwmConfigurationOfOptApiServices/PwmSetDutyCycle - true 
-PwmConfigurationOfOptApiServices/PwmSetDutyCycle_NoUpdate - false 
+PwmConfigurationOfOptApiServices/PwmSetDutyCycle_NoUpdate - true 
 PwmConfigurationOfOptApiServices/PwmSetDutyPhaseShift - true 
 PwmConfigurationOfOptApiServices/PwmSetOutputToIdle - false 
 PwmConfigurationOfOptApiServices/PwmSetPeriodAndDuty - false 
@@ -16844,7 +16535,7 @@ PwmConfigurationOfOptApiServices/PwmVersionInfoApi - false
 PwmEmios - PwmEmios_0 
 PwmEmios_0/Index - 0 
 PwmEmios_0/PwmEmiosChannels - PwmEmiosChannels_0 PwmEmiosChannels_1 PwmEmiosChannels_2 PwmEmiosChannels_3 
-PwmEmios_0/PwmEmiosChannels_0/EmiosChCounterBus - EMIOS_PWM_IP_BUS_BCDE 
+PwmEmios_0/PwmEmiosChannels_0/EmiosChCounterBus - EMIOS_PWM_IP_BUS_BCD 
 PwmEmios_0/PwmEmiosChannels_0/EmiosChDeadtime - 0 
 PwmEmios_0/PwmEmiosChannels_0/EmiosChFlagGeneration - Trailing_Edge 
 PwmEmios_0/PwmEmiosChannels_0/EmiosChFreeze - false 
@@ -16859,7 +16550,7 @@ PwmEmios_0/PwmEmiosChannels_0/EmiosChPrescalerSource - EMIOS_PWM_IP_PS_SRC_MODUL
 PwmEmios_0/PwmEmiosChannels_0/EmiosChTrigger - 0 
 PwmEmios_0/PwmEmiosChannels_0/Index - 0 
 PwmEmios_0/PwmEmiosChannels_0/PwmEmiosBusRef - /Mcl/Mcl/MclConfig/EmiosCommon_0/EmiosMclMasterBus_0 
-PwmEmios_0/PwmEmiosChannels_1/EmiosChCounterBus - EMIOS_PWM_IP_BUS_BCDE 
+PwmEmios_0/PwmEmiosChannels_1/EmiosChCounterBus - EMIOS_PWM_IP_BUS_BCD 
 PwmEmios_0/PwmEmiosChannels_1/EmiosChDeadtime - 0 
 PwmEmios_0/PwmEmiosChannels_1/EmiosChFlagGeneration - Trailing_Edge 
 PwmEmios_0/PwmEmiosChannels_1/EmiosChFreeze - false 
@@ -16874,7 +16565,7 @@ PwmEmios_0/PwmEmiosChannels_1/EmiosChPrescalerSource - EMIOS_PWM_IP_PS_SRC_MODUL
 PwmEmios_0/PwmEmiosChannels_1/EmiosChTrigger - 0 
 PwmEmios_0/PwmEmiosChannels_1/Index - 1 
 PwmEmios_0/PwmEmiosChannels_1/PwmEmiosBusRef - /Mcl/Mcl/MclConfig/EmiosCommon_0/EmiosMclMasterBus_0 
-PwmEmios_0/PwmEmiosChannels_2/EmiosChCounterBus - EMIOS_PWM_IP_BUS_BCDE 
+PwmEmios_0/PwmEmiosChannels_2/EmiosChCounterBus - EMIOS_PWM_IP_BUS_BCD 
 PwmEmios_0/PwmEmiosChannels_2/EmiosChDeadtime - 0 
 PwmEmios_0/PwmEmiosChannels_2/EmiosChFlagGeneration - Trailing_Edge 
 PwmEmios_0/PwmEmiosChannels_2/EmiosChFreeze - false 
@@ -16911,6 +16602,7 @@ PwmGeneral/PwmDevErrorDetect - false
 PwmGeneral/PwmDutycycleUpdatedEndperiod - false 
 PwmGeneral/PwmEnableDualClockMode - false 
 PwmGeneral/PwmEnableUserModeSupport - false 
+PwmGeneral/PwmFaultNotificationSupported - false 
 PwmGeneral/PwmIndex - 0 
 PwmGeneral/PwmMultiChannelSync - true 
 PwmGeneral/PwmMultipartitionEnabled - false 
@@ -16923,7 +16615,7 @@ PwmGeneral/PwmPeriodUpdatedEndperiod - true
     <PortCounts in="3"/>
     <P Name="Position">[735, -311, 1025, -209]</P>
     <P Name="ZOrder">100000</P>
-    <P Name="LibraryVersion">3.20</P>
+    <P Name="LibraryVersion">3.24</P>
     <P Name="SourceBlock">mbd_s32k3_io_library/Pwm</P>
     <P Name="SourceType">s32k3_pwm</P>
     <P Name="SourceProductName">IO Blocks</P>
@@ -16934,6 +16626,7 @@ PwmGeneral/PwmPeriodUpdatedEndperiod - true
       <P Name="notification">PWM_RISING_EDGE</P>
       <P Name="moduleId">PWM_EMIOS_INSTANCE_0</P>
       <P Name="prescalerType">PWM_PRIMARY_PRESCALER</P>
+      <P Name="fault">PWM_FLEXPWM_0_FAULT_INPUT_0</P>
       <P Name="text">CommonPublishedInformation - CommonPublishedInformation Pwm 
 CommonPublishedInformation/ArReleaseMajorVersion - 4 
 CommonPublishedInformation/ArReleaseMinorVersion - 7 
@@ -16979,7 +16672,7 @@ PwmChannel_3/PwmDutycycleDefault - 5
 PwmChannel_3/PwmHwChannel - /Pwm/Pwm/PwmChannelConfigSet/PwmEmios_0/PwmEmiosChannels_3 
 PwmChannel_3/PwmIdleState - PWM_LOW 
 PwmChannel_3/PwmMcuClockReferencePoint - /Mcu/Mcu/McuModuleConfiguration/McuClockSettingConfig_0/CORE_CLK 
-PwmChannel_3/PwmPeriodDefault - 16000.0 
+PwmChannel_3/PwmPeriodDefault - 16000 
 PwmChannel_3/PwmPeriodInTicks - true 
 PwmChannel_3/PwmPolarity - PWM_HIGH 
 PwmConfigurationOfOptApiServices - PwmConfigurationOfOptApiServices 
@@ -16992,7 +16685,7 @@ PwmConfigurationOfOptApiServices/PwmSetChannelDeadTime - false
 PwmConfigurationOfOptApiServices/PwmSetChannelOutputApi - false 
 PwmConfigurationOfOptApiServices/PwmSetCounterBusApi - false 
 PwmConfigurationOfOptApiServices/PwmSetDutyCycle - true 
-PwmConfigurationOfOptApiServices/PwmSetDutyCycle_NoUpdate - false 
+PwmConfigurationOfOptApiServices/PwmSetDutyCycle_NoUpdate - true 
 PwmConfigurationOfOptApiServices/PwmSetDutyPhaseShift - true 
 PwmConfigurationOfOptApiServices/PwmSetOutputToIdle - false 
 PwmConfigurationOfOptApiServices/PwmSetPeriodAndDuty - false 
@@ -17002,7 +16695,7 @@ PwmConfigurationOfOptApiServices/PwmVersionInfoApi - false
 PwmEmios - PwmEmios_0 
 PwmEmios_0/Index - 0 
 PwmEmios_0/PwmEmiosChannels - PwmEmiosChannels_0 PwmEmiosChannels_1 PwmEmiosChannels_2 PwmEmiosChannels_3 
-PwmEmios_0/PwmEmiosChannels_0/EmiosChCounterBus - EMIOS_PWM_IP_BUS_BCDE 
+PwmEmios_0/PwmEmiosChannels_0/EmiosChCounterBus - EMIOS_PWM_IP_BUS_BCD 
 PwmEmios_0/PwmEmiosChannels_0/EmiosChDeadtime - 0 
 PwmEmios_0/PwmEmiosChannels_0/EmiosChFlagGeneration - Trailing_Edge 
 PwmEmios_0/PwmEmiosChannels_0/EmiosChFreeze - false 
@@ -17017,7 +16710,7 @@ PwmEmios_0/PwmEmiosChannels_0/EmiosChPrescalerSource - EMIOS_PWM_IP_PS_SRC_MODUL
 PwmEmios_0/PwmEmiosChannels_0/EmiosChTrigger - 0 
 PwmEmios_0/PwmEmiosChannels_0/Index - 0 
 PwmEmios_0/PwmEmiosChannels_0/PwmEmiosBusRef - /Mcl/Mcl/MclConfig/EmiosCommon_0/EmiosMclMasterBus_0 
-PwmEmios_0/PwmEmiosChannels_1/EmiosChCounterBus - EMIOS_PWM_IP_BUS_BCDE 
+PwmEmios_0/PwmEmiosChannels_1/EmiosChCounterBus - EMIOS_PWM_IP_BUS_BCD 
 PwmEmios_0/PwmEmiosChannels_1/EmiosChDeadtime - 0 
 PwmEmios_0/PwmEmiosChannels_1/EmiosChFlagGeneration - Trailing_Edge 
 PwmEmios_0/PwmEmiosChannels_1/EmiosChFreeze - false 
@@ -17032,7 +16725,7 @@ PwmEmios_0/PwmEmiosChannels_1/EmiosChPrescalerSource - EMIOS_PWM_IP_PS_SRC_MODUL
 PwmEmios_0/PwmEmiosChannels_1/EmiosChTrigger - 0 
 PwmEmios_0/PwmEmiosChannels_1/Index - 1 
 PwmEmios_0/PwmEmiosChannels_1/PwmEmiosBusRef - /Mcl/Mcl/MclConfig/EmiosCommon_0/EmiosMclMasterBus_0 
-PwmEmios_0/PwmEmiosChannels_2/EmiosChCounterBus - EMIOS_PWM_IP_BUS_BCDE 
+PwmEmios_0/PwmEmiosChannels_2/EmiosChCounterBus - EMIOS_PWM_IP_BUS_BCD 
 PwmEmios_0/PwmEmiosChannels_2/EmiosChDeadtime - 0 
 PwmEmios_0/PwmEmiosChannels_2/EmiosChFlagGeneration - Trailing_Edge 
 PwmEmios_0/PwmEmiosChannels_2/EmiosChFreeze - false 
@@ -17069,6 +16762,7 @@ PwmGeneral/PwmDevErrorDetect - false
 PwmGeneral/PwmDutycycleUpdatedEndperiod - false 
 PwmGeneral/PwmEnableDualClockMode - false 
 PwmGeneral/PwmEnableUserModeSupport - false 
+PwmGeneral/PwmFaultNotificationSupported - false 
 PwmGeneral/PwmIndex - 0 
 PwmGeneral/PwmMultiChannelSync - true 
 PwmGeneral/PwmMultipartitionEnabled - false 
@@ -17081,7 +16775,7 @@ PwmGeneral/PwmPeriodUpdatedEndperiod - true
     <PortCounts in="3"/>
     <P Name="Position">[735, -123, 1025, -17]</P>
     <P Name="ZOrder">100000</P>
-    <P Name="LibraryVersion">3.20</P>
+    <P Name="LibraryVersion">3.24</P>
     <P Name="SourceBlock">mbd_s32k3_io_library/Pwm</P>
     <P Name="SourceType">s32k3_pwm</P>
     <P Name="SourceProductName">IO Blocks</P>
@@ -17092,6 +16786,7 @@ PwmGeneral/PwmPeriodUpdatedEndperiod - true
       <P Name="notification">PWM_RISING_EDGE</P>
       <P Name="moduleId">PWM_EMIOS_INSTANCE_0</P>
       <P Name="prescalerType">PWM_PRIMARY_PRESCALER</P>
+      <P Name="fault">PWM_FLEXPWM_0_FAULT_INPUT_0</P>
       <P Name="text">CommonPublishedInformation - CommonPublishedInformation Pwm 
 CommonPublishedInformation/ArReleaseMajorVersion - 4 
 CommonPublishedInformation/ArReleaseMinorVersion - 7 
@@ -17137,7 +16832,7 @@ PwmChannel_3/PwmDutycycleDefault - 5
 PwmChannel_3/PwmHwChannel - /Pwm/Pwm/PwmChannelConfigSet/PwmEmios_0/PwmEmiosChannels_3 
 PwmChannel_3/PwmIdleState - PWM_LOW 
 PwmChannel_3/PwmMcuClockReferencePoint - /Mcu/Mcu/McuModuleConfiguration/McuClockSettingConfig_0/CORE_CLK 
-PwmChannel_3/PwmPeriodDefault - 16000.0 
+PwmChannel_3/PwmPeriodDefault - 16000 
 PwmChannel_3/PwmPeriodInTicks - true 
 PwmChannel_3/PwmPolarity - PWM_HIGH 
 PwmConfigurationOfOptApiServices - PwmConfigurationOfOptApiServices 
@@ -17150,7 +16845,7 @@ PwmConfigurationOfOptApiServices/PwmSetChannelDeadTime - false
 PwmConfigurationOfOptApiServices/PwmSetChannelOutputApi - false 
 PwmConfigurationOfOptApiServices/PwmSetCounterBusApi - false 
 PwmConfigurationOfOptApiServices/PwmSetDutyCycle - true 
-PwmConfigurationOfOptApiServices/PwmSetDutyCycle_NoUpdate - false 
+PwmConfigurationOfOptApiServices/PwmSetDutyCycle_NoUpdate - true 
 PwmConfigurationOfOptApiServices/PwmSetDutyPhaseShift - true 
 PwmConfigurationOfOptApiServices/PwmSetOutputToIdle - false 
 PwmConfigurationOfOptApiServices/PwmSetPeriodAndDuty - false 
@@ -17160,7 +16855,7 @@ PwmConfigurationOfOptApiServices/PwmVersionInfoApi - false
 PwmEmios - PwmEmios_0 
 PwmEmios_0/Index - 0 
 PwmEmios_0/PwmEmiosChannels - PwmEmiosChannels_0 PwmEmiosChannels_1 PwmEmiosChannels_2 PwmEmiosChannels_3 
-PwmEmios_0/PwmEmiosChannels_0/EmiosChCounterBus - EMIOS_PWM_IP_BUS_BCDE 
+PwmEmios_0/PwmEmiosChannels_0/EmiosChCounterBus - EMIOS_PWM_IP_BUS_BCD 
 PwmEmios_0/PwmEmiosChannels_0/EmiosChDeadtime - 0 
 PwmEmios_0/PwmEmiosChannels_0/EmiosChFlagGeneration - Trailing_Edge 
 PwmEmios_0/PwmEmiosChannels_0/EmiosChFreeze - false 
@@ -17175,7 +16870,7 @@ PwmEmios_0/PwmEmiosChannels_0/EmiosChPrescalerSource - EMIOS_PWM_IP_PS_SRC_MODUL
 PwmEmios_0/PwmEmiosChannels_0/EmiosChTrigger - 0 
 PwmEmios_0/PwmEmiosChannels_0/Index - 0 
 PwmEmios_0/PwmEmiosChannels_0/PwmEmiosBusRef - /Mcl/Mcl/MclConfig/EmiosCommon_0/EmiosMclMasterBus_0 
-PwmEmios_0/PwmEmiosChannels_1/EmiosChCounterBus - EMIOS_PWM_IP_BUS_BCDE 
+PwmEmios_0/PwmEmiosChannels_1/EmiosChCounterBus - EMIOS_PWM_IP_BUS_BCD 
 PwmEmios_0/PwmEmiosChannels_1/EmiosChDeadtime - 0 
 PwmEmios_0/PwmEmiosChannels_1/EmiosChFlagGeneration - Trailing_Edge 
 PwmEmios_0/PwmEmiosChannels_1/EmiosChFreeze - false 
@@ -17190,7 +16885,7 @@ PwmEmios_0/PwmEmiosChannels_1/EmiosChPrescalerSource - EMIOS_PWM_IP_PS_SRC_MODUL
 PwmEmios_0/PwmEmiosChannels_1/EmiosChTrigger - 0 
 PwmEmios_0/PwmEmiosChannels_1/Index - 1 
 PwmEmios_0/PwmEmiosChannels_1/PwmEmiosBusRef - /Mcl/Mcl/MclConfig/EmiosCommon_0/EmiosMclMasterBus_0 
-PwmEmios_0/PwmEmiosChannels_2/EmiosChCounterBus - EMIOS_PWM_IP_BUS_BCDE 
+PwmEmios_0/PwmEmiosChannels_2/EmiosChCounterBus - EMIOS_PWM_IP_BUS_BCD 
 PwmEmios_0/PwmEmiosChannels_2/EmiosChDeadtime - 0 
 PwmEmios_0/PwmEmiosChannels_2/EmiosChFlagGeneration - Trailing_Edge 
 PwmEmios_0/PwmEmiosChannels_2/EmiosChFreeze - false 
@@ -17227,6 +16922,7 @@ PwmGeneral/PwmDevErrorDetect - false
 PwmGeneral/PwmDutycycleUpdatedEndperiod - false 
 PwmGeneral/PwmEnableDualClockMode - false 
 PwmGeneral/PwmEnableUserModeSupport - false 
+PwmGeneral/PwmFaultNotificationSupported - false 
 PwmGeneral/PwmIndex - 0 
 PwmGeneral/PwmMultiChannelSync - true 
 PwmGeneral/PwmMultipartitionEnabled - false 
@@ -17239,7 +16935,7 @@ PwmGeneral/PwmPeriodUpdatedEndperiod - true
     <PortCounts/>
     <P Name="Position">[740, 62, 1030, 128]</P>
     <P Name="ZOrder">100000</P>
-    <P Name="LibraryVersion">3.20</P>
+    <P Name="LibraryVersion">3.24</P>
     <P Name="SourceBlock">mbd_s32k3_io_library/Pwm</P>
     <P Name="SourceType">s32k3_pwm</P>
     <P Name="SourceProductName">IO Blocks</P>
@@ -17250,6 +16946,7 @@ PwmGeneral/PwmPeriodUpdatedEndperiod - true
       <P Name="notification">PWM_RISING_EDGE</P>
       <P Name="moduleId">PWM_EMIOS_INSTANCE_0</P>
       <P Name="prescalerType">PWM_PRIMARY_PRESCALER</P>
+      <P Name="fault">PWM_FLEXPWM_0_FAULT_INPUT_0</P>
       <P Name="text">CommonPublishedInformation - CommonPublishedInformation Pwm 
 CommonPublishedInformation/ArReleaseMajorVersion - 4 
 CommonPublishedInformation/ArReleaseMinorVersion - 7 
@@ -17295,7 +16992,7 @@ PwmChannel_3/PwmDutycycleDefault - 5
 PwmChannel_3/PwmHwChannel - /Pwm/Pwm/PwmChannelConfigSet/PwmEmios_0/PwmEmiosChannels_3 
 PwmChannel_3/PwmIdleState - PWM_LOW 
 PwmChannel_3/PwmMcuClockReferencePoint - /Mcu/Mcu/McuModuleConfiguration/McuClockSettingConfig_0/CORE_CLK 
-PwmChannel_3/PwmPeriodDefault - 16000.0 
+PwmChannel_3/PwmPeriodDefault - 16000 
 PwmChannel_3/PwmPeriodInTicks - true 
 PwmChannel_3/PwmPolarity - PWM_HIGH 
 PwmConfigurationOfOptApiServices - PwmConfigurationOfOptApiServices 
@@ -17308,7 +17005,7 @@ PwmConfigurationOfOptApiServices/PwmSetChannelDeadTime - false
 PwmConfigurationOfOptApiServices/PwmSetChannelOutputApi - false 
 PwmConfigurationOfOptApiServices/PwmSetCounterBusApi - false 
 PwmConfigurationOfOptApiServices/PwmSetDutyCycle - true 
-PwmConfigurationOfOptApiServices/PwmSetDutyCycle_NoUpdate - false 
+PwmConfigurationOfOptApiServices/PwmSetDutyCycle_NoUpdate - true 
 PwmConfigurationOfOptApiServices/PwmSetDutyPhaseShift - true 
 PwmConfigurationOfOptApiServices/PwmSetOutputToIdle - false 
 PwmConfigurationOfOptApiServices/PwmSetPeriodAndDuty - false 
@@ -17318,7 +17015,7 @@ PwmConfigurationOfOptApiServices/PwmVersionInfoApi - false
 PwmEmios - PwmEmios_0 
 PwmEmios_0/Index - 0 
 PwmEmios_0/PwmEmiosChannels - PwmEmiosChannels_0 PwmEmiosChannels_1 PwmEmiosChannels_2 PwmEmiosChannels_3 
-PwmEmios_0/PwmEmiosChannels_0/EmiosChCounterBus - EMIOS_PWM_IP_BUS_BCDE 
+PwmEmios_0/PwmEmiosChannels_0/EmiosChCounterBus - EMIOS_PWM_IP_BUS_BCD 
 PwmEmios_0/PwmEmiosChannels_0/EmiosChDeadtime - 0 
 PwmEmios_0/PwmEmiosChannels_0/EmiosChFlagGeneration - Trailing_Edge 
 PwmEmios_0/PwmEmiosChannels_0/EmiosChFreeze - false 
@@ -17333,7 +17030,7 @@ PwmEmios_0/PwmEmiosChannels_0/EmiosChPrescalerSource - EMIOS_PWM_IP_PS_SRC_MODUL
 PwmEmios_0/PwmEmiosChannels_0/EmiosChTrigger - 0 
 PwmEmios_0/PwmEmiosChannels_0/Index - 0 
 PwmEmios_0/PwmEmiosChannels_0/PwmEmiosBusRef - /Mcl/Mcl/MclConfig/EmiosCommon_0/EmiosMclMasterBus_0 
-PwmEmios_0/PwmEmiosChannels_1/EmiosChCounterBus - EMIOS_PWM_IP_BUS_BCDE 
+PwmEmios_0/PwmEmiosChannels_1/EmiosChCounterBus - EMIOS_PWM_IP_BUS_BCD 
 PwmEmios_0/PwmEmiosChannels_1/EmiosChDeadtime - 0 
 PwmEmios_0/PwmEmiosChannels_1/EmiosChFlagGeneration - Trailing_Edge 
 PwmEmios_0/PwmEmiosChannels_1/EmiosChFreeze - false 
@@ -17348,7 +17045,7 @@ PwmEmios_0/PwmEmiosChannels_1/EmiosChPrescalerSource - EMIOS_PWM_IP_PS_SRC_MODUL
 PwmEmios_0/PwmEmiosChannels_1/EmiosChTrigger - 0 
 PwmEmios_0/PwmEmiosChannels_1/Index - 1 
 PwmEmios_0/PwmEmiosChannels_1/PwmEmiosBusRef - /Mcl/Mcl/MclConfig/EmiosCommon_0/EmiosMclMasterBus_0 
-PwmEmios_0/PwmEmiosChannels_2/EmiosChCounterBus - EMIOS_PWM_IP_BUS_BCDE 
+PwmEmios_0/PwmEmiosChannels_2/EmiosChCounterBus - EMIOS_PWM_IP_BUS_BCD 
 PwmEmios_0/PwmEmiosChannels_2/EmiosChDeadtime - 0 
 PwmEmios_0/PwmEmiosChannels_2/EmiosChFlagGeneration - Trailing_Edge 
 PwmEmios_0/PwmEmiosChannels_2/EmiosChFreeze - false 
@@ -17385,6 +17082,7 @@ PwmGeneral/PwmDevErrorDetect - false
 PwmGeneral/PwmDutycycleUpdatedEndperiod - false 
 PwmGeneral/PwmEnableDualClockMode - false 
 PwmGeneral/PwmEnableUserModeSupport - false 
+PwmGeneral/PwmFaultNotificationSupported - false 
 PwmGeneral/PwmIndex - 0 
 PwmGeneral/PwmMultiChannelSync - true 
 PwmGeneral/PwmMultipartitionEnabled - false 
@@ -17737,8 +17435,8 @@ __MWOPC_PART_BEGIN__ /simulink/systems/system_9258.xml
 __MWOPC_PART_BEGIN__ /simulink/systems/system_9288.xml
 <?xml version="1.0" encoding="utf-8"?>
 <System>
-  <P Name="Location">[-1, -8, 2561, 1393]</P>
-  <P Name="ZoomFactor">93</P>
+  <P Name="Location">[284, 124, 1266, 876]</P>
+  <P Name="ZoomFactor">46</P>
   <Block BlockType="Inport" Name="SerialData" SID="9289">
     <P Name="Position">[80, 43, 110, 57]</P>
     <P Name="ZOrder">100000</P>
@@ -17763,7 +17461,7 @@ __MWOPC_PART_BEGIN__ /simulink/systems/system_9288.xml
     <PortCounts in="1" out="1"/>
     <P Name="Position">[235, 20, 505, 80]</P>
     <P Name="ZOrder">100000</P>
-    <P Name="LibraryVersion">3.131</P>
+    <P Name="LibraryVersion">3.145</P>
     <P Name="SourceBlock">mbd_s32k3_cdd_library/Uart</P>
     <P Name="SourceType">s32k3_uart</P>
     <P Name="SourceProductName">CDD Blocks</P>
@@ -17984,7 +17682,7 @@ __MWOPC_PART_BEGIN__ /simulink/systems/system_root.xml
   <P Name="Location">[284, 124, 1266, 876]</P>
   <P Name="Open">on</P>
   <P Name="ReportName">simulink-default.rpt</P>
-  <P Name="SIDHighWatermark">9421</P>
+  <P Name="SIDHighWatermark">9422</P>
   <Block BlockType="SubSystem" Name="Inverter and Motor" SID="8582">
     <PortCounts in="1" out="2"/>
     <P Name="Position">[1395, 330, 1560, 430]</P>
@@ -18072,7 +17770,7 @@ __MWOPC_PART_BEGIN__ /simulink/systems/system_root.xml
     <P Name="BackgroundColor">[0.901961, 0.901961, 1.000000]</P>
     <P Name="DropShadow">on</P>
     <P Name="AnnotationType">area_annotation</P>
-    <P Name="ZOrder">22</P>
+    <P Name="ZOrder">23</P>
     <P Name="FontSize">12</P>
   </Annotation>
   <Annotation SID="9282">
@@ -18127,22 +17825,82 @@ __MWOPC_PART_BEGIN__ /simulink/windowsInfo.xml
           <P Name="IsTabbed" Class="logical">1</P>
           <P Name="ViewObjType" Class="char">SimulinkTopLevel</P>
           <P Name="LoadSaveID" Class="char">0</P>
-          <P Name="Extents" Class="double">[878.0, 492.0]</P>
+          <P Name="Extents" Class="double">[878.0, 516.0]</P>
           <P Name="ZoomFactor" Class="double">1.0</P>
-          <P Name="Offset" Class="double">[809.62359933869971, 151.0]</P>
-          <P Name="SceneRectInView" Class="double">[809.62359933869971, 151.0, 878.0, 492.0]</P>
+          <P Name="Offset" Class="double">[809.62359933869971, 139.0]</P>
+          <P Name="SceneRectInView" Class="double">[809.62359933869971, 139.0, 878.0, 516.0]</P>
         </Object>
         <Object ObjectID="6">
           <P Name="IsActive" Class="logical">0</P>
           <P Name="IsTabbed" Class="logical">0</P>
           <P Name="ViewObjType" Class="char">SimulinkSubsys</P>
-          <P Name="LoadSaveID" Class="char">8631</P>
-          <P Name="Extents" Class="double">[878.0, 492.0]</P>
-          <P Name="ZoomFactor" Class="double">0.29575504523312457</P>
-          <P Name="Offset" Class="double">[952.66352941176478, 324.23058823529414]</P>
-          <P Name="SceneRectInView" Class="double">[952.66352941176478, 324.23058823529414, 2968.6729411764704, 1663.5388235294117]</P>
+          <P Name="LoadSaveID" Class="char">8793</P>
+          <P Name="Extents" Class="double">[878.0, 516.0]</P>
+          <P Name="ZoomFactor" Class="double">1.1609031733116355</P>
+          <P Name="Offset" Class="double">[-117.99999999999994, 97.913089188715645]</P>
+          <P Name="SceneRectInView" Class="double">[-117.99999999999994, 97.913089188715645, 756.30769230769226, 444.48151393026109]</P>
         </Object>
         <Object ObjectID="7">
+          <P Name="IsActive" Class="logical">0</P>
+          <P Name="IsTabbed" Class="logical">0</P>
+          <P Name="ViewObjType" Class="char">SimulinkSubsys</P>
+          <P Name="LoadSaveID" Class="char">9139</P>
+          <P Name="Extents" Class="double">[878.0, 516.0]</P>
+          <P Name="ZoomFactor" Class="double">1.0</P>
+          <P Name="Offset" Class="double">[563.5, 173.0]</P>
+          <P Name="SceneRectInView" Class="double">[563.5, 173.0, 878.0, 516.0]</P>
+        </Object>
+        <Object ObjectID="8">
+          <P Name="IsActive" Class="logical">0</P>
+          <P Name="IsTabbed" Class="logical">0</P>
+          <P Name="ViewObjType" Class="char">SimulinkSubsys</P>
+          <P Name="LoadSaveID" Class="char">8631</P>
+          <P Name="Extents" Class="double">[878.0, 516.0]</P>
+          <P Name="ZoomFactor" Class="double">0.29575504523312457</P>
+          <P Name="Offset" Class="double">[952.66352941176478, 283.65647058823527]</P>
+          <P Name="SceneRectInView" Class="double">[952.66352941176478, 283.65647058823527, 2968.6729411764704, 1744.6870588235295]</P>
+        </Object>
+        <Object ObjectID="9">
+          <P Name="IsActive" Class="logical">0</P>
+          <P Name="IsTabbed" Class="logical">0</P>
+          <P Name="ViewObjType" Class="char">SimulinkSubsys</P>
+          <P Name="LoadSaveID" Class="char">9137</P>
+          <P Name="Extents" Class="double">[878.0, 516.0]</P>
+          <P Name="ZoomFactor" Class="double">1.0</P>
+          <P Name="Offset" Class="double">[6.0, -256.5]</P>
+          <P Name="SceneRectInView" Class="double">[6.0, -256.5, 878.0, 516.0]</P>
+        </Object>
+        <Object ObjectID="10">
+          <P Name="IsActive" Class="logical">0</P>
+          <P Name="IsTabbed" Class="logical">0</P>
+          <P Name="ViewObjType" Class="char">SimulinkSubsys</P>
+          <P Name="LoadSaveID" Class="char">9288</P>
+          <P Name="Extents" Class="double">[878.0, 516.0]</P>
+          <P Name="ZoomFactor" Class="double">0.45693740327192278</P>
+          <P Name="Offset" Class="double">[-1058.4677419354839, -725.5725377813701]</P>
+          <P Name="SceneRectInView" Class="double">[-1058.4677419354839, -725.5725377813701, 1921.4885752688174, 1129.2575225953415]</P>
+        </Object>
+        <Object ObjectID="11">
+          <P Name="IsActive" Class="logical">0</P>
+          <P Name="IsTabbed" Class="logical">0</P>
+          <P Name="ViewObjType" Class="char">SimulinkSubsys</P>
+          <P Name="LoadSaveID" Class="char">9160</P>
+          <P Name="Extents" Class="double">[878.0, 516.0]</P>
+          <P Name="ZoomFactor" Class="double">1.0</P>
+          <P Name="Offset" Class="double">[131.0, -186.0]</P>
+          <P Name="SceneRectInView" Class="double">[131.0, -186.0, 878.0, 516.0]</P>
+        </Object>
+        <Object ObjectID="12">
+          <P Name="IsActive" Class="logical">0</P>
+          <P Name="IsTabbed" Class="logical">0</P>
+          <P Name="ViewObjType" Class="char">SimulinkSubsys</P>
+          <P Name="LoadSaveID" Class="char">9140</P>
+          <P Name="Extents" Class="double">[878.0, 516.0]</P>
+          <P Name="ZoomFactor" Class="double">1.0</P>
+          <P Name="Offset" Class="double">[-31.5, -148.0]</P>
+          <P Name="SceneRectInView" Class="double">[-31.5, -148.0, 878.0, 516.0]</P>
+        </Object>
+        <Object ObjectID="13">
           <P Name="IsActive" Class="logical">0</P>
           <P Name="IsTabbed" Class="logical">0</P>
           <P Name="ViewObjType" Class="char">SimulinkSubsys</P>
@@ -18152,7 +17910,7 @@ __MWOPC_PART_BEGIN__ /simulink/windowsInfo.xml
           <P Name="Offset" Class="double">[67.34765625, -198.0]</P>
           <P Name="SceneRectInView" Class="double">[67.34765625, -198.0, 2458.0, 1141.0]</P>
         </Object>
-        <Object ObjectID="8">
+        <Object ObjectID="14">
           <P Name="IsActive" Class="logical">0</P>
           <P Name="IsTabbed" Class="logical">0</P>
           <P Name="ViewObjType" Class="char">SimulinkSubsys</P>
@@ -18162,7 +17920,7 @@ __MWOPC_PART_BEGIN__ /simulink/windowsInfo.xml
           <P Name="Offset" Class="double">[-50.906066176470574, -189.08382352941175]</P>
           <P Name="SceneRectInView" Class="double">[-50.906066176470574, -189.08382352941175, 851.53088235294115, 477.16764705882349]</P>
         </Object>
-        <Object ObjectID="9">
+        <Object ObjectID="15">
           <P Name="IsActive" Class="logical">0</P>
           <P Name="IsTabbed" Class="logical">0</P>
           <P Name="ViewObjType" Class="char">SimulinkSubsys</P>
@@ -18172,7 +17930,7 @@ __MWOPC_PART_BEGIN__ /simulink/windowsInfo.xml
           <P Name="Offset" Class="double">[-129.02948113207549, -52.367924528301842]</P>
           <P Name="SceneRectInView" Class="double">[-129.02948113207549, -52.367924528301842, 1159.433962264151, 538.20754716981128]</P>
         </Object>
-        <Object ObjectID="10">
+        <Object ObjectID="16">
           <P Name="IsActive" Class="logical">0</P>
           <P Name="IsTabbed" Class="logical">0</P>
           <P Name="ViewObjType" Class="char">SimulinkSubsys</P>
@@ -18182,7 +17940,7 @@ __MWOPC_PART_BEGIN__ /simulink/windowsInfo.xml
           <P Name="Offset" Class="double">[-61.0859375, -141.0]</P>
           <P Name="SceneRectInView" Class="double">[-61.0859375, -141.0, 878.0, 492.0]</P>
         </Object>
-        <Object ObjectID="11">
+        <Object ObjectID="17">
           <P Name="IsActive" Class="logical">0</P>
           <P Name="IsTabbed" Class="logical">0</P>
           <P Name="ViewObjType" Class="char">SimulinkSubsys</P>
@@ -18192,7 +17950,7 @@ __MWOPC_PART_BEGIN__ /simulink/windowsInfo.xml
           <P Name="Offset" Class="double">[-610.15234375, -393.5]</P>
           <P Name="SceneRectInView" Class="double">[-610.15234375, -393.5, 2458.0, 1141.0]</P>
         </Object>
-        <Object ObjectID="12">
+        <Object ObjectID="18">
           <P Name="IsActive" Class="logical">0</P>
           <P Name="IsTabbed" Class="logical">0</P>
           <P Name="ViewObjType" Class="char">SimulinkSubsys</P>
@@ -18202,7 +17960,7 @@ __MWOPC_PART_BEGIN__ /simulink/windowsInfo.xml
           <P Name="Offset" Class="double">[-996.6640625, -160.5]</P>
           <P Name="SceneRectInView" Class="double">[-996.6640625, -160.5, 2458.0, 1141.0]</P>
         </Object>
-        <Object ObjectID="13">
+        <Object ObjectID="19">
           <P Name="IsActive" Class="logical">0</P>
           <P Name="IsTabbed" Class="logical">0</P>
           <P Name="ViewObjType" Class="char">SimulinkSubsys</P>
@@ -18212,7 +17970,7 @@ __MWOPC_PART_BEGIN__ /simulink/windowsInfo.xml
           <P Name="Offset" Class="double">[-969.54296875, -19.5]</P>
           <P Name="SceneRectInView" Class="double">[-969.54296875, -19.5, 2458.0, 1141.0]</P>
         </Object>
-        <Object ObjectID="14">
+        <Object ObjectID="20">
           <P Name="IsActive" Class="logical">0</P>
           <P Name="IsTabbed" Class="logical">0</P>
           <P Name="ViewObjType" Class="char">SimulinkSubsys</P>
@@ -18222,7 +17980,7 @@ __MWOPC_PART_BEGIN__ /simulink/windowsInfo.xml
           <P Name="Offset" Class="double">[-249.0, 151.91840738284702]</P>
           <P Name="SceneRectInView" Class="double">[-249.0, 151.91840738284702, 878.0, 492.0]</P>
         </Object>
-        <Object ObjectID="15">
+        <Object ObjectID="21">
           <P Name="IsActive" Class="logical">0</P>
           <P Name="IsTabbed" Class="logical">0</P>
           <P Name="ViewObjType" Class="char">SimulinkSubsys</P>
@@ -18232,7 +17990,7 @@ __MWOPC_PART_BEGIN__ /simulink/windowsInfo.xml
           <P Name="Offset" Class="double">[-149.48221982758628, -80.9299568965518]</P>
           <P Name="SceneRectInView" Class="double">[-149.48221982758628, -80.9299568965518, 1124.4644396551726, 630.1099137931036]</P>
         </Object>
-        <Object ObjectID="16">
+        <Object ObjectID="22">
           <P Name="IsActive" Class="logical">0</P>
           <P Name="IsTabbed" Class="logical">0</P>
           <P Name="ViewObjType" Class="char">SimulinkSubsys</P>
@@ -18242,7 +18000,7 @@ __MWOPC_PART_BEGIN__ /simulink/windowsInfo.xml
           <P Name="Offset" Class="double">[-586.0, 65.5]</P>
           <P Name="SceneRectInView" Class="double">[-586.0, 65.5, 878.0, 492.0]</P>
         </Object>
-        <Object ObjectID="17">
+        <Object ObjectID="23">
           <P Name="IsActive" Class="logical">0</P>
           <P Name="IsTabbed" Class="logical">0</P>
           <P Name="ViewObjType" Class="char">SimulinkSubsys</P>
@@ -18252,7 +18010,7 @@ __MWOPC_PART_BEGIN__ /simulink/windowsInfo.xml
           <P Name="Offset" Class="double">[-122.92941176470589, -105.68823529411765]</P>
           <P Name="SceneRectInView" Class="double">[-122.92941176470589, -105.68823529411765, 810.85882352941178, 454.37647058823529]</P>
         </Object>
-        <Object ObjectID="18">
+        <Object ObjectID="24">
           <P Name="IsActive" Class="logical">0</P>
           <P Name="IsTabbed" Class="logical">0</P>
           <P Name="ViewObjType" Class="char">SimulinkSubsys</P>
@@ -18262,7 +18020,7 @@ __MWOPC_PART_BEGIN__ /simulink/windowsInfo.xml
           <P Name="Offset" Class="double">[-38.460533405172384, -538.54741379310349]</P>
           <P Name="SceneRectInView" Class="double">[-38.460533405172384, -538.54741379310349, 849.61637931034477, 476.09482758620686]</P>
         </Object>
-        <Object ObjectID="19">
+        <Object ObjectID="25">
           <P Name="IsActive" Class="logical">0</P>
           <P Name="IsTabbed" Class="logical">0</P>
           <P Name="ViewObjType" Class="char">SimulinkSubsys</P>
@@ -18272,7 +18030,7 @@ __MWOPC_PART_BEGIN__ /simulink/windowsInfo.xml
           <P Name="Offset" Class="double">[-232.65234375, -65.5]</P>
           <P Name="SceneRectInView" Class="double">[-232.65234375, -65.5, 878.0, 492.0]</P>
         </Object>
-        <Object ObjectID="20">
+        <Object ObjectID="26">
           <P Name="IsActive" Class="logical">0</P>
           <P Name="IsTabbed" Class="logical">0</P>
           <P Name="ViewObjType" Class="char">SimulinkSubsys</P>
@@ -18282,7 +18040,7 @@ __MWOPC_PART_BEGIN__ /simulink/windowsInfo.xml
           <P Name="Offset" Class="double">[738.08984375, -123.0]</P>
           <P Name="SceneRectInView" Class="double">[738.08984375, -123.0, 878.0, 492.0]</P>
         </Object>
-        <Object ObjectID="21">
+        <Object ObjectID="27">
           <P Name="IsActive" Class="logical">0</P>
           <P Name="IsTabbed" Class="logical">0</P>
           <P Name="ViewObjType" Class="char">SimulinkSubsys</P>
@@ -18292,7 +18050,7 @@ __MWOPC_PART_BEGIN__ /simulink/windowsInfo.xml
           <P Name="Offset" Class="double">[-751.65234375, 61.0]</P>
           <P Name="SceneRectInView" Class="double">[-751.65234375, 61.0, 2458.0, 1141.0]</P>
         </Object>
-        <Object ObjectID="22">
+        <Object ObjectID="28">
           <P Name="IsActive" Class="logical">0</P>
           <P Name="IsTabbed" Class="logical">0</P>
           <P Name="ViewObjType" Class="char">SimulinkSubsys</P>
@@ -18302,7 +18060,7 @@ __MWOPC_PART_BEGIN__ /simulink/windowsInfo.xml
           <P Name="Offset" Class="double">[-989.15234375, -419.0]</P>
           <P Name="SceneRectInView" Class="double">[-989.15234375, -419.0, 2458.0, 1141.0]</P>
         </Object>
-        <Object ObjectID="23">
+        <Object ObjectID="29">
           <P Name="IsActive" Class="logical">0</P>
           <P Name="IsTabbed" Class="logical">0</P>
           <P Name="ViewObjType" Class="char">SimulinkSubsys</P>
@@ -18312,7 +18070,7 @@ __MWOPC_PART_BEGIN__ /simulink/windowsInfo.xml
           <P Name="Offset" Class="double">[-1219.15234375, -460.0]</P>
           <P Name="SceneRectInView" Class="double">[-1219.15234375, -460.0, 2458.0, 1141.0]</P>
         </Object>
-        <Object ObjectID="24">
+        <Object ObjectID="30">
           <P Name="IsActive" Class="logical">0</P>
           <P Name="IsTabbed" Class="logical">0</P>
           <P Name="ViewObjType" Class="char">SimulinkSubsys</P>
@@ -18322,7 +18080,7 @@ __MWOPC_PART_BEGIN__ /simulink/windowsInfo.xml
           <P Name="Offset" Class="double">[-981.65234375, -359.0]</P>
           <P Name="SceneRectInView" Class="double">[-981.65234375, -359.0, 2458.0, 1141.0]</P>
         </Object>
-        <Object ObjectID="25">
+        <Object ObjectID="31">
           <P Name="IsActive" Class="logical">0</P>
           <P Name="IsTabbed" Class="logical">0</P>
           <P Name="ViewObjType" Class="char">SimulinkSubsys</P>
@@ -18332,7 +18090,7 @@ __MWOPC_PART_BEGIN__ /simulink/windowsInfo.xml
           <P Name="Offset" Class="double">[72.37890625, 537.5]</P>
           <P Name="SceneRectInView" Class="double">[72.37890625, 537.5, 878.0, 492.0]</P>
         </Object>
-        <Object ObjectID="26">
+        <Object ObjectID="32">
           <P Name="IsActive" Class="logical">0</P>
           <P Name="IsTabbed" Class="logical">0</P>
           <P Name="ViewObjType" Class="char">SimulinkSubsys</P>
@@ -18342,7 +18100,7 @@ __MWOPC_PART_BEGIN__ /simulink/windowsInfo.xml
           <P Name="Offset" Class="double">[657.37890625, 489.0]</P>
           <P Name="SceneRectInView" Class="double">[657.37890625, 489.0, 878.0, 492.0]</P>
         </Object>
-        <Object ObjectID="27">
+        <Object ObjectID="33">
           <P Name="IsActive" Class="logical">0</P>
           <P Name="IsTabbed" Class="logical">0</P>
           <P Name="ViewObjType" Class="char">SimulinkSubsys</P>
@@ -18352,7 +18110,7 @@ __MWOPC_PART_BEGIN__ /simulink/windowsInfo.xml
           <P Name="Offset" Class="double">[-322.71741615853659, -196.5]</P>
           <P Name="SceneRectInView" Class="double">[-322.71741615853659, -196.5, 1070.7317073170732, 600.0]</P>
         </Object>
-        <Object ObjectID="28">
+        <Object ObjectID="34">
           <P Name="IsActive" Class="logical">0</P>
           <P Name="IsTabbed" Class="logical">0</P>
           <P Name="ViewObjType" Class="char">SimulinkSubsys</P>
@@ -18362,7 +18120,7 @@ __MWOPC_PART_BEGIN__ /simulink/windowsInfo.xml
           <P Name="Offset" Class="double">[-1020.53515625, -225.5]</P>
           <P Name="SceneRectInView" Class="double">[-1020.53515625, -225.5, 2458.0, 1141.0]</P>
         </Object>
-        <Object ObjectID="29">
+        <Object ObjectID="35">
           <P Name="IsActive" Class="logical">0</P>
           <P Name="IsTabbed" Class="logical">0</P>
           <P Name="ViewObjType" Class="char">SimulinkSubsys</P>
@@ -18372,7 +18130,7 @@ __MWOPC_PART_BEGIN__ /simulink/windowsInfo.xml
           <P Name="Offset" Class="double">[-652.66796875, -75.0]</P>
           <P Name="SceneRectInView" Class="double">[-652.66796875, -75.0, 2458.0, 1141.0]</P>
         </Object>
-        <Object ObjectID="30">
+        <Object ObjectID="36">
           <P Name="IsActive" Class="logical">0</P>
           <P Name="IsTabbed" Class="logical">0</P>
           <P Name="ViewObjType" Class="char">SimulinkSubsys</P>
@@ -18382,7 +18140,7 @@ __MWOPC_PART_BEGIN__ /simulink/windowsInfo.xml
           <P Name="Offset" Class="double">[43.674999999999955, -33.999999999999943]</P>
           <P Name="SceneRectInView" Class="double">[43.674999999999955, -33.999999999999943, 1966.4, 912.8]</P>
         </Object>
-        <Object ObjectID="31">
+        <Object ObjectID="37">
           <P Name="IsActive" Class="logical">0</P>
           <P Name="IsTabbed" Class="logical">0</P>
           <P Name="ViewObjType" Class="char">SimulinkSubsys</P>
@@ -18392,17 +18150,7 @@ __MWOPC_PART_BEGIN__ /simulink/windowsInfo.xml
           <P Name="Offset" Class="double">[-999.625, -406.5]</P>
           <P Name="SceneRectInView" Class="double">[-999.625, -406.5, 2458.0, 1141.0]</P>
         </Object>
-        <Object ObjectID="32">
-          <P Name="IsActive" Class="logical">0</P>
-          <P Name="IsTabbed" Class="logical">0</P>
-          <P Name="ViewObjType" Class="char">SimulinkSubsys</P>
-          <P Name="LoadSaveID" Class="char">9288</P>
-          <P Name="Extents" Class="double">[2458.0, 1141.0]</P>
-          <P Name="ZoomFactor" Class="double">0.92999999999999994</P>
-          <P Name="Offset" Class="double">[-1058.4677419354839, -562.36559139784947]</P>
-          <P Name="SceneRectInView" Class="double">[-1058.4677419354839, -562.36559139784947, 2643.010752688172, 1226.8817204301076]</P>
-        </Object>
-        <Object ObjectID="33">
+        <Object ObjectID="38">
           <P Name="IsActive" Class="logical">0</P>
           <P Name="IsTabbed" Class="logical">0</P>
           <P Name="ViewObjType" Class="char">SimulinkSubsys</P>
@@ -18412,7 +18160,7 @@ __MWOPC_PART_BEGIN__ /simulink/windowsInfo.xml
           <P Name="Offset" Class="double">[-851.0859375, -532.75]</P>
           <P Name="SceneRectInView" Class="double">[-851.0859375, -532.75, 2458.0, 1141.0]</P>
         </Object>
-        <Object ObjectID="34">
+        <Object ObjectID="39">
           <P Name="IsActive" Class="logical">0</P>
           <P Name="IsTabbed" Class="logical">0</P>
           <P Name="ViewObjType" Class="char">SimulinkSubsys</P>
@@ -18422,7 +18170,7 @@ __MWOPC_PART_BEGIN__ /simulink/windowsInfo.xml
           <P Name="Offset" Class="double">[-1132.68359375, -520.0]</P>
           <P Name="SceneRectInView" Class="double">[-1132.68359375, -520.0, 2458.0, 1141.0]</P>
         </Object>
-        <Object ObjectID="35">
+        <Object ObjectID="40">
           <P Name="IsActive" Class="logical">0</P>
           <P Name="IsTabbed" Class="logical">0</P>
           <P Name="ViewObjType" Class="char">SimulinkSubsys</P>
@@ -18432,7 +18180,7 @@ __MWOPC_PART_BEGIN__ /simulink/windowsInfo.xml
           <P Name="Offset" Class="double">[-977.68359375, -405.0]</P>
           <P Name="SceneRectInView" Class="double">[-977.68359375, -405.0, 2458.0, 1141.0]</P>
         </Object>
-        <Object ObjectID="36">
+        <Object ObjectID="41">
           <P Name="IsActive" Class="logical">0</P>
           <P Name="IsTabbed" Class="logical">0</P>
           <P Name="ViewObjType" Class="char">SimulinkSubsys</P>
@@ -18442,47 +18190,7 @@ __MWOPC_PART_BEGIN__ /simulink/windowsInfo.xml
           <P Name="Offset" Class="double">[-783.82109375, -323.49999999999994]</P>
           <P Name="SceneRectInView" Class="double">[-783.82109375, -323.49999999999994, 1966.4, 912.8]</P>
         </Object>
-        <Object ObjectID="37">
-          <P Name="IsActive" Class="logical">0</P>
-          <P Name="IsTabbed" Class="logical">0</P>
-          <P Name="ViewObjType" Class="char">SimulinkSubsys</P>
-          <P Name="LoadSaveID" Class="char">9139</P>
-          <P Name="Extents" Class="double">[2458.0, 1141.0]</P>
-          <P Name="ZoomFactor" Class="double">1.0</P>
-          <P Name="Offset" Class="double">[-226.5, -139.0]</P>
-          <P Name="SceneRectInView" Class="double">[-226.5, -139.0, 2458.0, 1141.0]</P>
-        </Object>
-        <Object ObjectID="38">
-          <P Name="IsActive" Class="logical">0</P>
-          <P Name="IsTabbed" Class="logical">0</P>
-          <P Name="ViewObjType" Class="char">SimulinkSubsys</P>
-          <P Name="LoadSaveID" Class="char">9137</P>
-          <P Name="Extents" Class="double">[2458.0, 1141.0]</P>
-          <P Name="ZoomFactor" Class="double">1.0</P>
-          <P Name="Offset" Class="double">[-784.0, -635.5]</P>
-          <P Name="SceneRectInView" Class="double">[-784.0, -635.5, 2458.0, 1141.0]</P>
-        </Object>
-        <Object ObjectID="39">
-          <P Name="IsActive" Class="logical">0</P>
-          <P Name="IsTabbed" Class="logical">0</P>
-          <P Name="ViewObjType" Class="char">SimulinkSubsys</P>
-          <P Name="LoadSaveID" Class="char">9140</P>
-          <P Name="Extents" Class="double">[2458.0, 1141.0]</P>
-          <P Name="ZoomFactor" Class="double">1.0</P>
-          <P Name="Offset" Class="double">[-821.5, -423.0]</P>
-          <P Name="SceneRectInView" Class="double">[-821.5, -423.0, 2458.0, 1141.0]</P>
-        </Object>
-        <Object ObjectID="40">
-          <P Name="IsActive" Class="logical">0</P>
-          <P Name="IsTabbed" Class="logical">0</P>
-          <P Name="ViewObjType" Class="char">SimulinkSubsys</P>
-          <P Name="LoadSaveID" Class="char">9160</P>
-          <P Name="Extents" Class="double">[2458.0, 1141.0]</P>
-          <P Name="ZoomFactor" Class="double">1.0</P>
-          <P Name="Offset" Class="double">[-659.0, -498.0]</P>
-          <P Name="SceneRectInView" Class="double">[-659.0, -498.0, 2458.0, 1141.0]</P>
-        </Object>
-        <Object ObjectID="41">
+        <Object ObjectID="42">
           <P Name="IsActive" Class="logical">0</P>
           <P Name="IsTabbed" Class="logical">0</P>
           <P Name="ViewObjType" Class="char">SimulinkSubsys</P>
@@ -18492,7 +18200,7 @@ __MWOPC_PART_BEGIN__ /simulink/windowsInfo.xml
           <P Name="Offset" Class="double">[-612.8828125, -229.5]</P>
           <P Name="SceneRectInView" Class="double">[-612.8828125, -229.5, 2458.0, 1141.0]</P>
         </Object>
-        <Object ObjectID="42">
+        <Object ObjectID="43">
           <P Name="IsActive" Class="logical">0</P>
           <P Name="IsTabbed" Class="logical">0</P>
           <P Name="ViewObjType" Class="char">SimulinkSubsys</P>
@@ -18502,7 +18210,7 @@ __MWOPC_PART_BEGIN__ /simulink/windowsInfo.xml
           <P Name="Offset" Class="double">[-1171.5, -701.5]</P>
           <P Name="SceneRectInView" Class="double">[-1171.5, -701.5, 2458.0, 1141.0]</P>
         </Object>
-        <Object ObjectID="43">
+        <Object ObjectID="44">
           <P Name="IsActive" Class="logical">0</P>
           <P Name="IsTabbed" Class="logical">0</P>
           <P Name="ViewObjType" Class="char">SimulinkSubsys</P>
@@ -18512,7 +18220,7 @@ __MWOPC_PART_BEGIN__ /simulink/windowsInfo.xml
           <P Name="Offset" Class="double">[-825.8359375, -396.0]</P>
           <P Name="SceneRectInView" Class="double">[-825.8359375, -396.0, 2458.0, 1141.0]</P>
         </Object>
-        <Object ObjectID="44">
+        <Object ObjectID="45">
           <P Name="IsActive" Class="logical">0</P>
           <P Name="IsTabbed" Class="logical">0</P>
           <P Name="ViewObjType" Class="char">SimulinkSubsys</P>
@@ -18522,7 +18230,7 @@ __MWOPC_PART_BEGIN__ /simulink/windowsInfo.xml
           <P Name="Offset" Class="double">[-1031.65234375, -543.5]</P>
           <P Name="SceneRectInView" Class="double">[-1031.65234375, -543.5, 2458.0, 1141.0]</P>
         </Object>
-        <Object ObjectID="45">
+        <Object ObjectID="46">
           <P Name="IsActive" Class="logical">0</P>
           <P Name="IsTabbed" Class="logical">0</P>
           <P Name="ViewObjType" Class="char">SimulinkSubsys</P>
@@ -18532,7 +18240,7 @@ __MWOPC_PART_BEGIN__ /simulink/windowsInfo.xml
           <P Name="Offset" Class="double">[-1081.25390625, -491.30555555555554]</P>
           <P Name="SceneRectInView" Class="double">[-1081.25390625, -491.30555555555554, 2458.0, 1141.0]</P>
         </Object>
-        <Object ObjectID="46">
+        <Object ObjectID="47">
           <P Name="IsActive" Class="logical">0</P>
           <P Name="IsTabbed" Class="logical">0</P>
           <P Name="ViewObjType" Class="char">SimulinkSubsys</P>
@@ -18542,7 +18250,7 @@ __MWOPC_PART_BEGIN__ /simulink/windowsInfo.xml
           <P Name="Offset" Class="double">[-558.63411458333337, -262.99999999999994]</P>
           <P Name="SceneRectInView" Class="double">[-558.63411458333337, -262.99999999999994, 1638.6666666666667, 760.66666666666663]</P>
         </Object>
-        <Object ObjectID="47">
+        <Object ObjectID="48">
           <P Name="IsActive" Class="logical">0</P>
           <P Name="IsTabbed" Class="logical">0</P>
           <P Name="ViewObjType" Class="char">SimulinkSubsys</P>
@@ -18552,7 +18260,7 @@ __MWOPC_PART_BEGIN__ /simulink/windowsInfo.xml
           <P Name="Offset" Class="double">[-870.51953125, -805.0]</P>
           <P Name="SceneRectInView" Class="double">[-870.51953125, -805.0, 2458.0, 1141.0]</P>
         </Object>
-        <Object ObjectID="48">
+        <Object ObjectID="49">
           <P Name="IsActive" Class="logical">0</P>
           <P Name="IsTabbed" Class="logical">0</P>
           <P Name="ViewObjType" Class="char">SimulinkSubsys</P>
@@ -18561,16 +18269,6 @@ __MWOPC_PART_BEGIN__ /simulink/windowsInfo.xml
           <P Name="ZoomFactor" Class="double">2.14</P>
           <P Name="Offset" Class="double">[-241.30841121495314, -258.35514018691589]</P>
           <P Name="SceneRectInView" Class="double">[-241.30841121495314, -258.35514018691589, 1163.0841121495325, 533.17757009345792]</P>
-        </Object>
-        <Object ObjectID="49">
-          <P Name="IsActive" Class="logical">0</P>
-          <P Name="IsTabbed" Class="logical">0</P>
-          <P Name="ViewObjType" Class="char">SimulinkSubsys</P>
-          <P Name="LoadSaveID" Class="char">8793</P>
-          <P Name="Extents" Class="double">[2458.0, 1141.0]</P>
-          <P Name="ZoomFactor" Class="double">3.25</P>
-          <P Name="Offset" Class="double">[-117.99999999999994, 144.61538461538464]</P>
-          <P Name="SceneRectInView" Class="double">[-117.99999999999994, 144.61538461538464, 756.30769230769226, 351.07692307692309]</P>
         </Object>
         <Object ObjectID="50">
           <P Name="IsActive" Class="logical">0</P>
@@ -23133,7 +22831,7 @@ __MWOPC_PART_BEGIN__ /simulink/windowsInfo.xml
           <P Name="SceneRectInView" Class="double">[0.0, 0.0, 864.0, 530.0]</P>
         </Object>
       </Array>
-      <Array PropName="DockComponentsInfo" Type="Simulink.DockComponentInfo" Dimension="1*3">
+      <Array PropName="DockComponentsInfo" Type="Simulink.DockComponentInfo" Dimension="1*4">
         <Object ObjectID="506">
           <P Name="Type" Class="char">GLUE2:SpreadSheet</P>
           <P Name="ID" Class="char">ModelData</P>
@@ -23171,8 +22869,20 @@ __MWOPC_PART_BEGIN__ /simulink/windowsInfo.xml
           <P Name="Height" Class="int32">480</P>
           <P Name="Minimized" Class="char">On</P>
         </Object>
+        <Object ObjectID="509">
+          <P Name="Type" Class="char">LibraryBrowser2 LibraryBrowserStudioComponent</P>
+          <P Name="ID" Class="char">s32k344_mcb_open_loop_s32ct</P>
+          <P Name="Visible" Class="logical">0</P>
+          <P Name="CreateCallback" Class="char"/>
+          <P Name="UserData" Class="char"/>
+          <P Name="Floating" Class="logical">0</P>
+          <P Name="DockPosition" Class="char">Left</P>
+          <P Name="Width" Class="int32">304</P>
+          <P Name="Height" Class="int32">549</P>
+          <P Name="Minimized" Class="char">Unset</P>
+        </Object>
       </Array>
-      <P Name="WindowState" Class="char">AAAA/wAAAAD9AAAAAwAAAAAAAAE0AAACI/wCAAAABPsAAAAWAEQAbwBjAGsAVwBpAGQAZwBlAHQAMwEAAAAxAAAB+AAAAAAAAAAA+wAAABYARABvAGMAawBXAGkAZABnAGUAdAA0AAAAAAD/////AAAAAAAAAAD8AAAAeQAAAiMAAAAAAP////oAAAABAgAAAAP7AAAAUgBHAEwAVQBFADIAIAB0AHIAZQBlACAAYwBvAG0AcABvAG4AZQBuAHQALwBHAEwAVQBFADIAIAB0AHIAZQBlACAAYwBvAG0AcABvAG4AZQBuAHQAAAAAAP////8AAABjAP////sAAACOAEwAaQBiAHIAYQByAHkAQgByAG8AdwBzAGUAcgAyACAATABpAGIAcgBhAHIAeQBCAHIAbwB3AHMAZQByAFMAdAB1AGQAaQBvAEMAbwBtAHAAbwBuAGUAbgB0AC8AcwAzADIAawAzADQANABfAG0AYwBfAHAAbQBzAG0AXwAyAHMAaABfAHMAMwAyAGMAdAAAAAAA/////wAAAAAAAAAA+wAAAI4ATABpAGIAcgBhAHIAeQBCAHIAbwB3AHMAZQByADIAIABMAGkAYgByAGEAcgB5AEIAcgBvAHcAcwBlAHIAUwB0AHUAZABpAG8AQwBvAG0AcABvAG4AZQBuAHQALwBzADMAMgBrADMANAA0AF8AbQBjAGIAXwBwAG0AcwBtAF8AbwBsAF8AcwAzADIAYwB0AAAAAAD/////AAAAAAAAAAD7AAAAYABTAGkAbQB1AGwAaQBuAGsAOgBFAGQAaQB0AG8AcgA6AFIAZQBmAGUAcgBlAG4AYwBlAGQARgBpAGwAZQBzAC8AUgBlAGYAZQByAGUAbgBjAGUAZAAgAEYAaQBsAGUAcwAAAAAA/////wAAAIwA////AAAAAQAAAlYAAAJB/AIAAAAC/AAAALEAAASjAAAAAAD////6/////wIAAAAA+wAAAFQARwBMAFUARQAyADoAUAByAG8AcABlAHIAdAB5AEkAbgBzAHAAZQBjAHQAbwByAC8AUAByAG8AcABlAHIAdAB5ACAASQBuAHMAcABlAGMAdABvAHIAAAAAAP////8AAAGsAP///wAAAAMAAAOUAAABe/wBAAAAAvwAAAAfAAADlAAAAAAA////+v////8BAAAAAfv/////AAAAAAD/////AAACeQD////7AAAANgBHAEwAVQBFADIAOgBTAHAAcgBlAGEAZABTAGgAZQBlAHQALwBNAG8AZABlAGwARABhAHQAYQAAAAAAAAAElwAAARgA////AAADlAAAAikAAAABAAAAAgAAAAEAAAAC/AAAAAQAAAAAAAAAAQAAADYAYwBvAGwAbABhAHAAcwBpAGIAbABlAFAAYQBuAGUAbABUAG8AbwBsAEIAYQByAEwAZQBmAHQDAAAAAP////8AAAAAAAAAAAAAAAEAAAABAAAAOABjAG8AbABsAGEAcABzAGkAYgBsAGUAUABhAG4AZQBsAFQAbwBvAGwAQgBhAHIAUgBpAGcAaAB0AwAAAAD/////AAAAAAAAAAAAAAACAAAAAf////8BAAAAAP////8AAAAAAAAAAAAAAAMAAAABAAAAOgBjAG8AbABsAGEAcABzAGkAYgBsAGUAUABhAG4AZQBsAFQAbwBvAGwAQgBhAHIAQgBvAHQAdABvAG0AAAAAAP////8AAAAAAAAAAA==</P>
+      <P Name="WindowState" Class="char">AAAA/wAAAAD9AAAAAwAAAAAAAAE0AAACQfwCAAAABPsAAAAWAEQAbwBjAGsAVwBpAGQAZwBlAHQAMwEAAAAxAAAB+AAAAAAAAAAA+wAAABYARABvAGMAawBXAGkAZABnAGUAdAA0AAAAAAD/////AAAAAAAAAAD8AAAAeQAAAiMAAAAAAP////oAAAABAgAAAAP7AAAAUgBHAEwAVQBFADIAIAB0AHIAZQBlACAAYwBvAG0AcABvAG4AZQBuAHQALwBHAEwAVQBFADIAIAB0AHIAZQBlACAAYwBvAG0AcABvAG4AZQBuAHQAAAAAAP////8AAABjAP////sAAACOAEwAaQBiAHIAYQByAHkAQgByAG8AdwBzAGUAcgAyACAATABpAGIAcgBhAHIAeQBCAHIAbwB3AHMAZQByAFMAdAB1AGQAaQBvAEMAbwBtAHAAbwBuAGUAbgB0AC8AcwAzADIAawAzADQANABfAG0AYwBfAHAAbQBzAG0AXwAyAHMAaABfAHMAMwAyAGMAdAAAAAAA/////wAAAAAAAAAA+wAAAI4ATABpAGIAcgBhAHIAeQBCAHIAbwB3AHMAZQByADIAIABMAGkAYgByAGEAcgB5AEIAcgBvAHcAcwBlAHIAUwB0AHUAZABpAG8AQwBvAG0AcABvAG4AZQBuAHQALwBzADMAMgBrADMANAA0AF8AbQBjAGIAXwBwAG0AcwBtAF8AbwBsAF8AcwAzADIAYwB0AAAAAAD/////AAAAAAAAAAD8AAAAeQAAAkEAAAAAAP////r/////AgAAAAL7AAAAYABTAGkAbQB1AGwAaQBuAGsAOgBFAGQAaQB0AG8AcgA6AFIAZQBmAGUAcgBlAG4AYwBlAGQARgBpAGwAZQBzAC8AUgBlAGYAZQByAGUAbgBjAGUAZAAgAEYAaQBsAGUAcwAAAAAA/////wAAAIwA////+wAAAJIATABpAGIAcgBhAHIAeQBCAHIAbwB3AHMAZQByADIAIABMAGkAYgByAGEAcgB5AEIAcgBvAHcAcwBlAHIAUwB0AHUAZABpAG8AQwBvAG0AcABvAG4AZQBuAHQALwBzADMAMgBrADMANAA0AF8AbQBjAGIAXwBvAHAAZQBuAF8AbABvAG8AcABfAHMAMwAyAGMAdAAAAAAA/////wAAAK8A////AAAAAQAAAlYAAAJB/AIAAAAC/AAAALEAAASjAAAAAAD////6/////wIAAAAA+wAAAFQARwBMAFUARQAyADoAUAByAG8AcABlAHIAdAB5AEkAbgBzAHAAZQBjAHQAbwByAC8AUAByAG8AcABlAHIAdAB5ACAASQBuAHMAcABlAGMAdABvAHIAAAAAAP////8AAAGsAP///wAAAAMAAAOUAAABe/wBAAAAAvwAAAAfAAADlAAAAAAA////+v////8BAAAAAfv/////AAAAAAD/////AAACeQD////7AAAANgBHAEwAVQBFADIAOgBTAHAAcgBlAGEAZABTAGgAZQBlAHQALwBNAG8AZABlAGwARABhAHQAYQAAAAAAAAAElwAAARgA////AAADlAAAAkEAAAABAAAAAgAAAAEAAAAC/AAAAAQAAAAAAAAAAQAAADYAYwBvAGwAbABhAHAAcwBpAGIAbABlAFAAYQBuAGUAbABUAG8AbwBsAEIAYQByAEwAZQBmAHQDAAAAAP////8AAAAAAAAAAAAAAAEAAAABAAAAOABjAG8AbABsAGEAcABzAGkAYgBsAGUAUABhAG4AZQBsAFQAbwBvAGwAQgBhAHIAUgBpAGcAaAB0AwAAAAD/////AAAAAAAAAAAAAAACAAAAAAAAAAMAAAABAAAAOgBjAG8AbABsAGEAcABzAGkAYgBsAGUAUABhAG4AZQBsAFQAbwBvAGwAQgBhAHIAQgBvAHQAdABvAG0AAAAAAP////8AAAAAAAAAAA==</P>
       <Array PropName="PersistedApps" Type="Cell" Dimension="0*1"/>
       <P Name="WindowUuid" Class="char">0b82776b-3568-4091-8b56-551a033ff4d9</P>
     </Object>
